@@ -63,9 +63,9 @@ const Hero = () => {
         <div className="relative">
           <span className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           </span>
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <AnimatedPinDemo />
-          </div>
+          </div> */}
         </div>
       </div>
 
