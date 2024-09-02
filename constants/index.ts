@@ -3,7 +3,7 @@ export const NAV_LINKS = [
   { href: '/', key: 'home', label: 'Home' },
   { href: '/search', key: 'Keyword Search', label: 'Keyword Search' },
   { href: '/howtouse', key: 'How ', label: 'How Verdictr Works' },
-  { href: '/frqs', key: 'FRQs ', label: 'FRQs ' },
+  { href: '/faqs', key: 'FAQs ', label: 'FAQs ' },
   // { href: '/', key: 'contact_us', label: 'Contact Us' },
 ];
 
