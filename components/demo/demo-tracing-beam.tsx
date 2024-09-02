@@ -53,7 +53,7 @@ const dummyContent = [
       </>
     ),
     badge: "How Data is Extracted",
-    image: "/usage/easy-to-use.png",
+    image: "https://images.unsplash.com/photo-1553895501-af9e282e7fc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Searching Practices",
