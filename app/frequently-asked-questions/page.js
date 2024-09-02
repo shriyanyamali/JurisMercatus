@@ -49,8 +49,8 @@ const AccordionItem = ({ index, question, answer }) => {
 const Page = () => {
   return (
     <>
-      <h2 className="flex items-center justify-center py-24 text-5xl text-center">
-        Frequently Asked Questions
+      <h2 className="flex items-center justify-center py-24 text-5xl text-center px-12">
+      Frequently Asked Questions
       </h2>
       <div>
         <AccordionItem
