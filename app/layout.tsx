@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Home - Verdictr',
+  title: 'Verdictr',
   description: 'Search feature for EU competition case relevant market decisions',
 }
 

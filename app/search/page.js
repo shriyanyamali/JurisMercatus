@@ -109,7 +109,7 @@ export default function Home() {
                   </span>
                 </Link>
               </h3>
-              <h3 className="text-base">
+              {/* <h3 className="text-base">
                 Problems?{" "}
                 <Link
                   href="mailto:srujanshriyan@gmail.com"
@@ -118,7 +118,7 @@ export default function Home() {
                 >
                   Contact <span>srujanshriyan@gmail.com</span>
                 </Link>
-              </h3>
+              </h3> */}
             </header>
             <section className="grid grid-cols-[repeat(auto-fill,minmax(500px,1fr))] gap-10">
               {filteredData.length ? (

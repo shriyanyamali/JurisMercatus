@@ -18,7 +18,7 @@ export function TracingBeamDemo() {
               {item?.image && (
                 <Image
                   src={item.image}
-                  alt="blog thumbnail"
+                  alt="Image"
                   height="1000"
                   width="1000"
                   className="rounded-lg mb-10 object-cover"
@@ -35,78 +35,79 @@ export function TracingBeamDemo() {
 
 const dummyContent = [
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "How Data is Extracted",
     description: (
       <>
         <p>
-          Sit duis est minim proident non nisi velit non consectetur. Esse
-          adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-          Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-          incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-          fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-          nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-          occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-          officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-          commodo et labore dolore commodo pariatur.
-        </p>
-        <p>
-          Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-          veniam in commodo id reprehenderit adipisicing. Proident duis
-          exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-        </p>
-        <p>
-          Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-          reprehenderit deserunt amet laborum consequat adipisicing officia qui
-          irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-          Amet culpa officia aliquip deserunt veniam deserunt officia
-          adipisicing aliquip proident officia sunt.
+          Verdictr is incredibly easy to use. After navigating to the{" "}
+          <a href="/search" className="text-blue-500">
+            keyword search page
+          </a>
+          &nbsp; go to the search box and start searching! However, you might
+          want to know how we extract our data. While we can&rsquo;t go into full detail,
+          we can explain the basic process. This process starts with us scraping decision texts 
+          from the European Commission's websites. After scraping these texts, we use 
+          highly intelligent and fined tuned large language models to analyze the data. 
+          After the data has been analyzed, we clean the data and upload it to our database.
         </p>
       </>
     ),
-    badge: "React",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    badge: "How Data is Extracted",
+    image: "/usage/easy-to-use.png",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "Searching Practices",
     description: (
       <>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-        <p>
-          In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse
-          veniam fugiat esse qui sint ad sunt reprehenderit do qui proident
-          reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-          cillum ut mollit.
+          Before you start searching, you might want to know how the regex
+          works. When you input a word, you will only get exact matches back.
+          For example, if you enter "Bi ke" into the search bar, you will not
+          get matches with the text "Bike" back, only matches with the text "Bi
+          ke." That is because the searches are space sensitive. However, the
+          searches are not case sensitive; both "Bike" and "bike" will yield the
+          same results. You might run into special characters within you market
+          decisons. If you find yourself in this spot, note that special
+          characters are included in the search function. There are more
+          do&rsquo;s and don&rsquo;ts than the ones discussed above. For more
+          information, visit our&nbsp;
+          <a href="/frequently-asked-questions" className="text-blue-500">
+            FAQs page.
+          </a>
         </p>
       </>
     ),
-    badge: "Changelog",
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    badge: "Searching Practices",
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "Searchable Data",
     description: (
       <>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
+          We have extracted 5 main data values from market decision; the case
+          number, link to case, link to decision text, topic, and market
+          decision text. The case number—the number assigned by the European
+          Commission to identify cases—is the case number of the case where the
+          market decision is located. The link to case is the link to the case's
+          page on the European Commission's website. The link to decision text
+          is the link to a PDF that contains the market decision. The topic is
+          the general idea of what the market decision. For example, the
+          decision text "A computer is an electronic device for storing and
+          processing data, typically in binary form, according to instructions
+          given to it in a variable program" might have a topic of "Computers."
+          The market decision text is the text extracted from the decision text
+          PDF. The market decision text has undergone minor filtering, where
+          some special characters and misplaced spaces were removed. You will
+          not get results if you add the data values in your search. For
+          example, if you search for "Case Number: M.4696" you will not get any
+          results, however, if you search for "M.4696" you will get results for
+          any market decisions extracted from case M.4696.
         </p>
       </>
     ),
-    badge: "Launch Week",
+    badge: "Searchable Data",
     image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1505744386214-51dba16a26fc?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
