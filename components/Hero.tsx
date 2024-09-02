@@ -46,7 +46,7 @@ const Hero = () => {
             />
           </a>
 
-          <a href="/how-verdictr-works">
+          <a href="/how-verdictr-worksf">
             <Button
               type="button"
               title="How does it work?"

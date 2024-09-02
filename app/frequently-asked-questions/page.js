@@ -94,7 +94,7 @@ const Page = () => {
         <AccordionItem
           index={7}
           question="Does Verdictr store my data?"
-          answer="No, we do not store your individual data. However, we Google Search Console may store website clicks for up
+          answer="No, we do not store your individual data. However, Google Search Console may store website clicks for up
             to 18 months."
         />
         <AccordionItem
