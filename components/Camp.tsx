@@ -44,7 +44,7 @@ const Camp = () => {
             <strong>Tired?</strong> Can&rsquo;t Find The Case You Want?
           </h2>
           <p className="regular-14 xl:regular-16 mt-5 text-white">
-            We get it. You&rsquo;re busy. We are all. That&rsquo;s why we are here to help shorten the search.
+            We get it. You&rsquo;re busy. We all are. That&rsquo;s why we are here to help shorten the search.
           </p>
           <Image 
             src="/quote.svg"
