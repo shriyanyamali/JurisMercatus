@@ -101,7 +101,7 @@ const Page = () => {
           index={8}
           question="I have a question that isn&rsquo;t listed here. What can I do?"
           answer="While we currently do not have an phone number or any social media, if you have a question or 
-            want to reach out, you can do so by emailing aspellperson@gmail.com"
+            want to reach out, you can do so by emailing yamalishriyan@gmail.com"
         />
       </div>
     </>
