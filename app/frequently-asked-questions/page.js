@@ -56,7 +56,7 @@ const Page = () => {
         <AccordionItem
           index={1}
           question="How much does Verdictr cost?"
-          answer="Verdictr is currently free as we are still in the development process."
+          answer="Nothing!"
         />
         <AccordionItem
           index={2}
@@ -94,13 +94,12 @@ const Page = () => {
         <AccordionItem
           index={7}
           question="Does Verdictr store my data?"
-          answer="No, we do not store your individual data. However, Google Search Console may store website clicks for up
-            to 18 months."
+          answer="No, we do not store your data."
         />
         <AccordionItem
           index={8}
           question="I have a question that isn&rsquo;t listed here. What can I do?"
-          answer="While we currently do not have an phone number or any social media, if you have a question or 
+          answer="While we currently do not have a phone number or any social media, if you have a question or 
             want to reach out, you can do so by emailing yamalishriyan@gmail.com"
         />
       </div>

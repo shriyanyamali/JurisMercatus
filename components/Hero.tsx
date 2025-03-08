@@ -12,32 +12,12 @@ const Hero = () => {
       <div className="mt-[3rem] relative z-20 flex flex-1 flex-col xl:w-1/2">
         <h1 className="bold-52 lg:bold-88">Verdictr</h1>
         <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
-          Verdictr is the #1 way to find market defintions. We have an extensive
-          collection of market decisions from over 6000 different cases spanning
-          more than a decade.
+          Verdictr is a 100% free and open access way to find market definitions.
+          We have an extensive collection of market decisions from over 6000
+          different cases spanning more than a decade.
         </p>
 
-        <div className="my-11 flex flex-wrap gap-5">
-          <div className="flex items-center gap-2">
-            {Array(5)
-              .fill(1)
-              .map((_, index) => (
-                <Image
-                  src="/star.svg"
-                  key={index}
-                  alt="star"
-                  width={24}
-                  height={24}
-                />
-              ))}
-          </div>
-
-          <p className="regular-12 lg:regular-16 ml-1">
-            5 Star Service Guaranteed
-          </p>
-        </div>
-
-        <div className="flex flex-col w-full gap-3 sm:flex-row">
+        <div className="mt-11 flex flex-col w-full gap-3 sm:flex-row">
           <a href="/search">
             <Button
               type="button"
@@ -58,11 +38,10 @@ const Hero = () => {
       </div>
       <div className="flex items-start">
         <span className="mt-[4rem] hidden sm:block">
-         <CardSpotlightDemo />
+          <CardSpotlightDemo />
         </span>
         <div className="relative">
-          <span className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          </span>
+          <span className="absolute -top-3 left-1/2 transform -translate-x-1/2"></span>
           {/* <div className="hidden md:block">
             <AnimatedPinDemo />
           </div> */}

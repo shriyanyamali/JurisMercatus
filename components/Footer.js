@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
                 Site Links
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -90,11 +90,7 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            Copyright © 2024{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
-              Verdictr
-            </a>
-            . All Rights Reserved.
+          Copyright &copy; {new Date().getFullYear()} Verdictr. All rights reserved.
           </span>
           {/* <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a

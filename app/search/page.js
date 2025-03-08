@@ -92,7 +92,7 @@ export default function Home() {
               </button>
             </div>
             <footer className="mt-auto text-center text-sm text-black">
-              <p>Copyright &copy; 2024 Verdictr. All rights reserved.</p>
+              <p>Copyright &copy; {new Date().getFullYear()} Verdictr. All rights reserved.</p>
             </footer>
           </aside>
           <main className="w-3/4 p-4">

@@ -11,7 +11,7 @@ export function CardSpotlightDemo() {
         <ul className="list-none  mt-2">
           <Step title="Accurate and up-to-date cases" />
           <Step title="A user friendly search experience" />
-          <Step title="The perfect solution for you or your business" />
+          <Step title="Completely free access" />
         </ul>
       </div>
       <p className="text-neutral-300 mt-4 relative z-20 text-sm">
