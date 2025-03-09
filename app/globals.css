@@ -19,10 +19,10 @@ body {
     @apply  border-white bg-white px-8 py-3 text-green-50
   }
   .btn_white_text  { 
-    @apply  border-white bg-white px-0 sm:px-8  py-3 text-gray-90
+    @apply  border-white bg-white px-0 sm:px-8  py-3 text-gray-90 hover:underline
   }
   .btn_green  { 
-    @apply  border-green-50 bg-green-50 px-8 py-5 text-white hover:bg-green-100 hover:text-black
+    @apply  border-green-50 border-2 bg-green-50 px-8 py-5 text-white hover:bg-white hover:text-green-50 duration-300
   }
   .btn_dark_green { 
     @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
