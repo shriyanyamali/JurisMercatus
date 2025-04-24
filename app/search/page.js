@@ -271,7 +271,7 @@ export default function Home() {
                   </div>
                 ))
               ) : (
-                <p>No results found.</p>
+                <p className="ml-2">No results found.</p>
               )}
             </section>
 
