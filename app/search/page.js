@@ -5,16 +5,12 @@ import Link from "next/link";
 import Head from "next/head";
 
 const normalizeString = (str) => {
-  return str
-    .toLowerCase()
-    .replace(/[^\w\s]/g, "")
-    .trim();
+  return str.toLowerCase().replace(/[^\w\s]/g, "").trim();
 };
 
 const highlightText = (text, searchTerm) => {
   if (!searchTerm.trim()) return text;
 
-  const normalizedSearchTerm = normalizeString(searchTerm);
   const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const regex = new RegExp(`(${escapedTerm})`, "gi");
 
@@ -27,47 +23,25 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("newest");
   const [selectedYear, setSelectedYear] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 20;
 
   useEffect(() => {
     fetch("/market-definitions.json")
       .then((response) => response.json())
       .then((data) => {
         setData(data);
-        setFilteredData(data);
       })
       .catch((error) => console.error("Error fetching the JSON data:", error));
   }, []);
 
-  const handleSearch = (e) => {
-    const term = e.target.value;
-    setSearchTerm(term);
-    filterAndSortData(term, selectedYear, sortOrder);
-  };
-
-  const handleClear = () => {
-    setSearchTerm("");
-    setSelectedYear("");
-    setSortOrder("newest");
-    setFilteredData(data);
-  };
-
-  const handleSortOrderChange = (order) => {
-    setSortOrder(order);
-    filterAndSortData(searchTerm, selectedYear, order);
-  };
-
-  const handleYearChange = (e) => {
-    const year = e.target.value;
-    setSelectedYear(year);
-    filterAndSortData(searchTerm, year, sortOrder);
-  };
-
-  const filterAndSortData = (term, year, order) => {
-    const normalizedSearchTerm = normalizeString(term);
+  useEffect(() => {
+    const normalizedSearchTerm = normalizeString(searchTerm);
 
     let filtered = data.filter(
       (item) =>
-        (!year || item.year === year) &&
+        (!selectedYear || item.year === selectedYear) &&
         ((item.case_number &&
           normalizeString(item.case_number).includes(normalizedSearchTerm)) ||
           (item.link &&
@@ -81,10 +55,43 @@ export default function Home() {
     filtered.sort((a, b) => {
       const yearA = parseInt(a.year);
       const yearB = parseInt(b.year);
-      return order === "newest" ? yearB - yearA : yearA - yearB;
+      return sortOrder === "newest" ? yearB - yearA : yearA - yearB;
     });
 
     setFilteredData(filtered);
+    setCurrentPage(1);
+  }, [searchTerm, selectedYear, sortOrder, data]);
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+    window.scrollTo({ top: window.scrollY }); // prevents scroll jump
+  };  
+
+  const handleClear = () => {
+    setSearchTerm("");
+    setSelectedYear("");
+    setSortOrder("newest");
+  };
+
+  const handleSortOrderChange = (order) => {
+    setSortOrder(order);
+  };
+
+  const handleYearChange = (e) => {
+    setSelectedYear(e.target.value);
+  };
+
+  const handleGoToPage = (e) => {
+    e.preventDefault();
+    const pageInput = parseInt(e.target.pageNumber.value);
+    if (!isNaN(pageInput) && pageInput >= 1 && pageInput <= totalPages) {
+      setCurrentPage(pageInput);
+      window.scrollTo({ top: window.scrollY });
+    }
   };
 
   const generateYearOptions = () => {
@@ -95,6 +102,10 @@ export default function Home() {
     }
     return years;
   };
+
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentPageData = filteredData.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <>
@@ -108,8 +119,8 @@ export default function Home() {
       <div className="flex flex-col min-h-screen font-sans">
         <div className="mt-2 flex flex-1">
           <aside className="w-1/4 p-4 bg-white shadow-md">
-          <div className="mb-4">
-              <label className="block text-lg font-semibold mb-2 ml-1 ">Keyword Search</label>
+            <div className="mb-4">
+              <label className="block text-lg font-semibold mb-2 ml-1">Keyword Search</label>
               <div className="flex items-center bg-white border border-gray-300 rounded-lg overflow-hidden">
                 <input
                   type="text"
@@ -118,18 +129,17 @@ export default function Home() {
                   placeholder="Search Keywords..."
                   className="w-full py-2 px-4 focus:outline-none"
                 />
-                <button
-                  onClick={handleClear}
-                  className="px-3 text-gray-600 hover:text-red-600"
-                >
-                  <i className="fas fa-times"></i>
-                </button>
+              <button onClick={() => {
+                setSearchTerm("");
+                setSelectedYear("");
+                setSortOrder("newest");
+              }} className="px-3 text-gray-600 hover:text-red-600">
+                ✕
+              </button>
               </div>
             </div>
             <div className="mb-4">
-              <label className="block text-lg mb-2 ml-1 font-semibold">
-                Filter by Year:
-              </label>
+              <label className="block text-lg mb-2 ml-1 font-semibold">Filter by Year:</label>
               <select
                 value={selectedYear}
                 onChange={handleYearChange}
@@ -144,14 +154,12 @@ export default function Home() {
               </select>
             </div>
             <div className="mb-4">
-              <label className="block text-lg mb-2 ml-1  font-semibold">Sort by:</label>
+              <label className="block text-lg mb-2 ml-1 font-semibold">Sort by:</label>
               <div className="flex gap-2">
                 <button
                   onClick={() => handleSortOrderChange("newest")}
                   className={`p-2 border rounded-lg ${
-                    sortOrder === "newest"
-                      ? "bg-blue-500 text-white"
-                      : "bg-white text-black"
+                    sortOrder === "newest" ? "bg-blue-500 text-white" : "bg-white text-black"
                   }`}
                 >
                   Newest First
@@ -159,23 +167,18 @@ export default function Home() {
                 <button
                   onClick={() => handleSortOrderChange("oldest")}
                   className={`p-2 border rounded-lg ${
-                    sortOrder === "oldest"
-                      ? "bg-blue-500 text-white"
-                      : "bg-white text-black"
+                    sortOrder === "oldest" ? "bg-blue-500 text-white" : "bg-white text-black"
                   }`}
                 >
                   Oldest First
                 </button>
-                
               </div>
             </div>
             <footer className="mt-auto text-center text-sm text-black">
-              <p>
-                Copyright &copy; {new Date().getFullYear()} Verdictr. All rights
-                reserved.
-              </p>
+              <p>Copyright &copy; {new Date().getFullYear()} Verdictr. All rights reserved.</p>
             </footer>
           </aside>
+
           <main className="w-3/4 p-4">
             <header className="mb-4">
               <h3 className="ml-2 text-base">
@@ -191,14 +194,50 @@ export default function Home() {
                 </Link>
               </h3>
               <p className="ml-2 my-4 text-xl">
-                {filteredData.length} result
-                {filteredData.length !== 1 ? "s" : ""} found
+                {filteredData.length} result{filteredData.length !== 1 ? "s" : ""} found
                 {selectedYear ? ` from ${selectedYear}` : ""}
               </p>
             </header>
+
+            {filteredData.length > 0 && (
+              <div className="flex items-center gap-4 mb-6 ml-2">
+               <button
+  onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
+  disabled={currentPage === 1}
+  className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+>
+  &laquo; Prev
+</button>
+<button
+  onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
+  disabled={currentPage === totalPages}
+  className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+>
+  Next &raquo;
+</button>
+
+                <form onSubmit={handleGoToPage} className="flex items-center gap-2">
+                  <input
+                    type="number"
+                    name="pageNumber"
+                    min="1"
+                    max={totalPages}
+                    placeholder="Page #"
+                    className="w-[6rem] p-2 border rounded"
+                  />
+                  <button type="submit" className="px-3 py-2 bg-blue-500 text-white rounded">
+                    Go
+                  </button>
+                </form>
+                <span className="ml-4 text-lg">
+                  Page {currentPage} of {totalPages}
+                </span>
+              </div>
+            )}
+
             <section className="grid grid-cols-[repeat(auto-fill,minmax(500px,1fr))] gap-10">
-              {filteredData.length ? (
-                filteredData.map((item, index) => (
+              {currentPageData.length ? (
+                currentPageData.map((item, index) => (
                   <div
                     key={index}
                     className="p-4 bg-white shadow-md rounded-lg border border-gray-300"
@@ -206,18 +245,14 @@ export default function Home() {
                     <h2 className="font-semibold">
                       Case Number: {item.case_number || ""}
                     </h2>
-                    <span className="text-gray-90">
-                      Year: {item.year}{" "}
-                    </span>
+                    <span className="text-gray-90">Year: {item.year} </span>
                     <p>
                       <Link
                         target="_blank"
                         href={`https://competition-cases.ec.europa.eu/cases/${item.case_number}`}
                         passHref
                       >
-                        <span className="text-blue-600 underline">
-                          Link to Case
-                        </span>
+                        <span className="text-blue-600 underline">Link to Case</span>
                       </Link>
                     </p>
                     <p>
@@ -227,14 +262,10 @@ export default function Home() {
                         passHref
                         className="my-4"
                       >
-                        <span className="text-blue-600 underline">
-                          Link to Decision Text
-                        </span>
+                        <span className="text-blue-600 underline">Link to Decision Text</span>
                       </Link>
                     </p>
-                    <p className="font-medium my-2 ">
-                      Topic: {item.topic || ""}
-                    </p>
+                    <p className="font-medium my-2">Topic: {item.topic || ""}</p>
                     <div
                       dangerouslySetInnerHTML={{
                         __html: highlightText(item.text, searchTerm),
@@ -246,6 +277,41 @@ export default function Home() {
                 <p>No results found.</p>
               )}
             </section>
+
+            {filteredData.length > 0 && (
+              <div className="flex items-center gap-4 mt-6 ml-2">
+                <button
+                  onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                  disabled={currentPage === 1}
+                  className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+                >
+                  &laquo; Prev
+                </button>
+                <button
+                  onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                  disabled={currentPage === totalPages}
+                  className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+                >
+                  Next &raquo;
+                </button>
+                <form onSubmit={handleGoToPage} className="flex items-center gap-2">
+                  <input
+                    type="number"
+                    name="pageNumber"
+                    min="1"
+                    max={totalPages}
+                    placeholder="Page #"
+                    className="w-[6rem] p-2 border rounded"
+                  />
+                  <button type="submit" className="px-3 py-2 bg-blue-500 text-white rounded">
+                    Go
+                  </button>
+                </form>
+                <span className="ml-4 text-lg">
+                  Page {currentPage} of {totalPages}
+                </span>
+              </div>
+            )}
           </main>
         </div>
       </div>
