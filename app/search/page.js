@@ -7,7 +7,7 @@ import Head from "next/head";
 const normalizeString = (str) => {
   return str
     .toLowerCase()
-    .replace(/[\s\W_]+/g, " ")
+    .replace(/[^\w\s]/g, "")
     .trim();
 };
 
@@ -25,6 +25,8 @@ export default function Home() {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [sortOrder, setSortOrder] = useState("newest");
+  const [selectedYear, setSelectedYear] = useState("");
 
   useEffect(() => {
     fetch("/market-definitions.json")
@@ -39,26 +41,59 @@ export default function Home() {
   const handleSearch = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
-
-    const normalizedSearchTerm = normalizeString(term);
-
-    const filtered = data.filter(
-      (item) =>
-        (item.case_number &&
-          normalizeString(item.case_number).includes(normalizedSearchTerm)) ||
-        (item.link &&
-          normalizeString(item.link).includes(normalizedSearchTerm)) ||
-        (item.topic &&
-          normalizeString(item.topic).includes(normalizedSearchTerm)) ||
-        (item.text && normalizeString(item.text).includes(normalizedSearchTerm))
-    );
-
-    setFilteredData(filtered);
+    filterAndSortData(term, selectedYear, sortOrder);
   };
 
   const handleClear = () => {
     setSearchTerm("");
+    setSelectedYear("");
+    setSortOrder("newest");
     setFilteredData(data);
+  };
+
+  const handleSortOrderChange = (order) => {
+    setSortOrder(order);
+    filterAndSortData(searchTerm, selectedYear, order);
+  };
+
+  const handleYearChange = (e) => {
+    const year = e.target.value;
+    setSelectedYear(year);
+    filterAndSortData(searchTerm, year, sortOrder);
+  };
+
+  const filterAndSortData = (term, year, order) => {
+    const normalizedSearchTerm = normalizeString(term);
+
+    let filtered = data.filter(
+      (item) =>
+        (!year || item.year === year) &&
+        ((item.case_number &&
+          normalizeString(item.case_number).includes(normalizedSearchTerm)) ||
+          (item.link &&
+            normalizeString(item.link).includes(normalizedSearchTerm)) ||
+          (item.topic &&
+            normalizeString(item.topic).includes(normalizedSearchTerm)) ||
+          (item.text &&
+            normalizeString(item.text).includes(normalizedSearchTerm)))
+    );
+
+    filtered.sort((a, b) => {
+      const yearA = parseInt(a.year);
+      const yearB = parseInt(b.year);
+      return order === "newest" ? yearB - yearA : yearA - yearB;
+    });
+
+    setFilteredData(filtered);
+  };
+
+  const generateYearOptions = () => {
+    const currentYear = new Date().getFullYear();
+    const years = [];
+    for (let y = currentYear; y >= 1980; y--) {
+      years.push(y);
+    }
+    return years;
   };
 
   return (
@@ -73,31 +108,77 @@ export default function Home() {
       <div className="flex flex-col min-h-screen font-sans">
         <div className="mt-2 flex flex-1">
           <aside className="w-1/4 p-4 bg-white shadow-md">
-            <div className="flex items-center bg-gray-100 rounded-lg p-2 mb-4">
-              <button
-                onClick={handleClear}
-                className="mt-12 border-none bg-transparent text-gray-600 cursor-pointer"
+          <div className="mb-4">
+              <label className="block text-lg font-semibold mb-2 ml-1 ">Keyword Search</label>
+              <div className="flex items-center bg-white border border-gray-300 rounded-lg overflow-hidden">
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                  placeholder="Search Keywords..."
+                  className="w-full py-2 px-4 focus:outline-none"
+                />
+                <button
+                  onClick={handleClear}
+                  className="px-3 text-gray-600 hover:text-red-600"
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <div className="mb-4">
+              <label className="block text-lg mb-2 ml-1 font-semibold">
+                Filter by Year:
+              </label>
+              <select
+                value={selectedYear}
+                onChange={handleYearChange}
+                className="w-full p-2 border border-gray-300 rounded-lg"
               >
-                <i className="fas fa-times"></i>
-              </button>
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={handleSearch}
-                placeholder="Search Keywords..."
-                className="py-2 flex-1 px-3 rounded-lg border border-gray-300 ml-2"
-              />
-              <button className="border-none bg-transparent text-gray-600 cursor-pointer">
-                <i className="fas fa-search"></i>
-              </button>
+                <option value="">All Years</option>
+                {generateYearOptions().map((year) => (
+                  <option key={year} value={year.toString()}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="mb-4">
+              <label className="block text-lg mb-2 ml-1  font-semibold">Sort by:</label>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => handleSortOrderChange("newest")}
+                  className={`p-2 border rounded-lg ${
+                    sortOrder === "newest"
+                      ? "bg-blue-500 text-white"
+                      : "bg-white text-black"
+                  }`}
+                >
+                  Newest First
+                </button>
+                <button
+                  onClick={() => handleSortOrderChange("oldest")}
+                  className={`p-2 border rounded-lg ${
+                    sortOrder === "oldest"
+                      ? "bg-blue-500 text-white"
+                      : "bg-white text-black"
+                  }`}
+                >
+                  Oldest First
+                </button>
+                
+              </div>
             </div>
             <footer className="mt-auto text-center text-sm text-black">
-              <p>Copyright &copy; {new Date().getFullYear()} Verdictr. All rights reserved.</p>
+              <p>
+                Copyright &copy; {new Date().getFullYear()} Verdictr. All rights
+                reserved.
+              </p>
             </footer>
           </aside>
           <main className="w-3/4 p-4">
             <header className="mb-4">
-              <h3 className="text-base">
+              <h3 className="ml-2 text-base">
                 Data from{" "}
                 <Link
                   target="_blank"
@@ -109,16 +190,11 @@ export default function Home() {
                   </span>
                 </Link>
               </h3>
-              {/* <h3 className="text-base">
-                Problems?{" "}
-                <Link
-                  href="mailto:srujanshriyan@gmail.com"
-                  target="_blank"
-                  className="font-medium text-blue-600 underline"
-                >
-                  Contact <span>srujanshriyan@gmail.com</span>
-                </Link>
-              </h3> */}
+              <p className="ml-2 my-4 text-xl">
+                {filteredData.length} result
+                {filteredData.length !== 1 ? "s" : ""} found
+                {selectedYear ? ` from ${selectedYear}` : ""}
+              </p>
             </header>
             <section className="grid grid-cols-[repeat(auto-fill,minmax(500px,1fr))] gap-10">
               {filteredData.length ? (
@@ -127,9 +203,12 @@ export default function Home() {
                     key={index}
                     className="p-4 bg-white shadow-md rounded-lg border border-gray-300"
                   >
-                    <h2 className="text-lg font-semibold">
+                    <h2 className="font-semibold">
                       Case Number: {item.case_number || ""}
                     </h2>
+                    <span className="text-gray-90">
+                      Year: {item.year}{" "}
+                    </span>
                     <p>
                       <Link
                         target="_blank"
