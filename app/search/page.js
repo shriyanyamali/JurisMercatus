@@ -174,9 +174,6 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <footer className="mt-auto text-center text-sm text-black">
-              <p>Copyright &copy; {new Date().getFullYear()} Verdictr. All rights reserved.</p>
-            </footer>
           </aside>
 
           <main className="w-3/4 p-4">
