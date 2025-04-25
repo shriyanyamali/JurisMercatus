@@ -262,8 +262,8 @@ export default function Home() {
                   className={`px-3 py-1 rounded-full border transition
         ${
           selectedPolicy === ""
-            ? "border-black border-2 my-1 mx-1 font-semibold"
-            : "border-gray-400 my-1 mx-1 text-gray-700 border-2 hover:font-semibold"
+            ? "border-gray-700 border-2 my-1 mx-1 font-semibold"
+            : "border-gray-400 my-1 mx-1 text-gray-700 hover:border-gray-700 duration-300 border-2 hover:font-semibold"
         }
       `}
                 >
@@ -273,26 +273,33 @@ export default function Home() {
                   <button
                     key={area}
                     onClick={() => setSelectedPolicy(area)}
-                    className={`px-3 py-1 rounded-full border transition
-          ${
-            selectedPolicy === area
-              ? "border-black border-2 my-1 mx-1 font-semibold"
-              : "my-1 border-2 mx-1 hover:font-semibold "
-          }
-          ${
-            area === "Antitrust & Cartels"
-              ? "text-blue-800 border-blue-400"
-              : area === "Merger"
-              ? "text-red-700 border-red-400"
-              : area === "State Aid"
-              ? "text-green-800 border-green-400"
-              : area === "Digital Markets Act"
-              ? "text-purple-800 border-purple-400"
-              : area === "Foreign Subsidies"
-              ? "text-orange-800 border-orange-400"
-              : ""
-          }
-        `}
+                    className={`
+                    px-3 py-1 rounded-full border-2 my-1 mx-1 transition
+                    ${selectedPolicy === area ? "font-semibold" : "hover:font-semibold"}
+                    ${
+                      area === "Antitrust & Cartels"
+                        ? selectedPolicy === area
+                          ? "text-blue-700 border-blue-700"
+                          : "text-blue-700 border-blue-400 hover:border-blue-700 duration-300"
+                        : area === "Merger"
+                        ? selectedPolicy === area
+                          ? "text-red-700 border-red-700"
+                          : "text-red-700 border-red-400 hover:border-red-700 duration-300"
+                        : area === "State Aid"
+                        ? selectedPolicy === area
+                          ? "text-green-700 border-green-700"
+                          : "text-green-700 border-green-400 hover:border-green-700 duration-300"
+                        : area === "Digital Markets Act"
+                        ? selectedPolicy === area
+                          ? "text-purple-700 border-purple-700"
+                          : "text-purple-700 border-purple-400 hover:border-purple-700 duration-300"
+                        : area === "Foreign Subsidies"
+                        ? selectedPolicy === area
+                          ? "text-orange-700 border-orange-700"
+                          : "text-orange-700 border-orange-400 hover:border-orange-700 duration-300"
+                        : ""
+                    }
+                  `}
                   >
                     {area}
                   </button>
