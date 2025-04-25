@@ -165,6 +165,31 @@ export default function Home() {
     startIndex + itemsPerPage
   );
 
+  const getResultMessage = () => {
+    const count = filteredData.length
+    const plural = count === 1 ? "result found" : "results found"
+  
+    const areaPart = selectedPolicy || ""
+  
+    const yearPart = selectedYear ? ` from ${selectedYear}` : ""
+  
+    const keywords = searchTerm
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+    const quoted = keywords.map((w) => `"${w}"`)
+    const keywordsPart = quoted.length
+      ? ` with the keyword${quoted.length > 1 ? "s" : ""} ${quoted.join(" and ")}`
+      : ""
+  
+    let msg = areaPart
+      ? `${count} ${areaPart} ${plural}`
+      : `${count} ${plural}`
+  
+    msg += `${yearPart}${keywordsPart}`
+    return msg
+  }
+
   return (
     <>
       <Head>
@@ -275,7 +300,11 @@ export default function Home() {
                     onClick={() => setSelectedPolicy(area)}
                     className={`
                     px-3 py-1 rounded-full border-2 my-1 mx-1 transition
-                    ${selectedPolicy === area ? "font-semibold" : "hover:font-semibold"}
+                    ${
+                      selectedPolicy === area
+                        ? "font-semibold"
+                        : "hover:font-semibold"
+                    }
                     ${
                       area === "Antitrust & Cartels"
                         ? selectedPolicy === area
@@ -366,11 +395,7 @@ export default function Home() {
           {/* Main Display */}
           <main className="w-3/4 p-4">
             <header className="mb-4">
-              <p className="ml-2 my-4 text-xl">
-                {filteredData.length} result
-                {filteredData.length !== 1 ? "s" : ""} found
-                {selectedYear ? ` from ${selectedYear}` : ""}
-              </p>
+              <p className="ml-2 my-4 text-xl">{getResultMessage()}</p>
             </header>
 
             {filteredData.length > 0 && (
