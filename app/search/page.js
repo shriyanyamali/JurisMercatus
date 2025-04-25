@@ -177,7 +177,7 @@ export default function Home() {
           <div className="bg-white rounded-lg p-6 max-w-sm mx-4 text-center">
             <h2 className="text-xl font-semibold mb-3">Notice</h2>
             <p className="mb-4">
-              This website is best experienced on a laptop or desktop. Some
+              This webpage is best experienced on a laptop or desktop. Some
               features may not be displayed correctly on smaller devices.
             </p>
             <label className="flex items-center justify-center mb-4 space-x-2">
