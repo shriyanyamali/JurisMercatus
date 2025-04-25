@@ -263,7 +263,7 @@ export default function Home() {
         ${
           selectedPolicy === ""
             ? "border-black border-2 my-1 mx-1 font-semibold"
-            : "border-gray-400 my-1 mx-1 text-gray-700 hover:border-2 hover:font-semibold"
+            : "border-gray-400 my-1 mx-1 text-gray-700 border-2 hover:font-semibold"
         }
       `}
                 >
@@ -277,7 +277,7 @@ export default function Home() {
           ${
             selectedPolicy === area
               ? "border-black border-2 my-1 mx-1 font-semibold"
-              : "border-gray-300 my-1 border-2 mx-1 hover:font-semibold "
+              : "my-1 border-2 mx-1 hover:font-semibold "
           }
           ${
             area === "Antitrust & Cartels"
