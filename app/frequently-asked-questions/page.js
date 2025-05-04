@@ -19,7 +19,7 @@ const AccordionItem = ({ index, question, answer }) => {
         className="w-full flex justify-between items-center py-5 text-xl sm:text-2xl text-slate-800"
       >
         <span className="pl-5">{question}</span>
-        <span className="relative flex items-center justify-center text-slate-800 transition-transform duration-300 pr-5">
+        <span className="relative flex items-start justify-start text-slate-800 transition-transform duration-300 pr-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -50,7 +50,7 @@ const Page = () => {
   return (
     <>
       <h2 className="flex items-center justify-center py-24 text-5xl text-center px-12">
-      Frequently Asked Questions
+        Frequently Asked Questions
       </h2>
       <div>
         <AccordionItem
@@ -69,6 +69,11 @@ const Page = () => {
           answer="While searching, you might might encounter special characters such as • or . Such characters are not random 
           but rather just characters that were included in the original decision text PDF. Treat these characters like you would treat
           any other character."
+        />
+        <AccordionItem
+          index={9}
+          question="Why are new market decisions not appearing for me?"
+          answer="Since we are regularly adding new market decisions, the keyword search webpage is continually being updated. If you notice that after a prolonged period of time, no new market decisions have appeared for you, trying clearing you cache by clicking Ctrl + Shift + R on Windows or Cmd + Shift + R on Mac."
         />
         <AccordionItem
           index={4}
