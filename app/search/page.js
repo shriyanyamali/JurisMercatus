@@ -153,7 +153,7 @@ export default function Home() {
   const generateYearOptions = () => {
     const currentYear = new Date().getFullYear();
     return Array.from(
-      { length: currentYear - 1979 },
+      { length: currentYear - 2020 },
       (_, i) => currentYear - i
     );
   };
