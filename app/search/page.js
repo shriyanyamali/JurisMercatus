@@ -166,29 +166,28 @@ export default function Home() {
   );
 
   const getResultMessage = () => {
-    const count = filteredData.length
-    const plural = count === 1 ? "result found" : "results found"
-  
-    const areaPart = selectedPolicy || ""
-  
-    const yearPart = selectedYear ? ` from ${selectedYear}` : ""
-  
-    const keywords = searchTerm
-      .trim()
-      .split(/\s+/)
-      .filter(Boolean)
-    const quoted = keywords.map((w) => `"${w}"`)
+    const count = filteredData.length;
+    const plural = count === 1 ? "result found" : "results found";
+
+    const areaPart = selectedPolicy || "";
+
+    const yearPart = selectedYear ? ` from ${selectedYear}` : "";
+
+    const keywords = searchTerm.trim().split(/\s+/).filter(Boolean);
+    const quoted = keywords.map((w) => `"${w}"`);
     const keywordsPart = quoted.length
-      ? ` with the keyword${quoted.length > 1 ? "s" : ""} ${quoted.join(" and ")}`
-      : ""
-  
+      ? ` with the keyword${quoted.length > 1 ? "s" : ""} ${quoted.join(
+          " and "
+        )}`
+      : "";
+
     let msg = areaPart
       ? `${count} ${areaPart} ${plural}`
-      : `${count} ${plural}`
-  
-    msg += `${yearPart}${keywordsPart}`
-    return msg
-  }
+      : `${count} ${plural}`;
+
+    msg += `${yearPart}${keywordsPart}`;
+    return msg;
+  };
 
   return (
     <>
@@ -388,6 +387,29 @@ export default function Home() {
                 >
                   Oldest First
                 </button>
+              </div>
+              <div className="flex gap-2 mt-4">
+                <p className="ml-1 text-sm">
+                  The source code for this site available on{" "}
+                  <Link
+                    href="https://github.com/shriyanyamali/Verdictr"
+                    target="_blank"
+                  >
+                    <span className="font-medium text-blue-600 underline">
+                      GitHub
+                    </span>
+                  </Link>
+                  . The market definitions database was built using the{" "}
+                  <Link
+                    href="https://github.com/shriyanyamali/market-def-scraper"
+                    target="_blank"
+                  >
+                    <span className="font-medium text-blue-600 underline">
+                      market-def-scraper
+                    </span>
+                  </Link>{" "}
+                  repository. See its README file to learn how the exactly the data was generated.
+                </p>
               </div>
             </div>
           </aside>
