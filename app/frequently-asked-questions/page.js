@@ -61,19 +61,19 @@ const Page = () => {
         <AccordionItem
           index={2}
           question="What are the benefits of Verdictr?"
-          answer="Verdictr comes with a myriad of benefits. The benefits include saving time, ease of access, accuracy, and more."
+          answer="Verdictr comes with a myriad of benefits including saving time, ease of access, accuracy, and more."
         />
         <AccordionItem
           index={3}
           question="What are the random characters in the market decision text?"
-          answer="While searching, you might might encounter special characters such as • or . Such characters are not random 
+          answer="While searching, you might encounter special characters such as • or . Such characters are not random 
           but rather just characters that were included in the original decision text PDF. Treat these characters like you would treat
           any other character."
         />
         <AccordionItem
           index={9}
           question="Why are new market decisions not appearing for me?"
-          answer="Since we are regularly adding new market decisions, the keyword search webpage is continually being updated. If you notice that after a prolonged period of time, no new market decisions have appeared for you, trying clearing you cache by clicking Ctrl + Shift + R on Windows or Cmd + Shift + R on Mac."
+          answer="If you notice that after a prolonged period of time, no new market decisions have appeared for you, try clearing you cache by clicking Ctrl + Shift + R on Windows or Cmd + Shift + R on Mac."
         />
         <AccordionItem
           index={4}
@@ -90,11 +90,10 @@ const Page = () => {
         <AccordionItem
           index={6}
           question="How are the market decisions extracted?"
-          answer="Our market decisions are extracted through a rigorous extracting and filtering system. We start by obtaining the 
-            case decision files, where all the market decisions are located. However, these decisions are buried with unnecessary text.
+          answer="Our market decisions are extracted through a rigorous extraction and filtering system. We start by obtaining the 
+            case decision files, where all the market decisions are located. However, these decisions are buried in unnecessary text.
             So after the files are located, we scrape the files and store the scraped text. This text is then filtered twice by
-            a highly intelligent and fined tuned large language model. This filtered text is then uploaded into our database and made
-            accessible to you!"
+            a fined-tuned large language model. This filtered text is then uploaded into our database and made accessible to you!"
         />
         <AccordionItem
           index={7}
