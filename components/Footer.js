@@ -5,6 +5,8 @@ const Footer = () => {
     <footer className="bg-white dark:bg-gray-900 mt-24">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
+
+          {/* Veridctr Logo */}
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
               <img
@@ -17,7 +19,11 @@ const Footer = () => {
               </span>
             </div>
           </div>
+
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-">
+
+          {/* Site Links */}
+
             <div>
               <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
                 Site Links
@@ -45,6 +51,29 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+
+            {/* Repository Links */}
+
+            <div>
+                <h2 className="mr-[6rem] mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
+                  Code Repositories
+                </h2>
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <li className="mb-4">
+                    <a href="https://github.com/shriyanyamali/Verdictr" target="_blank" className="hover:underline">
+                      UI & Search
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a href="https://github.com/shriyanyamali/market-def-scraper" target="_blank" className="hover:underline">
+                      Database Generator
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            {/* Social links and legal links in the footer */}
+
             {/* <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Follow us
@@ -92,6 +121,9 @@ const Footer = () => {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           Copyright &copy; {new Date().getFullYear()} Verdictr. All rights reserved.
           </span>
+
+          {/* Social Image Links in the footer  */}
+          
           {/* <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
               href="#"
