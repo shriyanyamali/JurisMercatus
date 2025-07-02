@@ -45,7 +45,7 @@ export default function Home() {
 
   // ——— load JSON data ———
   useEffect(() => {
-    fetch("/market-definitions.json")
+    fetch("/database.json")
       .then((r) => r.json())
       .then((d) => setData(d))
       .catch((err) => console.error("Error fetching JSON:", err));
