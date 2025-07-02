@@ -66,7 +66,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-4">
                     <a href="https://github.com/shriyanyamali/market-def-scraper" target="_blank" className="hover:underline">
-                      Database Generator
+                      Market Definition Scraper
                     </a>
                   </li>
                 </ul>
