@@ -1,15 +1,13 @@
+## Purpose
+
 Verdictr is a database of thousands of market decisions from over 6000 antitrust cases with a searchable index.
 
-View the live website at [verdictr.shriyanyamali.tech](https://verdictr.shriyanyamali.tech/)
+## Usage Restrictions
 
-Learn more about how Verdictr's database was created [here](https://github.com/shriyanyamali/market-def-scraper)
+You are not authorized to use, modify, or distribute any code, data, or content found in this repository. Any unauthorized use or alteration is strictly prohibited.
 
-Contact
+Thank you for your understanding.
 
-Email: [yamalishriyan@gmail.com](mailto:yamalishriyan@gmail.com)
+###### Copyright © 2025 Verdictr. All rights reserved.
 
-Personal Website: [shriyanyamali.tech](https://shriyanyamali.tech/)
-
-Copyright © 2025 Shriyan Yamali. All rights reserved.
-
-File last updated on 7/1/2025.
+###### File Updated on 1/11/2025
