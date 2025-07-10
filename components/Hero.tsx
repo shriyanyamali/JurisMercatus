@@ -6,7 +6,7 @@ import { CardSpotlightDemo } from "./demo/demo-card-spotlight";
 
 const Hero = () => {
   return (
-    <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
+    <section className="max-container padding-container flex flex-col gap-20  pt-24 md:gap-28 lg:pb-20 lg:pt-24 xl:flex-row">
       <div className="hero-map" />
 
       <div className="mt-[3rem] relative z-20 flex flex-1 flex-col xl:w-1/2">
