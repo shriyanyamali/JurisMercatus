@@ -9,7 +9,7 @@ const Page = () => {
         <title>About Us - Verdictr</title>
         <meta name="description" content="Learn more about Verdictr and our mission" />
       </Head>
-      <h2 className="flex items-center justify-center py-24 text-5xl text-center px-12">
+      <h2 className="flex items-center justify-center pb-24 pt-32 text-5xl text-center px-12">
         How Verdictr Works
       </h2>
       <div>
