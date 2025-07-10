@@ -5,7 +5,7 @@ import Guide from "@/components/Guide";
 import Hero from "@/components/Hero";
 
 export const metadata: Metadata = {
-  title: 'Home - Verdictr',
+  title: 'Verdictr',
 };
 
 export default function HomePage() {

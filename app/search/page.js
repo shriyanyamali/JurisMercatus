@@ -22,10 +22,7 @@ const highlightText = (text, searchTerm) => {
 
 const policyAreas = [
   "Merger",
-  "Antitrust & Cartels",
-  "State Aid",
-  "Digital Markets Act",
-  "Foreign Subsidies",
+  "Antitrust",
 ];
 
 export default function Home() {
@@ -305,7 +302,7 @@ export default function Home() {
                         : "hover:font-semibold"
                     }
                     ${
-                      area === "Antitrust & Cartels"
+                      area === "Antitrust"
                         ? selectedPolicy === area
                           ? "text-blue-700 border-blue-700"
                           : "text-blue-700 border-blue-400 hover:border-blue-700 duration-300"
@@ -313,18 +310,6 @@ export default function Home() {
                         ? selectedPolicy === area
                           ? "text-red-700 border-red-700"
                           : "text-red-700 border-red-400 hover:border-red-700 duration-300"
-                        : area === "State Aid"
-                        ? selectedPolicy === area
-                          ? "text-green-700 border-green-700"
-                          : "text-green-700 border-green-400 hover:border-green-700 duration-300"
-                        : area === "Digital Markets Act"
-                        ? selectedPolicy === area
-                          ? "text-purple-700 border-purple-700"
-                          : "text-purple-700 border-purple-400 hover:border-purple-700 duration-300"
-                        : area === "Foreign Subsidies"
-                        ? selectedPolicy === area
-                          ? "text-orange-700 border-orange-700"
-                          : "text-orange-700 border-orange-400 hover:border-orange-700 duration-300"
                         : ""
                     }
                   `}
@@ -478,17 +463,11 @@ export default function Home() {
                     <span
                       className={`absolute top-3 right-3 text-sm px-2 py-1 rounded-full font-semibold
                       ${
-                        item.policy_area === "Antitrust & Cartels"
+                        item.policy_area === "Antitrust"
                           ? "bg-blue-100 text-blue-800"
                           : item.policy_area === "Merger"
                           ? "bg-red-100 text-red-700"
                           : item.policy_area === "State Aid"
-                          ? "bg-green-100 text-green-800"
-                          : item.policy_area === "Digital Markets Act"
-                          ? "bg-purple-100 text-purple-800"
-                          : item.policy_area === "Foreign Subsidies"
-                          ? "bg-orange-100 text-orange-800"
-                          : "bg-gray-100 text-gray-800"
                       }
                     `}
                     >
