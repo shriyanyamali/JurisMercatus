@@ -229,8 +229,8 @@ export default function Home() {
       )}
 
       <div className="flex flex-col min-h-screen font-sans">
-        <div className="mt-2 flex flex-1">
-          <aside className="w-1/4 p-4 bg-white shadow-md">
+        <div className="mt-2 flex flex-col md:flex-row flex-1">
+          <aside className="w-full md:w-1/4 p-4 bg-white shadow-md">
             <h3 className="ml-1 text-lg my-4">
               Data from{" "}
               <Link
@@ -242,6 +242,7 @@ export default function Home() {
                 </span>
               </Link>
             </h3>
+            
             {/* Search Input */}
             <div className="mb-4">
               <label className="block text-lg font-semibold mb-2 ml-1">
@@ -322,7 +323,7 @@ export default function Home() {
                 value={selectedYear}
                 onChange={handleYearChange}
                 className="
-                w-full p-2 pr-64 border-2 border-gray-300 rounded-lg
+                w-full p-2 pr-8 border-2 border-gray-300 rounded-lg
                 bg-white
                 hover:bg-gray-300
                 focus:bg-white
@@ -345,7 +346,7 @@ export default function Home() {
                 Items per page:
               </label>
               <div className="flex gap-2 ml-1">
-                {[20, 50].map((n) => (
+                {[10, 20, 50].map((n) => (
                   <button
                     key={n}
                     onClick={() => {
@@ -356,7 +357,7 @@ export default function Home() {
                  ${
                    itemsPerPage === n
                      ? "border-red-400 text-red-700"
-                     : "bg-white border-gray-300 text-gray-700 hover:border-red-400 hover:text-red-700 duration-300"
+                     : "bg-white border-gray-300 text-gray-700 hover:border-red-400 hover:text-red-700"
                  }
                `}
                   >
@@ -421,20 +422,21 @@ export default function Home() {
           </aside>
 
           {/* Main Display */}
-          <main className="w-3/4 p-4">
+          <main className="w-full md:w-3/4 p-4">
             <header className="mb-4">
               <p className="ml-2 my-4 text-xl">{getResultMessage()}</p>
             </header>
 
             {filteredData.length > 0 && (
-              <div className="flex items-center gap-4 mb-6 ml-2">
+              <div className="flex flex-wrap items-center gap-4 mb-6 ml-0 sm:ml-2">
                 <button
                   onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
                   disabled={currentPage === 1}
                   className="px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
                 >
-                  &laquo; Prev
+                  « Prev
                 </button>
+
                 <button
                   onClick={() =>
                     handlePageChange(Math.min(currentPage + 1, totalPages))
@@ -442,7 +444,7 @@ export default function Home() {
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
                 >
-                  Next &raquo;
+                  Next »
                 </button>
 
                 <form
@@ -461,19 +463,20 @@ export default function Home() {
                   />
                   <button
                     type="submit"
-                    className="px-3 py-2 bg-blue-500 text-white rounded hover:text-blue-500 border-2 border-blue-500 hover:bg-white duration-300"
+                    className="px-3 py-2 bg-blue-500 text-white rounded border-2 border-blue-500 hover:bg-white hover:text-blue-500 duration-300"
                   >
                     Go
                   </button>
                 </form>
-                <span className="ml-4 text-lg">
+
+                <span className="w-full text-center text-base sm:w-auto sm:text-left sm:ml-4 sm:text-lg">
                   Page {currentPage} of {totalPages}
                 </span>
               </div>
             )}
 
             {/* Cards Grid */}
-            <section className="grid grid-cols-[repeat(auto-fill,minmax(500px,1fr))] gap-10">
+            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(500px,1fr))] gap-6">
               {currentPageData.length ? (
                 currentPageData.map((item, index) => (
                   <div
@@ -532,14 +535,15 @@ export default function Home() {
             </section>
 
             {filteredData.length > 0 && (
-              <div className="flex items-center gap-4 mt-6 ml-2">
+              <div className="flex flex-wrap items-center gap-4 mt-6 ml-0 sm:ml-2">
                 <button
                   onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
                   disabled={currentPage === 1}
                   className="px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
                 >
-                  &laquo; Prev
+                  « Prev
                 </button>
+
                 <button
                   onClick={() =>
                     handlePageChange(Math.min(currentPage + 1, totalPages))
@@ -547,7 +551,7 @@ export default function Home() {
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
                 >
-                  Next &raquo;
+                  Next »
                 </button>
 
                 <form
@@ -566,13 +570,13 @@ export default function Home() {
                   />
                   <button
                     type="submit"
-                    className="px-3 py-2 bg-blue-500 text-white rounded hover:text-blue-500 border-2 border-blue-500 hover:bg-white duration-300"
+                    className="px-3 py-2 bg-blue-500 text-white rounded border-2 border-blue-500 hover:bg-white hover:text-blue-500 duration-300"
                   >
                     Go
                   </button>
                 </form>
 
-                <span className="ml-4 text-lg">
+                <span className="w-full text-center text-base sm:w-auto sm:text-left sm:ml-4 sm:text-lg">
                   Page {currentPage} of {totalPages}
                 </span>
               </div>
