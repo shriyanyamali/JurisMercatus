@@ -23,7 +23,6 @@ const highlightText = (text, searchTerm) => {
 const policyAreas = ["Merger", "Antitrust"];
 
 export default function Home() {
-  // ——— existing state/hooks ———
   const [data, setData] = useState([]);
   const [pageInput, setPageInput] = useState("");
   const [filteredData, setFilteredData] = useState([]);
@@ -37,7 +36,6 @@ export default function Home() {
   const [showWarning, setShowWarning] = useState(false);
   const [doNotShow, setDoNotShow] = useState(false);
 
-  // ——— reset current page when items per page changes ———
   useEffect(() => {
     setCurrentPage(1);
   }, [itemsPerPage]);
@@ -64,7 +62,6 @@ export default function Home() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // ——— filter + sort whenever inputs change ———
   useEffect(() => {
     const norm = normalizeString(searchTerm);
     let filtered = data.filter((item) => {
@@ -94,7 +91,6 @@ export default function Home() {
     setCurrentPage(1);
   }, [searchTerm, selectedYear, selectedPolicy, sortOrder, data]);
 
-  // ——— modal: check localStorage on mount ———
   useEffect(() => {
     const hidden =
       typeof window !== "undefined" &&
@@ -111,7 +107,6 @@ export default function Home() {
     setShowWarning(false);
   };
 
-  // ——— existing handlers ———
   const handleSearch = (e) => setSearchTerm(e.target.value);
   const handleClear = () => {
     setSearchTerm("");
@@ -136,7 +131,7 @@ export default function Home() {
       setCurrentPage(pageNum);
       window.scrollTo({ top: window.scrollY });
     }
-    setPageInput(""); // ← clear the field
+    setPageInput("");
   };
 
   const generateYearOptions = () => {
@@ -158,8 +153,16 @@ export default function Home() {
     const count = filteredData.length;
     const plural = count === 1 ? "result found" : "results found";
 
-    const areaPart = selectedPolicy || "";
+    const noFilters =
+      !searchTerm.trim() && 
+      !selectedYear && 
+      !selectedPolicy; 
 
+    if (noFilters) {
+      return `${count} total ${plural}`;
+    }
+
+    const areaPart = selectedPolicy ? selectedPolicy : "";
     const yearPart = selectedYear ? ` from ${selectedYear}` : "";
 
     const keywords = searchTerm.trim().split(/\s+/).filter(Boolean);
@@ -242,7 +245,7 @@ export default function Home() {
                 </span>
               </Link>
             </h3>
-            
+
             {/* Search Input */}
             <div className="mb-4">
               <label className="block text-lg font-semibold mb-2 ml-1">
@@ -343,7 +346,7 @@ export default function Home() {
             {/* ——— Items per page toggle ——— */}
             <div className="mb-4">
               <label className="block text-lg font-semibold mb-2 ml-1">
-                Items per page:
+                Items Per Page:
               </label>
               <div className="flex gap-2 ml-1">
                 {[10, 20, 50].map((n) => (
@@ -370,7 +373,7 @@ export default function Home() {
             {/* Sort Options */}
             <div className="mb-4">
               <label className="block text-lg mb-2 ml-1 font-semibold">
-                Sort by:
+                Sort By:
               </label>
               <div className="flex gap-2">
                 <button
