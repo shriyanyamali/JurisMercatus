@@ -1,74 +1,114 @@
 "use client";
 
+import React, { useState } from "react";
 import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
-import { useState } from "react";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
-      <Link href="/">
-        <Image
-          src="/hilink-logo.svg"
-          alt="logo"
-          width={74}
-          height={29}
-          className="invisible"
-        />
-      </Link>
+    <nav className="bg-white shadow-md fixed w-full z-30">
+      <div className="max-container padding-container flex items-center justify-between py-4">
+        {/* LOGO */}
+        <Link href="/" className="cursor-pointer flex-shrink-0 p-0 mr-4">
+          <Image
+            src="verdictr-logo.png"
+            alt="Verdictr logo"
+            width={100}
+            height={48}
+            className="rounded-full"
+            priority
+          />
+        </Link>
 
-      <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link
-            href={link.href}
-            key={link.key}
-            className="!font-semibold regular-16 !text-lg text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:underline"
-          >
-            {link.label}
-          </Link>
-        ))}
-      </ul>
-
-      <div className="lg:flexCenter invisible hidden">
-        <Button
-          type="button"
-          title="Login"
-          icon="/user.svg"
-          variant="btn_dark_green"
-        />
-      </div>
-
-      <Image
-        src={isMenuOpen ? "/cross.svg" : "/menu.svg"}
-        alt="menu"
-        width={isMenuOpen ? 24 : 32} // Adjust sizes here
-        height={isMenuOpen ? 24 : 32} // Adjust sizes here
-        className="inline-block cursor-pointer lg:hidden"
-        onClick={toggleMenu}
-      />
-
-      {isMenuOpen && (
-        <ul className="absolute top-full left-0 w-full bg-gray-800 text-white p-4 flex flex-col gap-8 lg:hidden z-40">
+        {/* desktop links */}
+        <ul className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
-            <Link
-              href={link.href}
-              key={link.key}
-              className="text-lg font-semibold cursor-pointer transition-all hover:underline"
-              onClick={() => setIsMenuOpen(false)} // Close the menu after a link is clicked
-            >
-              {link.label}
-            </Link>
+            <li key={link.key} className="relative group">
+              <Link
+                href={link.href}
+                className="
+                  text-gray-700
+                  text-2xl
+                  font-medium
+                  transition-colors duration-200
+                  hover:text-green-600
+                "
+              >
+                {link.label}
+              </Link>
+              <span className="absolute bottom-0 left-0 h-0.5 w-full bg-green-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            </li>
           ))}
         </ul>
-      )}
+
+        {/* invisible Sign In (holds width) */}
+        <div className="hidden lg:flex items-center invisible pointer-events-none">
+          <Button
+            type="button"
+            title="Sign In"
+            icon="/user.svg"
+            variant="btn_primary"
+          />
+        </div>
+
+        {/* mobile menu toggle */}
+        <button
+          onClick={toggleMenu}
+          className="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+        >
+          <Image
+            src={isMenuOpen ? "/cross.svg" : "/menu.svg"}
+            alt="menu"
+            width={28}
+            height={28}
+            className="
+      w-7 h-7              /* force both to 28px × 28px */
+      transform
+      transition-transform
+      duration-200
+    "
+            style={{
+              transform: isMenuOpen ? "rotate(90deg)" : "none",
+              transformOrigin: "center",
+            }}
+          />
+        </button>
+      </div>
+
+      {/* mobile dropdown */}
+      <div
+        className={`
+          overflow-hidden bg-white lg:hidden
+          transition-all duration-300 ease-in-out
+          ${isMenuOpen ? "max-h-screen" : "max-h-0"}
+        `}
+      >
+        <ul className="flex flex-col gap-6 p-6">
+          {NAV_LINKS.map((link) => (
+            <li key={link.key}>
+              <Link
+                href={link.href}
+                className="
+                  block
+                  text-gray-700
+                  text-2xl
+                  font-medium
+                  transition-colors duration-200
+                  hover:text-green-600
+                "
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };
