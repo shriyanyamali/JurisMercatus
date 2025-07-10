@@ -20,10 +20,7 @@ const highlightText = (text, searchTerm) => {
   return text.replace(regex, "<mark>$1</mark>");
 };
 
-const policyAreas = [
-  "Merger",
-  "Antitrust",
-];
+const policyAreas = ["Merger", "Antitrust"];
 
 export default function Home() {
   // ——— existing state/hooks ———
@@ -35,10 +32,15 @@ export default function Home() {
   const [selectedYear, setSelectedYear] = useState("");
   const [selectedPolicy, setSelectedPolicy] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20;
+  const [itemsPerPage, setItemsPerPage] = useState(20);
   const [showScroll, setShowScroll] = useState(false);
   const [showWarning, setShowWarning] = useState(false);
   const [doNotShow, setDoNotShow] = useState(false);
+
+  // ——— reset current page when items per page changes ———
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [itemsPerPage]);
 
   // ——— load JSON data ———
   useEffect(() => {
@@ -47,16 +49,6 @@ export default function Home() {
       .then((d) => setData(d))
       .catch((err) => console.error("Error fetching JSON:", err));
   }, []);
-
-  // ——— log first few policy areas (optional) ———
-  useEffect(() => {
-    if (data.length) {
-      console.log("First few policy areas:");
-      data
-        .slice(0, 10)
-        .forEach((item) => console.log(`-> "${item.policy_area}"`));
-    }
-  }, [data]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -286,6 +278,7 @@ export default function Home() {
             ? "border-gray-700 border-2 my-1 mx-1 font-semibold"
             : "border-gray-400 my-1 mx-1 text-gray-700 hover:border-gray-700 duration-300 border-2 hover:font-semibold"
         }
+
       `}
                 >
                   All
@@ -346,6 +339,33 @@ export default function Home() {
               </select>
             </div>
 
+            {/* ——— Items per page toggle ——— */}
+            <div className="mb-4">
+              <label className="block text-lg font-semibold mb-2 ml-1">
+                Items per page:
+              </label>
+              <div className="flex gap-2 ml-1">
+                {[20, 50].map((n) => (
+                  <button
+                    key={n}
+                    onClick={() => {
+                      setItemsPerPage(n);
+                      setCurrentPage(1);
+                    }}
+                    className={`px-3 py-1 rounded border-2 transition
+                 ${
+                   itemsPerPage === n
+                     ? "border-red-400 text-red-700"
+                     : "bg-white border-gray-300 text-gray-700 hover:border-red-400 hover:text-red-700 duration-300"
+                 }
+               `}
+                  >
+                    {n}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Sort Options */}
             <div className="mb-4">
               <label className="block text-lg mb-2 ml-1 font-semibold">
@@ -393,7 +413,8 @@ export default function Home() {
                       market-def-scraper
                     </span>
                   </Link>{" "}
-                  repository. See its README file to learn how the exactly the data was generated.
+                  repository. See its README file to learn how the exactly the
+                  data was generated.
                 </p>
               </div>
             </div>
@@ -467,7 +488,7 @@ export default function Home() {
                           ? "bg-blue-100 text-blue-800"
                           : item.policy_area === "Merger"
                           ? "bg-red-100 text-red-700"
-                          : item.policy_area === "State Aid"
+                          : ""
                       }
                     `}
                     >
