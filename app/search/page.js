@@ -228,7 +228,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="flex flex-col min-h-screen font-sans">
+      <div className="pt-20 flex flex-col min-h-screen font-sans">
         <div className="mt-2 flex flex-col md:flex-row flex-1">
           <aside className="w-full md:w-1/4 p-4 bg-white shadow-md">
             <h3 className="ml-1 text-lg my-4">
