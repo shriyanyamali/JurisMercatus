@@ -34,9 +34,9 @@ const Navbar: React.FC = () => {
         ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}
       `}
     >
-      <div className="max-container padding-container flex items-center justify-between lg:justify-center p-2 mt-2 sm:mt-4 gap-6 lg:p-0">
+      <div className="max-container padding-container flex items-center justify-between lg:justify-center p-2 gap-6 lg:p-0">
         {/* LOGO */}
-        <Link href="/" className="cursor-pointer flex-shrink-0 mr-4 p-0">
+        <Link href="/" className="cursor-pointer flex-shrink-0 mr-4 p-2 sm:p-4">
           <Image
             src="verdictr-logo.png"
             alt="Verdictr logo"
