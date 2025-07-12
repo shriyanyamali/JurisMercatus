@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { NAV_LINKS } from "@/constants";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
@@ -21,19 +22,19 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => setIsMenuOpen(prev => !prev);
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+
+  const pathname = usePathname();
 
   return (
     <nav
       className={`
         fixed top-0 left-0 w-full z-30
         transition-shadow duration-300
-        ${isScrolled
-          ? "bg-white shadow-md"
-          : "bg-transparent shadow-none"}
+        ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}
       `}
     >
-      <div className="max-container padding-container flex items-center justify-between lg:justify-center p-2 gap-4 lg:p-0">
+      <div className="max-container padding-container flex items-center justify-between lg:justify-center p-2 mt-2 sm:mt-4 gap-6 lg:p-0">
         {/* LOGO */}
         <Link href="/" className="cursor-pointer flex-shrink-0 mr-4 p-0">
           <Image
@@ -48,44 +49,40 @@ const Navbar: React.FC = () => {
 
         {/* desktop links */}
         <ul className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map(link => (
-            <li key={link.key} className="relative group">
-              <Link
-                href={link.href}
-                className={`
-                  text-xl font-medium transition-colors duration-200
-                  ${isScrolled ? "text-gray-700 hover:text-green-600"
-                               : "text-gray-700 hover:text-green-600"}
-                `}
-              >
-                {link.label}
-              </Link>
-              <span
-                className={`
-                  absolute bottom-0 left-0 h-0.5 w-full bg-green-600
-                  scale-x-0 group-hover:scale-x-100
-                  transition-transform duration-300 origin-left
-                `}
-              />
-            </li>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <li key={link.key} className="relative">
+                <div className="group">
+                  <Link
+                    href={link.href}
+                    className={`
+              text-xl font-medium transition-colors duration-200
+              ${
+                isActive
+                  ? "text-green-600"
+                  : "text-gray-700 group-hover:text-green-600"
+              }
+            `}
+                  >
+                    {link.label}
+                  </Link>
+                  <span
+                    className={`
+              absolute bottom-0 left-0 h-0.5 w-full bg-green-600
+              ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}
+              transition-transform duration-300 origin-left
+            `}
+                  />
+                </div>
+              </li>
+            );
+          })}
         </ul>
 
-        {/* invisible Sign In (holds width) */}
-        <div className="hidden lg:flex items-center invisible pointer-events-none">
-          <Button
-            type="button"
-            title="Sign In"
-            icon="/user.svg"
-            variant="btn_primary"
-          />
-        </div>
-
         {/* mobile menu toggle */}
-        <button
-          onClick={toggleMenu}
-          className="lg:hidden p-2"
-        >
+        <button onClick={toggleMenu} className="lg:hidden p-2">
           <Image
             src={isMenuOpen ? "/cross.svg" : "/menu.svg"}
             alt="menu"
@@ -111,20 +108,28 @@ const Navbar: React.FC = () => {
         `}
       >
         <ul className="flex flex-col gap-6 p-6">
-          {NAV_LINKS.map(link => (
-            <li key={link.key}>
-              <Link
-                href={link.href}
-                className="
-                  block text-gray-700 text-2xl font-medium
-                  transition-colors duration-200 hover:text-green-600
-                "
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <li key={link.key}>
+                <Link
+                  href={link.href}
+                  className={`
+            block text-2xl font-medium transition-colors duration-200
+            ${
+              isActive
+                ? "text-green-600 underline"
+                : "text-gray-700 hover:text-green-600"
+            }
+          `}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>
