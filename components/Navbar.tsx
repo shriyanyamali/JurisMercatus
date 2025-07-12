@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}
       `}
     >
-      <div className="max-container padding-container flex items-center justify-between lg:justify-center p-2 gap-6 lg:p-0">
+      <div className="max-container padding-container flex items-center justify-between lg:justify-center p-2 gap-2 lg:p-0">
         {/* LOGO */}
         <Link href="/" className="cursor-pointer flex-shrink-0 mr-4 p-2 sm:p-4">
           <Image
@@ -70,10 +70,11 @@ const Navbar: React.FC = () => {
                   </Link>
                   <span
                     className={`
-              absolute bottom-0 left-0 h-0.5 w-full bg-green-600
-              ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}
-              transition-transform duration-300 origin-left
-            `}
+                                absolute left-0 -bottom-1 h-0.5 bg-green-600
+                                ${isActive ? "w-full scale-x-100" : "w-0 group-hover:w-full scale-x-100"}
+                                transition-all duration-300 origin-left
+                                block
+                              `}
                   />
                 </div>
               </li>
