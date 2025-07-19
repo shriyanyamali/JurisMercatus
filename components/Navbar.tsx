@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { NAV_LINKS } from "@/constants";
 import { usePathname } from "next/navigation";
+import { Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
@@ -23,7 +24,6 @@ const Navbar: React.FC = () => {
   }, []);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-
   const pathname = usePathname();
 
   return (
@@ -34,47 +34,46 @@ const Navbar: React.FC = () => {
         ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}
       `}
     >
-      <div className="max-container padding-container flex items-center justify-between lg:justify-center p-2 gap-2 lg:p-0">
-        {/* LOGO */}
-        <Link href="/" className="cursor-pointer flex-shrink-0 mr-4 p-2 sm:p-4">
-          <Image
-            src="verdictr-logo.png"
-            alt="Verdictr logo"
-            width={100}
-            height={48}
-            className="rounded-full"
-            priority
-          />
+      <div className="max-container padding-container flex items-center justify-between p-2 gap-10 lg:p-0 my-3">
+        {/* LOGO (left) */}
+        <Link
+          href="/"
+          className="cursor-pointer flex-shrink-0 p-2 sm:p-4 text-4xl font-bold text-black"
+        >
+          Verdictr
         </Link>
 
-        {/* desktop links */}
-        <ul className="hidden lg:flex items-center gap-8">
+        {/* DESKTOP LINKS (center) */}
+        <ul className="hidden lg:flex items-center gap-16">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
-
             return (
               <li key={link.key} className="relative">
                 <div className="group">
                   <Link
                     href={link.href}
                     className={`
-              text-xl font-medium transition-colors duration-200
-              ${
-                isActive
-                  ? "text-green-600"
-                  : "text-gray-700 group-hover:text-green-600"
-              }
-            `}
+                      text-lg font-medium transition-colors duration-200
+                      ${
+                        isActive
+                          ? "text-green-600"
+                          : "text-gray-700 group-hover:text-green-600"
+                      }
+                    `}
                   >
                     {link.label}
                   </Link>
                   <span
                     className={`
-                                absolute left-0 -bottom-1 h-0.5 bg-green-600
-                                ${isActive ? "w-full scale-x-100" : "w-0 group-hover:w-full scale-x-100"}
-                                transition-all duration-300 origin-left
-                                block
-                              `}
+                      absolute left-0 -bottom-1 h-0.5 bg-green-600
+                      ${
+                        isActive
+                          ? "w-full scale-x-100"
+                          : "w-0 group-hover:w-full"
+                      }
+                      transition-all duration-300 origin-left
+                      block
+                    `}
                   />
                 </div>
               </li>
@@ -82,16 +81,47 @@ const Navbar: React.FC = () => {
           })}
         </ul>
 
-        {/* mobile menu toggle */}
+        <div className="hidden lg:block">
+          <div className="hidden lg:block">
+            <Link
+              href="mailto:yamalishriyan@gmail.com"
+              target="_blank"
+              className="
+          group
+          relative
+          inline-flex items-center justify-center
+          bg-gray-900 text-white font-regular
+          rounded-full
+          pl-[2rem] pr-[4.5rem] py-[1.2rem]      
+          text-[1rem] leading-none   
+          hover:bg-white border hover:border-gray-900 hover:text-gray-900
+          transition duration-300 ease-in-out
+        "
+            >
+              Contact
+              <Send
+                className="
+                absolute right-2
+                bg-white rounded-full p-2
+                text-black w-10 h-10
+                transition duration-300 ease-in-out
+                group-hover:bg-gray-900
+                group-hover:text-white
+                overflow-visible
+              "
+              />
+            </Link>
+          </div>
+        </div>
+
+        {/* MOBILE MENU TOGGLE */}
         <button onClick={toggleMenu} className="lg:hidden p-2">
           <Image
             src={isMenuOpen ? "/cross.svg" : "/menu.svg"}
             alt="menu"
             width={28}
             height={28}
-            className={`
-              w-7 h-7 transform transition-transform duration-200
-            `}
+            className="w-7 h-7 transition-transform duration-200"
             style={{
               transform: isMenuOpen ? "rotate(90deg)" : "none",
               transformOrigin: "center",
@@ -100,7 +130,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* mobile dropdown */}
+      {/* MOBILE DROPDOWN */}
       <div
         className={`
           overflow-hidden bg-white lg:hidden
@@ -111,19 +141,18 @@ const Navbar: React.FC = () => {
         <ul className="flex flex-col gap-6 p-6">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
-
             return (
               <li key={link.key}>
                 <Link
                   href={link.href}
                   className={`
-            block text-2xl font-medium transition-colors duration-200
-            ${
-              isActive
-                ? "text-green-600 underline"
-                : "text-gray-700 hover:text-green-600"
-            }
-          `}
+                    block text-2xl font-medium transition-colors duration-200
+                    ${
+                      isActive
+                        ? "text-green-600 underline"
+                        : "text-gray-700 hover:text-green-600"
+                    }
+                  `}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
