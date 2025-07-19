@@ -387,11 +387,11 @@ export default function SearchPage() {
                     min={1}
                     max={totalPages}
                     placeholder="Page #"
-                    className="w-20 p-2 border rounded"
+                    className="w-[5.5rem] p-2 border rounded"
                   />
                   <button
                     type="submit"
-                    className="px-3 py-[0.375rem] bg-blue-500 text-white rounded border-2 border-blue-500 hover:bg-white hover:text-blue-500 duration-300"
+                    className="ml-2 px-3 py-[0.375rem] bg-blue-500 text-white rounded border-2 border-blue-500 hover:bg-white hover:text-blue-500 duration-300"
                   >
                     Go
                   </button>

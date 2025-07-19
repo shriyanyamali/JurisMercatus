@@ -18,7 +18,7 @@ const AccordionItem = ({ index, question, answer }) => {
         aria-expanded={isOpen}
         className="w-full flex justify-between items-center py-5 text-xl sm:text-2xl text-slate-800"
       >
-        <span className="pl-5">{question}</span>
+        <span className="pl-5 font-medium">{question}</span>
         <span className="relative flex items-start justify-start text-slate-800 transition-transform duration-300 pr-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const AccordionItem = ({ index, question, answer }) => {
 const Page = () => {
   return (
     <>
-      <h2 className="flex items-center justify-center pb-24 pt-32 text-5xl text-center px-12">
+      <h2 className="font-semibold flex items-center justify-center pb-24 pt-40 text-5xl text-center px-12">
         Frequently Asked Questions
       </h2>
       <div>
