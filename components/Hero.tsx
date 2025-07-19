@@ -1,77 +1,107 @@
-import Image from "next/image";
-import Button from "./Button";
-import { AnimatedTooltipPreview } from "./demo/demo-animated-tooltip";
-import { AnimatedPinDemo } from "./demo/demo-3d-pin";
-import { CardSpotlightDemo } from "./demo/demo-card-spotlight";
+import Link from "next/link";
+import { MoveUpRight } from "lucide-react";
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section className="max-container padding-container flex flex-col gap-20  pt-24 md:gap-28 lg:pb-20 lg:pt-24 xl:flex-row">
-      <div className="hero-map" />
+    <section
+      className="
+        max-w-screen-xl mx-auto
+        px-4
+        flex flex-col items-center
+        space-y-16
+        pt-40 lg:pb-20
+      "
+    >
+      <div className="hero-map mb-12" />
 
-      <div className="mt-[3rem] relative z-20 flex flex-1 flex-col xl:w-1/2">
-        <h1 className="bold-52 lg:bold-88">Verdictr</h1>
-        <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
-          Verdictr is a 100% free and open access way to find market definitions.
-          We have an extensive collection of market decisions from over 6000
-          different cases spanning more than a decade.
+      <div className="flex flex-col items-center text-center space-y-8">
+        <h1
+          className="
+          font-semibold
+          text-[60px] lg:text-[84px]
+          leading-[1.4]
+          text-gray-900 
+          [word-spacing:0.15em]
+        "
+        >
+          <span className="font-bold bg-gradient-to-r from-[#1d4ed8] via-[#1d4ed8] to-[#200f7c] bg-clip-text text-transparent">
+            Verdictr:
+          </span>
+          {""} The {""}
+          <span className="relative inline-block">
+            <span className="relative z-10">Easiest Way</span>
+            <span className="absolute bottom-0 left-0 w-full h-1/2 bg-[#03cea4] z-0"></span>
+          </span>{" "}
+          {""}
+          To Find Market Definitions
+        </h1>
+
+        <p
+          className="
+          mt-0  
+          text-xl sm:text-2xl
+          leading-relaxed
+          max-w-4xl
+          text-black
+          font-medium
+          "
+        >
+         <span className="
+         underline decoration-wavy decoration-2 
+         decoration-[#03cea4]"
+         >
+          4000+
+         </span> 
+
+         market decisions. {" "}
+         
+         <span className="
+         underline decoration-wavy decoration-2 
+         decoration-[#03cea4]"
+         >
+          600
+         </span> {" "}
+         
+         unique cases. {" "}
+         
+          <span className="
+         underline decoration-wavy decoration-2 
+         decoration-[#03cea4]"
+         >
+          100%
+         </span> {" "}
+         
+         Free.
         </p>
 
-        <div className="mt-11 flex flex-col w-full gap-3 sm:flex-row">
-          <a href="/search">
-            <Button
-              type="button"
-              title="Try Verdictr Out"
-              variant="btn_green"
-            />
-          </a>
-
-          <a href="/how-verdictr-works">
-            <Button
-              type="button"
-              title="How does it work?"
-              icon="/play.svg"
-              variant="btn_white_text"
-            />
-          </a>
-        </div>
+        <Link
+          href="/search"
+          className="
+          group
+          !mt-14
+          relative
+          inline-flex items-center justify-center
+          bg-gray-900 text-white font-regular
+          rounded-full
+          pl-[2.5rem] pr-[5rem] py-[1.2rem]      
+          text-[1rem] leading-none   
+          hover:bg-white border hover:border-gray-900 hover:text-gray-900
+          transition duration-300 ease-in-out
+        "
+        >
+          Try It Out
+          <MoveUpRight
+            className="
+      absolute right-2
+      bg-white rounded-full p-2
+      text-black w-10 h-10
+      transition duration-300 ease-in-out
+      group-hover:bg-gray-900
+      group-hover:text-white
+    "
+          />
+        </Link>
       </div>
-      <div className="flex items-start">
-        <span className="mt-[4rem] hidden sm:block">
-          <CardSpotlightDemo />
-        </span>
-        <div className="relative">
-          <span className="absolute -top-3 left-1/2 transform -translate-x-1/2"></span>
-          {/* <div className="hidden md:block">
-            <AnimatedPinDemo />
-          </div> */}
-        </div>
-      </div>
-
-      {/* <div className="relative flex flex-1 items-start">
-        <div className="relative z-20 flex w-[268px] flex-col gap-8 rounded-3xl bg-green-90 px-7 py-8">
-          <div className="flex flex-col">
-            <div className="flexBetween">
-              <p className="regular-16 text-gray-20">Location</p>
-              <Image src="/close.svg" alt="close" width={24} height={24} />
-            </div>
-            <p className="bold-20 text-white">Aguas Calientes</p>
-          </div>
-
-          <div className="flexBetween">
-            <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Distance</p>
-              <p className="bold-20 text-white">173.28 mi</p>
-            </div>
-            <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Elevation</p>
-              <p className="bold-20 text-white">2.040 km</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
-};
-
-export default Hero;
+}

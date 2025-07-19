@@ -1,4 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/VastagoGrotesk-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: 'Vastago Grotesk', sans-serif;
+}
+
 
 @tailwind base;
 @tailwind components;
@@ -8,10 +83,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: Inter;
 }
 
 @layer utilities {
@@ -57,72 +128,72 @@ body {
 
   /* FONTS */
   .regular-64 {
-    @apply text-[64px] font-[400] leading-[120%];
-  }
+  @apply font-sans text-[64px] font-[400] leading-[120%];
+}
 
-  .regular-40 {
-    @apply text-[40px] font-[400] leading-[120%];
-  }
+.regular-40 {
+  @apply font-sans text-[40px] font-[400] leading-[120%];
+}
 
-  .regular-32 {
-    @apply text-[32px] font-[400];
-  }
+.regular-32 {
+  @apply font-sans text-[32px] font-[400];
+}
 
-  .regular-24 {
-    @apply text-[24px] font-[400];
-  }
+.regular-24 {
+  @apply font-sans text-[24px] font-[400];
+}
 
-  .regular-20 {
-    @apply text-[20px] font-[400];
-  }
+.regular-20 {
+  @apply font-sans text-[20px] font-[400];
+}
 
-  .regular-18 {
-    @apply text-[18px] font-[400];
-  }
+.regular-18 {
+  @apply font-sans text-[18px] font-[400];
+}
 
-  .regular-16 {
-    @apply text-[16px] font-[400];
-  }
+.regular-16 {
+  @apply font-sans text-[16px] font-[400];
+}
 
-  .regular-14 {
-    @apply text-[14px] font-[400];
-  }
+.regular-14 {
+  @apply font-sans text-[14px] font-[400];
+}
 
-  .medium-14 {
-    @apply text-[14px] font-[600];
-  }
+.medium-14 {
+  @apply font-sans text-[14px] font-[600];
+}
 
-  .bold-88 {
-    @apply text-[88px] font-[700] leading-[120%];
-  }
+.bold-88 {
+  @apply font-sans text-[88px] font-[700] leading-[120%];
+}
 
-  .bold-64 {
-    @apply text-[64px] font-[700] leading-[120%];
-  }
+.bold-64 {
+  @apply font-sans text-[64px] font-[700] leading-[120%];
+}
 
-  .bold-52 {
-    @apply text-[52px] font-[700] leading-[120%];
-  }
+.bold-52 {
+  @apply font-sans text-[52px] font-[700] leading-[120%];
+}
 
-  .bold-40 {
-    @apply text-[40px] font-[700] leading-[120%];
-  }
+.bold-40 {
+  @apply font-sans text-[40px] font-[700] leading-[120%];
+}
 
-  .bold-32 {
-    @apply text-[32px] font-[700] leading-[120%];
-  }
+.bold-32 {
+  @apply font-sans text-[32px] font-[700] leading-[120%];
+}
 
-  .bold-20 {
-    @apply text-[20px] font-[700];
-  }
+.bold-20 {
+  @apply font-sans text-[20px] font-[700];
+}
 
-  .bold-18 {
-    @apply text-[18px] font-[700];
-  }
+.bold-18 {
+  @apply font-sans text-[18px] font-[700];
+}
 
-  .bold-16 {
-    @apply text-[16px] font-[700];
-  }
+.bold-16 {
+  @apply font-sans text-[16px] font-[700];
+}
 
   /* Hero */
   .hero-map {

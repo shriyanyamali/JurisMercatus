@@ -15,7 +15,6 @@ export default function HomePage() {
       <Camp />
       <Guide />
       <Features />
-      {/* <GetApp /> */}
     </>
   );
 }
