@@ -5,17 +5,18 @@ import Head from "next/head";
 const Page = () => {
   return (
     <>
-           <Head>
+      <Head>
         <title>About Us - Verdictr</title>
         <meta name="description" content="Learn more about Verdictr and our mission" />
       </Head>
-      <h2 className="flex items-center justify-center pb-24 pt-32 text-5xl text-center px-12">
+      <h2 className="flex font-semibold items-center justify-center pb-24 p-40 text-5xl text-center px-12">
         How Verdictr Works
       </h2>
       <div>
         <TracingBeamDemo />
       </div>
     </>
+
   );
 };
 
