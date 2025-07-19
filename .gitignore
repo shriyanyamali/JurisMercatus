@@ -36,3 +36,4 @@ next-env.d.ts
 
 # old files
 app/search/lexical-search.js
+search/route.ts
