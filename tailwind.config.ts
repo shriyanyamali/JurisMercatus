@@ -59,6 +59,15 @@ module.exports = {
         grotesk: ['"Vastago Grotesk"', "sans-serif"],
         sans: ['"Vastago Grotesk"', "sans-serif"],
       },
+      animation: {
+        underline: "underline 1.5s ease-out forwards",
+      },
+      keyframes: {
+        underline: {
+          "0%": { transform: "scaleX(0)" },
+          "100%": { transform: "scaleX(1)" },
+        },
+      },
     },
   },
   plugins: [addVariablesForColors],

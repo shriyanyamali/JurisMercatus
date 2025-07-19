@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MoveUpRight } from "lucide-react";
+import AnimatedUnderline from "@/components/AnimatedUnderline";
 
 export default function Hero() {
   return (
@@ -24,16 +25,12 @@ export default function Hero() {
           [word-spacing:0.15em]
         "
         >
-          <span className="font-bold bg-gradient-to-r from-[#1d4ed8] via-[#1d4ed8] to-[#200f7c] bg-clip-text text-transparent">
+          <span className="font-bold bg-gradient-to-r from-[#3b317b] via-[#133591] to-[#200f7c] bg-clip-text text-transparent">
             Verdictr:
           </span>
           {""} The {""}
-          <span className="relative inline-block">
-            <span className="relative z-10">Easiest Way</span>
-            <span className="absolute bottom-0 left-0 w-full h-1/2 bg-[#03cea4] z-0"></span>
-          </span>{" "}
-          {""}
-          To Find Market Definitions
+          <AnimatedUnderline />
+         {""} To Find Market Definitions
         </h1>
 
         <p
@@ -44,34 +41,33 @@ export default function Hero() {
           max-w-4xl
           text-black
           font-medium
+          [word-spacing:0.15em]
           "
         >
-         <span className="
+          <span
+            className="
          underline decoration-wavy decoration-2 
          decoration-[#03cea4]"
-         >
-          4000+
-         </span> 
-
-         market decisions. {" "}
-         
-         <span className="
+          >
+            4000+
+          </span>
+         {""} market decisions.{" "}
+          <span
+            className="
          underline decoration-wavy decoration-2 
          decoration-[#03cea4]"
-         >
-          600
-         </span> {" "}
-         
-         unique cases. {" "}
-         
-          <span className="
+          >
+            600
+          </span>{" "}
+          unique cases.{" "}
+          <span
+            className="
          underline decoration-wavy decoration-2 
          decoration-[#03cea4]"
-         >
-          100%
-         </span> {" "}
-         
-         Free.
+          >
+            100%
+          </span>{" "}
+          Free.
         </p>
 
         <Link
@@ -81,11 +77,11 @@ export default function Hero() {
           !mt-14
           relative
           inline-flex items-center justify-center
-          bg-gray-900 text-white font-regular
+          bg-[#03cea4] text-white font-regular
           rounded-full
           pl-[2.5rem] pr-[5rem] py-[1.2rem]      
           text-[1rem] leading-none   
-          hover:bg-white border hover:border-gray-900 hover:text-gray-900
+          hover:bg-[#03ce87] border border-gray-900 hover:text-gray-900
           transition duration-300 ease-in-out
         "
         >
