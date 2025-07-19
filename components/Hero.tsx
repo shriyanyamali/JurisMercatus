@@ -28,9 +28,8 @@ export default function Hero() {
           <span className="font-bold bg-gradient-to-r from-[#3b317b] via-[#133591] to-[#200f7c] bg-clip-text text-transparent">
             Verdictr:
           </span>
-          {""} The {""}
+          {""} A Database for Finding {""}
           <AnimatedUnderline />
-         {""} To Find Market Definitions
         </h1>
 
         <p
