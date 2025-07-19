@@ -40,7 +40,6 @@ export default function SearchPage() {
   const [showWarning, setShowWarning] = useState(false);
   const [doNotShow, setDoNotShow] = useState(false);
 
-  // load JSON once
   useEffect(() => {
     fetch("/database.json")
       .then((r) => r.json())
@@ -83,7 +82,6 @@ export default function SearchPage() {
         `/api/search?q=${encodeURIComponent(q)}&limit=${ITEMS_PER_PAGE}`
       );
       const { matches } = await res.json();
-      // enrich each item with its score
       const enriched = matches.map((m) => ({
         score: m.score,
         ...m.metadata,
@@ -97,7 +95,6 @@ export default function SearchPage() {
     }
   };
 
-  // “Show All Definitions” / Clear Search handler
   const handleShowAll = () => {
     setRawResults(null);
     setInputTerm("");
@@ -108,7 +105,6 @@ export default function SearchPage() {
     setCurrentPage(1);
   };
 
-  // rebuild filteredData whenever rawData/rawResults or filters change
   const [filteredData, setFilteredData] = useState([]);
   useEffect(() => {
     let list = rawResults !== null ? rawResults : rawData;
@@ -131,7 +127,6 @@ export default function SearchPage() {
     setCurrentPage(1);
   }, [rawData, rawResults, selectedYear, selectedPolicy, sortOrder]);
 
-  // reset page on new search/filters
   useEffect(() => {
     setCurrentPage(1);
   }, [rawResults, selectedYear, selectedPolicy, sortOrder]);
