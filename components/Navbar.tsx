@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
       className={`
         fixed top-0 left-0 w-full z-30
         transition-shadow duration-300
-        ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}
+        ${isScrolled ? "bg-[#F2F0EF] shadow-md" : "bg-transparent shadow-none"}
       `}
     >
       <div className="max-container padding-container flex items-center justify-between px-6 lg:px-4 gap-6 my-3">

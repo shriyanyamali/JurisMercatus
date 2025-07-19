@@ -186,7 +186,7 @@ export default function SearchPage() {
       <div className="pt-20 flex flex-col min-h-screen font-sans">
         <div className="mt-2 flex flex-col md:flex-row flex-1">
           {/* Sidebar */}
-          <aside className="w-full md:w-1/4 p-4 bg-white shadow-md">
+          <aside className="w-full md:w-1/4 p-4 bg-[#FFFAFA] shadow-md">
             <h3 className="ml-1 text-lg my-4">
               Data from{" "}
               <Link
@@ -360,7 +360,7 @@ export default function SearchPage() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
                   disabled={currentPage === 1}
-                  className="px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
+                  className="bg-white px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
                 >
                   « Prev
                 </button>
@@ -369,7 +369,7 @@ export default function SearchPage() {
                     setCurrentPage((p) => Math.min(p + 1, totalPages))
                   }
                   disabled={currentPage === totalPages}
-                  className="px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
+                  className="bg-white px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
                 >
                   Next »
                 </button>
@@ -401,7 +401,7 @@ export default function SearchPage() {
                 </span>
                 <button
                   onClick={handleShowAll}
-                  className="px-4 py-2 border-2 rounded ml-4 hover:bg-gray-100 duration-300"
+                  className="bg-white px-4 py-2 border-2 rounded ml-4 hover:bg-gray-100 duration-300"
                 >
                   Clear Search
                 </button>
