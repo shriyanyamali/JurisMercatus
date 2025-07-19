@@ -34,8 +34,8 @@ const Navbar: React.FC = () => {
         ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}
       `}
     >
-      <div className="max-container padding-container flex items-center justify-between p-2 gap-10 lg:p-0 my-3">
-        {/* LOGO (left) */}
+      <div className="max-container padding-container flex items-center justify-between px-6 lg:px-4 gap-6 my-3">
+        {/* LOGO */}
         <Link
           href="/"
           className="cursor-pointer flex-shrink-0 p-2 sm:p-4 text-4xl font-bold text-black"
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           Verdictr
         </Link>
 
-        {/* DESKTOP LINKS (center) */}
+        {/* DESKTOP LINKS */}
         <ul className="hidden lg:flex items-center gap-16">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
@@ -81,6 +81,7 @@ const Navbar: React.FC = () => {
           })}
         </ul>
 
+        {/* DESKTOP CONTACT BUTTON */}
         <div className="hidden lg:block">
           <div className="hidden lg:block">
             <Link
