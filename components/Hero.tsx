@@ -10,7 +10,7 @@ export default function Hero() {
         px-4
         flex flex-col items-center
         space-y-16
-        3xl:pt-40 xl:pt-28 lg:pb-20
+        3xl:pt-40 xl:pt-28 py-20
       "
     >
       <div className="hero-map mb-12" />
