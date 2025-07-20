@@ -28,7 +28,7 @@ export default function Hero() {
           <span className="font-bold bg-gradient-to-r from-[#3080FF] via-[#3080FF] to-[#3080FF] bg-clip-text text-transparent">
             Verdictr:
           </span>
-          {""} A Database for Finding {""}
+          {""} A Database For Finding {""}
           <span className="hidden md:inline-block">
             <AnimatedUnderline />
           </span>
