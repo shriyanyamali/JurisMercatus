@@ -4,7 +4,7 @@ import React from "react";
 export default function HowToUse() {
   return (
     <section className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 pb-44">
-      <div className="flex items-center mb-10">
+      <div className="flex justify-center items-center mb-10 text-center">
         <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
           How To Use
         </h2>
