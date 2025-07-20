@@ -184,16 +184,6 @@ export default function Terms() {
           </p>
 
           <p>
-            Specifically, any public use or redistribution of Verdictr’s code
-            must include the following attribution:
-          </p>
-
-          <pre>
-            Copyright © 2025 Shriyan Yamali – Verdictr
-            (https://github.com/shriyanyamali/Verdictr)
-          </pre>
-
-          <p>
             Failure to include proper attribution when using Verdictr’s code may
             be considered a violation of the license terms.
           </p>
