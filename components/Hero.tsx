@@ -19,7 +19,7 @@ export default function Hero() {
         <h1
           className="
           font-semibold
-          text-[60px] lg:text-[84px]
+          text-[60px] lg:text-[5rem]
           leading-[1.4]
           text-gray-900 
           [word-spacing:0.15em]
@@ -28,33 +28,8 @@ export default function Hero() {
           <span className="font-bold bg-gradient-to-r from-[#3080FF] via-[#3080FF] to-[#3080FF] bg-clip-text text-transparent">
             Verdictr:
           </span>
-          {""} A Database Of {""}
-          <span className="hidden md:inline-block">
-            <AnimatedUnderline />
-          </span>
-
-          <div  className="inline-block md:hidden">
-            <span className="relative inline-block">
-              <span className="relative z-10">Market</span>
-              <span
-                className="
-          absolute bottom-0 left-0
-          w-full h-1/2
-          bg-[#03cea4] z-0
-          transform origin-left"
-              />
-            </span>{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10">Definitions</span>
-              <span
-                className="
-          absolute bottom-0 left-0
-          w-full h-1/2
-          bg-[#03cea4] z-0
-          transform origin-left"
-              />
-            </span>
-          </div>
+          {""} A <AnimatedUnderline /> Database Of Market Definitions
+            
         </h1>
 
         <p
