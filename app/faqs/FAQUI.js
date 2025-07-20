@@ -82,8 +82,8 @@ const FAQUI = () => {
         />
         <AccordionItem
           index={5}
-          question="Why is the keyword search page taking so long to load?"
-          answer="The keyword search page loads all market decisions at once. Because of this, it may take some time for the page 
+          question="Why is the semantic search page taking so long to load?"
+          answer="The semantic search page loads all market decisions at once. Because of this, it may take some time for the page 
           to load all of the necessary text and links. However, once the page has loaded, all of the market decisions in our database
           will be accessible."
         />

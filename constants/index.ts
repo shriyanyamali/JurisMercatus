@@ -1,14 +1,13 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/", key: "Home", label: "Home" },
-  { href: "/search", key: "Search", label: "Search" },
+  { href: "/semantic-search", key: "Semantic Search", label: "Semantic Search" },
   {
     href: "/how-verdictr-works",
     key: "How Verdictr Works ",
     label: "How Verdictr Works",
   },
   { href: "/faqs", key: "FAQs ", label: "FAQs " },
-  // { href: '/', key: 'contact_us', label: 'Contact Us' },
 ];
 
 // CAMP SECTION
