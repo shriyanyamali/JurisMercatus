@@ -133,7 +133,7 @@ const Navbar: React.FC = () => {
       {/* MOBILE DROPDOWN */}
       <div
         className={`
-          overflow-hidden bg-[F2F0EF] lg:hidden
+          overflow-hidden bg-[#F2F0EF] lg:hidden
           transition-all duration-300 ease-in-out
           ${isMenuOpen ? "max-h-screen" : "max-h-0"}
         `}
