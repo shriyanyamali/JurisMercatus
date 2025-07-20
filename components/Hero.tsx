@@ -10,7 +10,7 @@ export default function Hero() {
         px-4
         flex flex-col items-center
         space-y-16
-        3xl:pt-40 xl:pt-28 py-20
+        3xl:pt-40 xl:pt-24 py-20
       "
     >
       <div className="hero-map mb-12" />
@@ -29,7 +29,32 @@ export default function Hero() {
             Verdictr:
           </span>
           {""} A Database for Finding {""}
-          <AnimatedUnderline />
+          <span className="hidden md:inline-block">
+            <AnimatedUnderline />
+          </span>
+
+          <div  className="inline-block md:hidden">
+            <span className="relative inline-block">
+              <span className="relative z-10">Market</span>
+              <span
+                className="
+          absolute bottom-0 left-0
+          w-full h-1/2
+          bg-[#03cea4] z-0
+          transform origin-left"
+              />
+            </span>{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">Definitions</span>
+              <span
+                className="
+          absolute bottom-0 left-0
+          w-full h-1/2
+          bg-[#03cea4] z-0
+          transform origin-left"
+              />
+            </span>
+          </div>
         </h1>
 
         <p
@@ -78,7 +103,7 @@ export default function Hero() {
             inline-flex items-center justify-center
             bg-[#03cea4] text-white font-regular
             rounded-xl
-            pl-[2.5rem] pr-[5rem] py-[1.2rem]      
+            pl-[2.5rem] pr-[5rem] py-[1.2rem]
             text-[1rem] leading-none   
             hover:bg-[#03ce87] border border-gray-900 hover:text-gray-900
             transition duration-300 ease-in-out
@@ -107,7 +132,7 @@ export default function Hero() {
                 inline-flex items-center justify-center
                 bg-[#3094FF] text-white font-regular
                 rounded-xl
-                pl-[2.5rem] pr-[5rem] py-[1.2rem]      
+                pl-[2.5rem] pr-[5rem] py-[1.2rem]
                 text-[1rem] leading-none   
                 hover:bg-[#3080FF] border border-gray-900
                 hover:text-gray-900
@@ -125,6 +150,24 @@ export default function Hero() {
               group-hover:text-white
             "
             />
+          </Link>
+        </div>
+
+        <div className="text-lg flex items-center space-x-2 mt-8 font-semibold text-gray-800">
+          <Link
+            className="underline underline-offset-4"
+            href="https://shriyanyamali.tech/"
+            target="_blank"
+          >
+            Shriyan Yamali
+          </Link>
+          <span>•</span>
+          <Link
+            className="underline underline-offset-4"
+            href="https://thibaultschrepel.com/"
+            target="_blank"
+          >
+            Dr. Schrepel
           </Link>
         </div>
       </div>
