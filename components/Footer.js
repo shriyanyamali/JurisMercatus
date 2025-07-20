@@ -34,8 +34,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/how-verdictr-works" className="hover:underline">
-                    How Verdictr Works
+                  <a href="/how-it-works" className="hover:underline">
+                    How It Works
                   </a>
                 </li>
                 <li>
