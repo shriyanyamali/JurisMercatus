@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import WhatIsVerdictr from '@/components/WhatIsVerdictr';
 import Camp from "@/components/Camp";
 import Features from "@/components/Features";
 import Guide from "@/components/Guide";
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <WhatIsVerdictr />
       <Camp />
       <Guide />
       <Features />

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900 mt-40">
+    <footer className="bg-[#FFFAFA] dark:bg-gray-900 mt-40">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
 
@@ -20,11 +20,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-">
 
           {/* Site Links */}
 
-            <div>
+            <div className="pt-4 lg:pt-0">
               <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
                 Site Links
               </h2>
@@ -54,7 +54,7 @@ const Footer = () => {
 
             {/* Repository Links */}
 
-            <div>
+            <div className="pt-4 lg:pt-0">
                 <h2 className="mr-[6rem] mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
                   Code Repositories
                 </h2>
@@ -72,48 +72,25 @@ const Footer = () => {
                 </ul>
               </div>
 
-            {/* Social links and legal links in the footer */}
+            {/* Legal Links */}
 
-            {/* <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
-                    className="hover:underline "
-                  >
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
-                  >
-                    Discord
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
+            <div className="pt-4 lg:pt-0">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Legal
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/terms" className="hover:underline">
                     Terms &amp; Conditions
                   </a>
                 </li>
+                <li>
+                  <a href="/license" className="hover:underline">
+                    License
+                  </a>
+                </li>
               </ul>
-            </div> */}
+            </div>
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
@@ -122,7 +99,7 @@ const Footer = () => {
           Copyright &copy; {new Date().getFullYear()} Verdictr. All rights reserved.
           </span>
 
-          {/* Social Image Links in the footer  */}
+          {/* Social Image Links  */}
           
           {/* <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
