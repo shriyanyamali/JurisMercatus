@@ -4,6 +4,7 @@ import Camp from "@/components/Camp";
 import Features from "@/components/Features";
 import Guide from "@/components/Guide";
 import Hero from "@/components/Hero";
+import Applications from '@/components/Applications';
 
 export const metadata = {
   title: 'Home - Verdictr',
@@ -15,9 +16,7 @@ export default function HomePage() {
     <>
       <Hero />
       <WhatIsVerdictr />
-      <Camp />
-      <Guide />
-      <Features />
+      <Applications />
     </>
   );
 }
