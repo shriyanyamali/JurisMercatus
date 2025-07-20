@@ -206,7 +206,7 @@ export default function SearchUI() {
                   type="text"
                   value={inputTerm}
                   onChange={(e) => setInputTerm(e.target.value)}
-                  placeholder="Search semantically…"
+                  placeholder="Search anything..."
                   className="w-full py-2 pl-10 pr-10 rounded-full border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300"
                 />
                 <button

@@ -25,7 +25,7 @@ export default function Terms() {
             <Link
               className="text-blue-500 underline"
               rel="stylesheet"
-              href="verdictr.vercel.app"
+              href="https://verdictr.vercel.app"
             >
               verdictr.vercel.app
             </Link>{" "}
