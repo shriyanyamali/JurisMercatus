@@ -49,7 +49,7 @@ const features = [
 export default function Benefits() {
   return (
     <>
-      <section className="max-w-2xl lg:max-w-screen-lg mx-auto px-4 sm:px-6 pb-44 text-center">
+      <section className="max-w-2xl lg:max-w-screen-lg mx-auto px-4 sm:px-6 pb-44">
         <div className="flex items-center mb-10">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
             Verdictr vs. EC's Case Search
@@ -92,10 +92,10 @@ export default function Benefits() {
 
       <section
         id="why-use-verdictr"
-        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 text-center"
+        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 pb-44 text-center"
       >
         <div className="flex items-center mb-10">
-          <h2 className="text-6xl font-bold text-gray-900">
+          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
             Why Use Verdictr?
           </h2>
         </div>
@@ -106,7 +106,7 @@ export default function Benefits() {
               key={feature.title}
               className="border border-gray-200 bg-white p-8 rounded-lg hover:shadow-md transition-shadow duration-300"
             >
-              <h3 className="text-3xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-2xl lg:text-3xl font-semibold text-gray-900 mb-3">
                 {feature.title}
               </h3>
               <p className="text-lg text-gray-600 leading-snug">
