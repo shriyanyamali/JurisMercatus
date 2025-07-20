@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
           rounded-full
           pl-[2rem] pr-[4.5rem] py-[1.2rem]      
           text-[1rem] leading-none   
-          hover:bg-white border hover:border-gray-900 hover:text-gray-900
+          hover:bg-[#FFFAFA] border hover:border-gray-900 hover:text-gray-900
           transition duration-300 ease-in-out
         "
             >
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
               <Send
                 className="
                 absolute right-2
-                bg-white rounded-full p-2
+                bg-[#FFFAFA] rounded-full p-2
                 text-black w-10 h-10
                 transition duration-300 ease-in-out
                 group-hover:bg-gray-900
