@@ -42,10 +42,10 @@ export default function Applications() {
               {idx + 1}
             </span>
 
-            <h3 className="text-xl font-semibold text-gray-900 transition-colors duration-300 group-hover:text-[#03cea4]">
+            <h3 className="text-xl font-semibold text-gray-900 transition-colors duration-300 group-hover:text-[#3080FF]">
               {app.name}
             </h3>
-            <p className="text-gray-600 mt-2 transition-colors duration-300 group-hover:text-[#3080FF]">
+            <p className="text-gray-600 mt-2">
               {app.description}
             </p>
           </div>
