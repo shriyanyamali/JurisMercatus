@@ -38,7 +38,7 @@ Try it out in your browser (no sign‑up needed):
 3. Return the top 20 results based on the search criteria.
 
 
-## Terms of Service
+## Terms & Conditions
 
 By accessing or using Verdictr, you agree to the following:
 
