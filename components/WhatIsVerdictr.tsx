@@ -1,4 +1,5 @@
 import React from "react";
+import { Scale, Search, Database } from "lucide-react";
 
 const features = [
   {
@@ -46,29 +47,48 @@ export default function WhatIsVerdictr() {
       </section>
 
       <section
-        id="why-use-verdictr"
-        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 text-center"
+        id="motivation"
+        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 pb-44 text-center"
       >
         <div className="flex items-center mb-10">
-          <h2 className="text-6xl font-bold text-gray-900">
-            Why Use Verdictr?
+          <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
+            The Motivation Behind Verdictr
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="border border-gray-200 bg-white p-8 rounded-lg hover:shadow-md transition-shadow duration-300"
-            >
-              <h3 className="text-3xl font-semibold text-gray-900 mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-lg text-gray-600 leading-snug">
-                {feature.description}
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <Scale className="w-12 h-12 mb-4 text-indigo-600" />
+            <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              Essential Role
+            </h3>
+            <div className="text-gray-600 text-center">
+              Market decisions define the product and geographic boundaries
+              crucial for EU competition law.
             </div>
-          ))}
+          </div>
+
+          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <Search className="w-12 h-12 mb-4 text-indigo-600" />
+            <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              Discovery Challenge
+            </h3>
+            <div className="text-gray-600 text-center">
+              The EC buries each decision in long, separate PDFs, making finding market definitions
+              laborious and time-consuming.
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <Database className="w-12 h-12 mb-4 text-indigo-600" />
+            <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              Verdictr’s Solution
+            </h3>
+            <div className="text-gray-600 text-center">
+              Compiles ten years of market definitions into one open-source,
+              semantically searchable database.
+            </div>
+          </div>
         </div>
       </section>
     </>
