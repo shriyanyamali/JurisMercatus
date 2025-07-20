@@ -188,7 +188,7 @@ export default function Terms() {
             must include the following attribution:
           </p>
 
-          <pre className="bg-gray-100 text-sm text-gray-800 p-4 rounded-lg border border-gray-300 overflow-x-auto">
+          <pre>
             Copyright © 2025 Shriyan Yamali – Verdictr
             (https://github.com/shriyanyamali/Verdictr)
           </pre>
