@@ -1,14 +1,13 @@
 import { TracingBeamDemo } from "@/components/demo/demo-tracing-beam";
-import React from "react";
-import Head from "next/head";
+
+export const metadata = {
+  title: 'How Verdictr Works - Verdictr',
+  description: 'How Verdictr Works page for Verdictr. Made by Shriyan Yamali.',
+}
 
 const Page = () => {
   return (
     <>
-      <Head>
-        <title>About Us - Verdictr</title>
-        <meta name="description" content="Learn more about Verdictr and our mission" />
-      </Head>
       <h2 className="flex font-semibold items-center justify-center pb-24 p-40 text-5xl text-center px-12">
         How Verdictr Works
       </h2>

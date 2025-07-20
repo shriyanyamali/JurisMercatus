@@ -46,7 +46,7 @@ const AccordionItem = ({ index, question, answer }) => {
   );
 };
 
-const Page = () => {
+const FAQUI = () => {
   return (
     <>
       <h2 className="font-semibold flex items-center justify-center pb-24 pt-40 text-5xl text-center px-12">
@@ -111,4 +111,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default FAQUI;

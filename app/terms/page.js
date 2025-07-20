@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: 'Terms & Conditions - Verdictr',
+  description: 'Terms & Conditions for Verdictr. Made by Shriyan Yamali.',
+}
+
 export default function Terms() {
   return (
     <>
