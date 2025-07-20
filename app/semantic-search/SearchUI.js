@@ -182,7 +182,7 @@ export default function SearchUI() {
         <div className="mt-2 flex flex-col md:flex-row flex-1">
           {/* Sidebar */}
           <aside className="w-full md:w-1/4 p-4 bg-[#FFFAFA] shadow-md">
-            <h3 className="ml-1 text-md my-4">
+            <h3 className="ml-1 text-md 4xl:text-lg mb-4">
               Data from{" "}
               <Link
                 href="https://competition-cases.ec.europa.eu/"

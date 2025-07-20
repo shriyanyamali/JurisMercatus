@@ -25,14 +25,14 @@ export default function Applications() {
   ];
 
   return (
-    <section className="max-w-2xl lg:max-w-screen-lg mx-auto px-12">
-      <div className="flex items-center mb-10">
+    <section className="max-w-2xl lg:max-w-screen-lg mx-auto">
+      <div className="flex items-center mb-10 px-6 text-center xs:text-start">
         <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
           Real-World Applications
         </h2>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col px-12">
         {apps.map((app, idx) => (
           <div
             key={app.name}
