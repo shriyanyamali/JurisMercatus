@@ -29,7 +29,6 @@ export default function Hero() {
             Verdictr:
           </span>
           {""} A <AnimatedUnderline /> Database Of Market Definitions
-            
         </h1>
 
         <p
@@ -71,7 +70,7 @@ export default function Hero() {
 
         <div className="flex gap-4 !mt-14">
           <Link
-            href="/search"
+            href="/semantic-search"
             className="
             group
             relative

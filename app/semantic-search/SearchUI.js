@@ -196,7 +196,7 @@ export default function SearchUI() {
 
             {/* Search Bar */}
             <label className="block text-lg font-semibold mb-2 ml-1">
-              Keyword Search:
+              Semantic Search:
             </label>
             <form onSubmit={handleSubmit} className="mb-2">
               <div className="relative">

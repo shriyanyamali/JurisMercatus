@@ -17,7 +17,7 @@ export default function HowToUse() {
           <div className="ml-4">
             <h3 className="text-2xl font-medium text-gray-900">
               Go to the{" "}
-              <Link href="/search" className="text-blue-500 underline">
+              <Link href="/semantic-search" className="text-blue-500 underline">
                 {" "}
                 Search Page{" "}
               </Link>

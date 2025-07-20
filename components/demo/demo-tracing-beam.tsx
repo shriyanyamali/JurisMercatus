@@ -40,8 +40,8 @@ const dummyContent = [
       <>
         <p>
           Verdictr is incredibly easy to use. After navigating to the{" "}
-          <a href="/search" className="text-blue-500">
-            keyword search page
+          <a href="/semantic-search" className="text-blue-500">
+            semantic search page
           </a>
           &nbsp; go to the search box and start searching! However, you might
           want to know how we extract our data. While we can&rsquo;t go into

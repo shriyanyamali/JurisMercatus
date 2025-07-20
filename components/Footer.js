@@ -29,8 +29,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/search" className="hover:underline">
-                    Keyword Search
+                  <a href="/semantic-search" className="hover:underline">
+                    Semantic Search
                   </a>
                 </li>
                 <li className="mb-4">
