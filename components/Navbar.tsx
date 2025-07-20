@@ -56,8 +56,8 @@ const Navbar: React.FC = () => {
                       text-lg font-medium transition-colors duration-200
                       ${
                         isActive
-                          ? "text-green-600"
-                          : "text-gray-700 group-hover:text-green-600"
+                          ? "text-[#3080FF]"
+                          : "text-gray-700 group-hover:text-[#3080FF]"
                       }
                     `}
                   >
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
                   </Link>
                   <span
                     className={`
-                      absolute left-0 -bottom-1 h-0.5 bg-green-600
+                      absolute left-0 -bottom-1 h-0.5 bg-[#3080FF]
                       ${
                         isActive
                           ? "w-full scale-x-100"
@@ -150,8 +150,8 @@ const Navbar: React.FC = () => {
                     block text-2xl font-medium transition-colors duration-200
                     ${
                       isActive
-                        ? "text-green-600 underline"
-                        : "text-gray-700 hover:text-green-600"
+                        ? "text-[#3080FF] underline"
+                        : "text-gray-700 hover:text-[#3080FF]"
                     }
                   `}
                   onClick={() => setIsMenuOpen(false)}

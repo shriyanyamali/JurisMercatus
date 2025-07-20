@@ -5,15 +5,10 @@ const Footer = () => {
     <footer className="bg-[#FFFAFA] dark:bg-gray-900 mt-40">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
-
           {/* Veridctr Logo */}
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
-              <img
-                src="favicon.ico"
-                className="h-8 me-3"
-                alt="Verdictr Logo"
-              />
+              <img src="favicon.ico" className="h-8 me-3" alt="Verdictr Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Verdictr
               </span>
@@ -21,8 +16,7 @@ const Footer = () => {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-">
-
-          {/* Site Links */}
+            {/* Site Links */}
 
             <div className="pt-4 lg:pt-0">
               <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
@@ -45,7 +39,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/frequently-asked-questions" className="hover:underline">
+                  <a href="/faqs" className="hover:underline">
                     FAQs
                   </a>
                 </li>
@@ -55,22 +49,30 @@ const Footer = () => {
             {/* Repository Links */}
 
             <div className="pt-4 lg:pt-0">
-                <h2 className="mr-[6rem] mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
-                  Code Repositories
-                </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <a href="https://github.com/shriyanyamali/Verdictr" target="_blank" className="hover:underline">
-                      UI & Search
-                    </a>
-                  </li>
-                  <li className="mb-4">
-                    <a href="https://github.com/shriyanyamali/market-def-scraper" target="_blank" className="hover:underline">
-                      Market Definition Scraper
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <h2 className="mr-[6rem] mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
+                Code Repositories
+              </h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <a
+                    href="https://github.com/shriyanyamali/Verdictr"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    UI & Search
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://github.com/shriyanyamali/market-def-scraper"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Market Definition Scraper
+                  </a>
+                </li>
+              </ul>
+            </div>
 
             {/* Legal Links */}
 
@@ -96,11 +98,12 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          Copyright &copy; {new Date().getFullYear()} Verdictr. All rights reserved.
+            Copyright &copy; {new Date().getFullYear()} Verdictr. All rights
+            reserved.
           </span>
 
           {/* Social Image Links  */}
-          
+
           {/* <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
               href="#"

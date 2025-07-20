@@ -44,16 +44,18 @@ const dummyContent = [
             keyword search page
           </a>
           &nbsp; go to the search box and start searching! However, you might
-          want to know how we extract our data. While we can&rsquo;t go into full detail,
-          we can explain the basic process. This process starts with us scraping decision texts 
-          from the European Commission's websites. After scraping these texts, we use 
-          highly intelligent and fined tuned large language models to analyze the data. 
-          After the data has been analyzed, we clean the data and upload it to our database.
+          want to know how we extract our data. While we can&rsquo;t go into
+          full detail, we can explain the basic process. This process starts
+          with us scraping decision texts from the European Commission's
+          websites. After scraping these texts, we use highly intelligent and
+          fined tuned large language models to analyze the data. After the data
+          has been analyzed, we clean the data and upload it to our database.
         </p>
       </>
     ),
     badge: "How Data is Extracted",
-    image: "https://images.unsplash.com/photo-1553895501-af9e282e7fc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1553895501-af9e282e7fc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Searching Practices",
@@ -71,14 +73,15 @@ const dummyContent = [
           characters are included in the search function. There are more
           do&rsquo;s and don&rsquo;ts than the ones discussed above. For more
           information, visit our&nbsp;
-          <a href="/frequently-asked-questions" className="text-blue-500">
+          <a href="/faqs" className="text-blue-500">
             FAQs page.
           </a>
         </p>
       </>
     ),
     badge: "Searching Practices",
-    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Searchable Data",
