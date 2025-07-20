@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +17,7 @@ const Navbar: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // initialize on mount
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -134,7 +133,7 @@ const Navbar: React.FC = () => {
       {/* MOBILE DROPDOWN */}
       <div
         className={`
-          overflow-hidden bg-white lg:hidden
+          overflow-hidden bg-[F2F0EF] lg:hidden
           transition-all duration-300 ease-in-out
           ${isMenuOpen ? "max-h-screen" : "max-h-0"}
         `}
