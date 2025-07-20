@@ -14,13 +14,13 @@ Verdictr is a market definition database aggregated from the European Commission
 
 ## Development
 
-The database for Verdictr was created using this repo: [https://github.com/shriyanyamali/market-def-scraper](https://github.com/shriyanyamali/market-def-scraper)
+The database for Verdictr was created using this repo: [shriyanyamali/market-def-scraper](https://github.com/shriyanyamali/market-def-scraper)
 
 
 ## Live Demo
 
 Try it out in your browser (no sign‑up needed):  
-[https://verdictr.vercel.app](https://verdictr.vercel.app)
+[verdictr.vercel.app](https://verdictr.vercel.app)
 
 
 ## Features
@@ -59,14 +59,14 @@ By accessing or using Verdictr, you agree to the following:
 
    Failure to include proper attribution when using Verdictr’s code may be considered a violation of the license terms.
 
-   View the full terms of service here: [https://verdictr.vercel.app/terms](verdictr.vercel.app/terms)
+   View the full terms of service here: [verdictr.vercel.app/terms](https://verdictr.vercel.app/terms)
 
 
 ## License
 
    The code in this repository is licensed under the MIT License, adhering to the restrictions set in the Terms of Service.
 
-   View the full license here: [https://verdictr.vercel.app/license](verdictr.vercel.app/license)
+   View the full license here: [verdictr.vercel.app/license](https://verdictr.vercel.app/license)
 
 ## Contact
 
