@@ -189,7 +189,7 @@ export default function Terms() {
           </p>
 
           <p className="text-sm text-gray-600 mt-12">
-            Last updated: July 19, 2025
+            Last updated: July 20, 2025
           </p>
         </section>
       </main>
