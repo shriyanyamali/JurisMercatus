@@ -1,4 +1,3 @@
-// components/WhatIsVerdictr.tsx
 import React from "react";
 
 const features = [
@@ -29,7 +28,7 @@ export default function WhatIsVerdictr() {
     <>
       <section
         id="what-is-verdictr"
-        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 py-24 3xl:pt-44 3xl:pb-24 text-center"
+        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 py-24 3xl:pt-44 text-center"
       >
         <div className="flex items-center mb-10">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
@@ -48,7 +47,7 @@ export default function WhatIsVerdictr() {
 
       <section
         id="why-use-verdictr"
-        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 pb-24 text-center"
+        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 text-center"
       >
         <div className="flex items-center mb-10">
           <h2 className="text-6xl font-bold text-gray-900">
