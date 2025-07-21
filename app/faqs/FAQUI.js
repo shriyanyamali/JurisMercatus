@@ -55,20 +55,13 @@ const FAQUI = () => {
       <div>
         <AccordionItem
           index={1}
-          question="How much does Verdictr cost?"
+          question="How much does Verdictr cost to use?"
           answer="Nothing!"
-        />
-        <AccordionItem
-          index={2}
-          question="What are the benefits of Verdictr?"
-          answer="Verdictr comes with a myriad of benefits including saving time, ease of access, accuracy, and more."
         />
         <AccordionItem
           index={3}
           question="What are the random characters in the market decision text?"
-          answer="While searching, you might encounter special characters such as • or . Such characters are not random 
-          but rather just characters that were included in the original decision text PDF. Treat these characters like you would treat
-          any other character."
+          answer="While searching, you might encounter special characters such as • or . These characters are a result of encoding mismatches. They don't affect the meaning or accuracy of the content, so you can simply ignore them and continue as usual."
         />
         <AccordionItem
           index={9}
@@ -78,22 +71,18 @@ const FAQUI = () => {
         <AccordionItem
           index={4}
           question="Are my searches case or space sensitive?"
-          answer="Your searches are not case sensitive but are space sensitive. Make sure that you only add spaces when needed."
+          answer="Your searches are not case sensitive or space sensitive."
         />
         <AccordionItem
           index={5}
           question="Why is the semantic search page taking so long to load?"
           answer="The semantic search page loads all market decisions at once. Because of this, it may take some time for the page 
-          to load all of the necessary text and links. However, once the page has loaded, all of the market decisions in our database
-          will be accessible."
+          to load all of the necessary text and links. However, once the page has loaded, it will load faster the next time around."
         />
         <AccordionItem
-          index={6}
-          question="How are the market decisions extracted?"
-          answer="Our market decisions are extracted through a rigorous extraction and filtering system. We start by obtaining the 
-            case decision files, where all the market decisions are located. However, these decisions are buried in unnecessary text.
-            So after the files are located, we scrape the files and store the scraped text. This text is then filtered twice by
-            a fined-tuned large language model. This filtered text is then uploaded into our database and made accessible to you!"
+          index={7}
+          question="Can I commercialize Verdictr or any of its code?"
+          answer="No, Verdictr is provided solely for non-commercial use. You may not use any part of Verdictr in any commercial product. See the Terms & Conditions for more information."
         />
         <AccordionItem
           index={7}
