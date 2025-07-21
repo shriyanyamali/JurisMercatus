@@ -1,5 +1,6 @@
-![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
+![Build Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main)
 ![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/Verdictr)
 ![React](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
@@ -16,12 +17,10 @@ Verdictr is a market definition database aggregated from the European Commission
 
 The database for Verdictr was created using this repo: [shriyanyamali/market-def-scraper](https://github.com/shriyanyamali/market-def-scraper)
 
-
 ## Live Demo
 
 Try it out in your browser (no sign‑up needed):  
 [verdictr.vercel.app](https://verdictr.vercel.app)
-
 
 ## Features
 
@@ -30,13 +29,11 @@ Try it out in your browser (no sign‑up needed):
 - Natural Language Search
 - Free and Open Access
 
-
 ## How to Use
 
 1. Visit the **Search** page to start exploring definitions.
 2. Filter by policy area, year, or search.
 3. Return the top 20 results based on the search criteria.
-
 
 ## Terms & Conditions
 
@@ -61,12 +58,11 @@ By accessing or using Verdictr, you agree to the following:
 
    View the full terms of service here: [verdictr.vercel.app/terms](https://verdictr.vercel.app/terms)
 
-
 ## License
 
-   The code in this repository is licensed under the MIT License, adhering to the restrictions set in the Terms of Service.
+The code in this repository is licensed under the MIT License, adhering to the restrictions set in the Terms of Service.
 
-   View the full license here: [verdictr.vercel.app/license](https://verdictr.vercel.app/license)
+View the full license here: [verdictr.vercel.app/license](https://verdictr.vercel.app/license)
 
 ## Contact
 
