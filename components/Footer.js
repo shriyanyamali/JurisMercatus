@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -100,6 +101,25 @@ const Footer = () => {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             Copyright &copy; {new Date().getFullYear()} Verdictr. All rights
             reserved.
+          </span>
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              Created by{" "} 
+              <Link
+                className="underline underline-offset-4"
+                href="https://shriyanyamali.tech/"
+                target="_blank"
+              >
+                Shriyan Yamali
+              </Link>
+              <span className="mx-4">•</span>
+              Advised by{" "} 
+              <Link
+                className="underline underline-offset-4"
+                href="https://thibaultschrepel.com/"
+                target="_blank"
+              >
+                Dr. Thibault Schrepel
+              </Link>
           </span>
 
           {/* Social Image Links  */}
