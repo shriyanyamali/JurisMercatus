@@ -60,7 +60,7 @@ module.exports = {
         sans: ['"Vastago Grotesk"', "sans-serif"],
       },
       animation: {
-        underline: "underline 1.5s ease-out forwards",
+        underline: "underline 1.2s ease-out forwards",
       },
       keyframes: {
         underline: {
