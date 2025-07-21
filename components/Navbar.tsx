@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
         {/* LOGO */}
         <Link
           href="/"
-          className="cursor-pointer flex-shrink-0 p-2 sm:p-4 text-4xl font-bold text-black"
+          className="cursor-pointer flex-shrink-0 py-2 sm:p-4 text-4xl font-bold text-black"
         >
           Verdictr
         </Link>
@@ -133,9 +133,10 @@ const Navbar: React.FC = () => {
       {/* MOBILE DROPDOWN */}
       <div
         className={`
-          overflow-hidden bg-[#F2F0EF] lg:hidden
-          transition-all duration-300 ease-in-out
-          ${isMenuOpen ? "max-h-screen" : "max-h-0"}
+          overflow-hidden lg:hidden
+          transition-all duration-300 ease-in-out shadow-md
+          ${isMenuOpen ? "max-h-screen" : "max-h-0 !shadow-md"}
+          ${isScrolled ? "bg-[#F2F0EF]" : "bg-[#FFFAFA]"}
         `}
       >
         <ul className="flex flex-col gap-6 p-6">
