@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
           text-[1rem] leading-none   
           hover:bg-[#FFFAFA] border hover:border-gray-900 hover:text-gray-900
           transition duration-300 ease-in-out
-          ${isScrolled ? "hover:bg-[#F2F0EF]" : "hover:bg-[#FFFAFA]"}
+          ${isScrolled ? "hover:!bg-[#F2F0EF]" : "hover:!bg-[#FFFAFA]"}
         `}
             >
               Contact
