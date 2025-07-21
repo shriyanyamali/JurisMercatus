@@ -86,7 +86,7 @@ export default function Terms() {
           <p>
             All branding materials, including but not limited to logos, images,
             illustrations, color palettes, UI elements, and the name{" "}
-            <strong>Verdictr</strong>, are protected assets owned by Verdictr.
+            Verdictr, are protected assets owned by Verdictr.
             Use of these materials for any purpose, including derivative works,
             is strictly prohibited without explicit authorization.
           </p>
@@ -189,7 +189,7 @@ export default function Terms() {
           </p>
 
           <p className="text-sm text-gray-600 mt-12">
-            Last updated: July 20, 2025
+            Last updated: July 21, 2025
           </p>
         </section>
       </main>
