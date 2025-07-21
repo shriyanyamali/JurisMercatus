@@ -60,24 +60,45 @@ const FAQUI = () => {
         />
         <AccordionItem
           index={3}
+          question="What is semantic search?"
+          answer="Semantic search is a search method that matches the meaning of a search query with market definitions,
+          rather than matching keywords. For example, if you search &quot;tires&quot;, it might return results related to cars, even though
+          tires are never explicitly mentioned in the market definition."
+        />
+        <AccordionItem
+          index={3}
           question="What are the random characters in the market decision text?"
-          answer="While searching, you might encounter special characters such as • or . These characters are a result of encoding mismatches. They don't affect the meaning or accuracy of the content, so you can simply ignore them and continue as usual."
+          answer="While searching, you might encounter special characters such as • or . These characters are a result of encoding mismatches.
+          They don't affect the meaning or accuracy of the content, so you can simply ignore them and continue as usual."
         />
         <AccordionItem
           index={9}
           question="Why are new market decisions not appearing for me?"
-          answer="If you notice that after a prolonged period of time, no new market decisions have appeared for you, try clearing you cache by clicking Ctrl + Shift + R on Windows or Cmd + Shift + R on Mac."
-        />
-        <AccordionItem
-          index={4}
-          question="Are my searches case or space sensitive?"
-          answer="Your searches are not case sensitive or space sensitive."
+          answer="If you notice that after a prolonged period of time, no new market decisions have appeared for you,
+          try clearing you cache by clicking Ctrl + Shift + R on Windows or Cmd + Shift + R on Mac."
         />
         <AccordionItem
           index={5}
           question="Why is the semantic search page taking so long to load?"
           answer="The semantic search page loads all market decisions at once. Because of this, it may take some time for the page 
           to load all of the necessary text and links. However, once the page has loaded, it will load faster the next time around."
+        />
+        <AccordionItem
+          index={5}
+          question="Why are some words highlighted in a few of the matches?"
+          answer="While Verdictr uses semantic search, if you type a word(s) in your search query which exactly matches the wording of 
+          a match, then it will be highlighted."
+        />
+        <AccordionItem
+          index={5}
+          question="Why is it taking a long time for matches to be returned?"
+          answer="If it is taking a long time to find matches, that indicates that there might not be any high scoring matches.
+          Try adjusting your query to something broader."
+        />
+        <AccordionItem
+          index={4}
+          question="Are my searches case or space sensitive?"
+          answer="Your searches are not case sensitive or space sensitive."
         />
         <AccordionItem
           index={7}
