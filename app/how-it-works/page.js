@@ -10,12 +10,12 @@ export default function HowItWorks() {
         </h2>
       </section>
 
-      <h2 className="font-medium pb-20 text-4xl underline decoration-wavy decoration-[#03cea4]">
+      <h2 className="xs:text-center md:text-start font-medium pb-20 text-4xl underline decoration-wavy decoration-[#03cea4]">
         Data Extraction
       </h2>
 
-      <section className="flex flex-col items-center mb-16 md:flex-row md:gap-12">
-        <div className="md:w-1/2">
+      <section className="flex flex-col-reverse md:flex-row items-center mb-16 md:gap-12">
+        <div className="sm:w-3/5 md:w-1/2">
           <h2 className="text-2xl font-bold mb-4">The Process</h2>
           <p className="text-lg leading-relaxed text-gray-700">
             You might be interested extract our data and search the database.
@@ -23,7 +23,7 @@ export default function HowItWorks() {
             overview, which is what we will do below.
           </p>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
+        <div className="md:w-1/2 my-8 md:my-0">
           <Image
             src="/how-it-works/data-pipeline.png"
             alt="data pipeline"
@@ -35,8 +35,8 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center mb-16 md:flex-row-reverse md:gap-12">
-        <div className="md:w-1/2">
+      <section className="flex flex-col-reverse items-center mb-16 md:flex-row-reverse md:gap-12">
+        <div className="sm:w-3/5 md:w-1/2">
           <h2 className="text-2xl font-bold mb-4">Scrape Cases</h2>
           <p className="text-lg leading-relaxed text-gray-700">
             The process starts with us scraping definition texts from the
@@ -53,7 +53,7 @@ export default function HowItWorks() {
             known as text corpus.
           </p>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
+        <div className="md:w-1/2 my-8 md:my-0">
           <Image
             src="/how-it-works/web-scrape.png"
             alt="web scrape"
@@ -65,8 +65,8 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center mb-16 md:flex-row md:gap-12">
-        <div className="md:w-1/2">
+      <section className="flex flex-col-reverse items-center mb-16 md:flex-row md:gap-12">
+        <div className="sm:w-3/5 md:w-1/2">
           <h2 className="text-2xl font-bold mb-4">Section Extraction</h2>
           <p className="text-lg leading-relaxed text-gray-700">
             After extracting the text corpus, we run it through a fine-tuned
@@ -76,7 +76,7 @@ export default function HowItWorks() {
             they are removed.
           </p>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
+        <div className="md:w-1/2 my-8 md:my-0">
           <Image
             src="/how-it-works/data-input.png"
             alt="data input"
@@ -88,8 +88,8 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center mb-16 md:flex-row-reverse md:gap-12">
-        <div className="md:w-1/2">
+      <section className="flex flex-col-reverse items-center mb-16 md:flex-row-reverse md:gap-12">
+        <div className="sm:w-3/5 md:w-1/2">
           <h2 className="text-2xl font-bold mb-4">Definition Extraction</h2>
           <p className="text-lg leading-relaxed text-gray-700">
             Then, we run the extracted market definition sections through
@@ -97,7 +97,7 @@ export default function HowItWorks() {
             individual definition, which is aggregated into a single JSON file.
           </p>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
+        <div className="md:w-1/2 my-8 md:my-0">
           <Image
             src="/how-it-works/data-filtering.png"
             alt="data filtering"
@@ -109,12 +109,12 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <h2 className="font-medium py-20 text-4xl underline decoration-wavy decoration-[#3094FF]">
+      <h2 className="xs:text-center md:text-start font-medium py-20 text-4xl underline decoration-wavy decoration-[#3094FF]">
         Searching For Market Definitions
       </h2>
 
-      <section className="flex flex-col items-center my-16 md:flex-row md:gap-12">
-        <div className="md:w-1/2">
+      <section className="flex flex-col-reverse items-center my-16 md:flex-row md:gap-12">
+        <div className="sm:w-3/5 md:w-1/2">
           <h2 className="text-2xl font-bold mb-4">Embedding and Indexing</h2>
           <p className="text-lg leading-relaxed text-gray-700">
             Once the database is ready, each entry is parsed to extract the
@@ -124,7 +124,7 @@ export default function HowItWorks() {
             a Pinecone index.
           </p>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
+        <div className="md:w-1/2 my-8 md:my-0">
           <Image
             src="/how-it-works/embedding.png"
             alt="embedding"
@@ -136,8 +136,8 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center mb-16 md:flex-row-reverse md:gap-12">
-        <div className="md:w-1/2">
+      <section className="flex flex-col-reverse items-center mb-16 md:flex-row-reverse md:gap-12">
+        <div className="sm:w-3/5 md:w-1/2">
           <h2 className="text-2xl font-bold mb-4">Queries</h2>
           <p className="text-lg leading-relaxed text-gray-700">
             When a user submits a query, the OpenAI API converts the query into
@@ -147,7 +147,7 @@ export default function HowItWorks() {
             keywords.
           </p>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
+        <div className="md:w-1/2 my-8 md:my-0">
           <Image
             src="/how-it-works/query.png"
             alt="query"
@@ -159,8 +159,8 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center my-16 md:flex-row md:gap-12">
-        <div className="md:w-1/2">
+      <section className="flex flex-col-reverse items-center my-16 md:flex-row md:gap-12">
+        <div className="sm:w-3/5 md:w-1/2">
           <h2 className="text-2xl font-bold mb-4">Matches</h2>
           <p className="text-lg leading-relaxed text-gray-700">
             The returned matches are filtered based on the filters chosen. You
@@ -169,7 +169,7 @@ export default function HowItWorks() {
             query (input). The closer the score is to 1.000, the more similar the match.
           </p>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
+        <div className="md:w-1/2 my-8 md:my-0">
           <Image
             src="/how-it-works/matches.png"
             alt="matches"
