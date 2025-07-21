@@ -395,12 +395,25 @@ export default function SearchUI() {
                 </span>
 
                 <button
-                  onClick={handleShowAll}
+                  onClick={(e) => {
+                    handleShowAll();
+                    e.currentTarget.blur();
+                  }}
                   className="
-                md:-mt-1 ml-4 group relative inline-flex h-[2.75rem] items-center justify-center overflow-hidden rounded-md
-                border-2 border-blue-500 bg-transparent px-4 font-regular text-black transition-all duration-200
-                [box-shadow:5px_5px_#3b82f6] hover:translate-x-[3px] hover:translate-y-[3px]
-                hover:[box-shadow:0px_0px_#3b82f6] hover:bg-[#3b83f670]
+                  md:-mt-1 ml-4 relative inline-flex h-[2.75rem] items-center justify-center 
+                  overflow-hidden rounded-md border-2 border-blue-500 bg-transparent 
+                  px-4 font-regular text-black transition-all duration-200
+                  [box-shadow:5px_5px_#3b82f6]
+
+                  md:hover:translate-x-[3px] 
+                  md:hover:translate-y-[3px]
+                  md:hover:[box-shadow:0px_0px_#3b82f6]
+                  md:hover:bg-[#3b83f670]
+
+                  active:translate-x-[3px]
+                  active:translate-y-[3px]
+                  active:[box-shadow:0px_0px_#3b82f6]
+                  active:bg-[#3b83f670]
                 "
                 >
                   Clear Search
