@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Instructions() {
+export default function GettingStarted() {
   return (
     <section className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 pb-44">
       <div className="flex items-center mb-10 justify-center xs:justify-normal text-center">
         <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
-          Instructions
+          Getting Started
         </h2>
       </div>
       <ol className="space-y-8">
@@ -69,8 +69,8 @@ export default function Instructions() {
             </h3>
             <p className="mt-1 text-xl text-gray-600">
               Each match will have a score ranging from 0.000 to 1.000. A score
-              close to 1.000 means that the match is very similar to your search.
-              Average scores are between 0.300 and 0.600.
+              close to 1.000 means that the match is very similar to your
+              search. Average scores are between 0.300 and 0.600.
             </p>
           </div>
         </li>
