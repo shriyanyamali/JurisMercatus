@@ -315,7 +315,7 @@ export default function SearchUI() {
               </div>
             </div>
 
-            <div className="flex gap-2 mt-4">
+            <div className="sm:flex gap-2 mt-4 hidden">
               <p className="ml-1 text-sm">
                 The source code for this site available on{" "}
                 <Link
@@ -344,7 +344,6 @@ export default function SearchUI() {
 
           {/* Main */}
           <main className="w-full md:w-3/4 p-4">
-
             <header className="mb-4">
               <p className="text-xl ml-2">{getResultMessage()}</p>
             </header>
@@ -394,9 +393,15 @@ export default function SearchUI() {
                 <span className="text-lg ml-4 mt-2">
                   Page {currentPage} of {totalPages}
                 </span>
+
                 <button
                   onClick={handleShowAll}
-                  className="bg-white px-4 py-2 border-2 rounded ml-4 hover:bg-gray-100 duration-300"
+                  className="
+                md:-mt-1 ml-4 group relative inline-flex h-[2.75rem] items-center justify-center overflow-hidden rounded-md
+                border-2 border-blue-500 bg-transparent px-4 font-regular text-black transition-all duration-200
+                [box-shadow:5px_5px_#3b82f6] hover:translate-x-[3px] hover:translate-y-[3px]
+                hover:[box-shadow:0px_0px_#3b82f6] hover:bg-[#3b83f670]
+                "
                 >
                   Clear Search
                 </button>
@@ -405,8 +410,15 @@ export default function SearchUI() {
 
             {/* Results and Spinner */}
             {isLoading ? (
-              <div className="flex justify-center items-center my-16">
-                <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-500 border-t-transparent"></div>
+              <div className="spinner-container">
+                <div className="spinner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
               </div>
             ) : (
               <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fill,minmax(500px,1fr))] gap-6">
