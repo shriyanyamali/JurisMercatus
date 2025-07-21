@@ -127,21 +127,14 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="text-lg flex items-center space-x-2 mt-8 font-semibold text-gray-800">
+        <div className="text-lg items-center space-x-2 mt-8 font-semibold text-gray-800">
+          Created by{" "} 
           <Link
             className="underline underline-offset-4"
             href="https://shriyanyamali.tech/"
             target="_blank"
           >
             Shriyan Yamali
-          </Link>
-          <span>•</span>
-          <Link
-            className="underline underline-offset-4"
-            href="https://thibaultschrepel.com/"
-            target="_blank"
-          >
-            Dr. Schrepel
           </Link>
         </div>
       </div>
