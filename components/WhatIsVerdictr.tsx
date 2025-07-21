@@ -52,7 +52,7 @@ export default function WhatIsVerdictr() {
       >
         <div className="flex items-center mb-10 text-center xs:text-start">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
-            The Motivation Behind Verdictr
+            The Motivation
           </h2>
         </div>
 

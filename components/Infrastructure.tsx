@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 
-interface Technology {
+interface Infrastructure {
   name: string;
   icon: string;
   category?: string;
 }
 
 export default function TechnologiesSection() {
-  const technologies: Technology[] = [
+  const technologies: Infrastructure[] = [
     { name: "React", icon: "logos/react.svg?height=48&width=48" },
     { name: "Next.js", icon: "logos/nextjs.svg?height=48&width=48" },
     { name: "TypeScript", icon: "logos/typescript.svg?height=48&width=48" },
@@ -26,7 +26,7 @@ export default function TechnologiesSection() {
     <section className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 pb-44">
       <div className="flex items-center mb-10 text-center xs:text-start">
         <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
-          Frameworks & Tools
+          Infrastructure
         </h2>
       </div>
 
