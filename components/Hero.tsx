@@ -19,7 +19,7 @@ export default function Hero() {
         <h1
           className="
           font-semibold
-          text-[60px] lg:text-[5rem]
+          text-5xl xs:text-[3.75rem] lg:text-[5rem]
           leading-[1.4]
           text-gray-900 
           [word-spacing:0.15em]
