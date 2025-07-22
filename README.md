@@ -12,14 +12,16 @@
 
 Verdictr is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together on one page and uses natural language searches, so your query doesn't need to exactly match the wording in the decisions.
 
-## Development
+## Development Process
 
-- **Scrape Cases:** The process starts with us scraping definition texts from the European Commission's Competition Case Search website. We then convert the PDFs into text documents, at which point, most cases without market definition are excluded. The scraped text is known as text corpus.
-- **Section Extraction:** After extracting the text corpus, we run it through a fine-tuned model of Google Gemini with a specially designed prompt which extracts the section where the market definitions are. At this point, if there are any remaining cases without market definitions, they are removed.
-- **Definition Extraction:** Then, we run the extracted market definition sections through another specially fine-tuned Google Gemini model to extract each individual definition, which is aggregated into a single JSON file.
-- **Embedding and Indexing:** Once the database is ready, each entry is parsed to extract the relevant text fields. These text chunks are then embedded using the Pinecone API, transforming them into high-dimensional vectors that capture their semantic meaning. These vectors are stored remotely in a Pinecone index.
-- **Queries:** When a user submits a query, the OpenAI API converts the query into its own vector representation using the same embedding model. This query vector is then used to search the Pinecone index, returning the closest matches based on semantic similarity rather than exact keywords.
-- **Matches:** The returned matches are filtered based on the filters chosen. You may receive anywhere from 0 to 20 matches. Each match is given a score, representing how similar that match is to the meaning of your query (input). The closer the score is to 1.000, the more similar the match.
+1. Scrape Cases
+2. Extract Sections
+3. Extract Individual Market Definitions
+4. Embed and Index
+5. Search
+6. Return Matches
+
+Learn about the full development process [here](https://verdictr.vercel.app/how-it-works).
 
 ## Features
 
