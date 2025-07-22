@@ -114,6 +114,10 @@ Try it out in your browser (no sign‑up needed):
 3. Enter your query.
 4. Return the top 20 results based on the search criteria.
 
+## Contributing
+
+Contributions are welcome. Please read the [contribution guidelines](https://github.com/shriyanyamali/Verdictr/blob/main/CONTRIBUTING.md) first.
+
 ## Constituent repositories
 
  - [market-def-scraper](https://github.com/shriyanyamali/market-def-scraper): Extracts relevant market definitions from European Commission competition case decision PDFs.
