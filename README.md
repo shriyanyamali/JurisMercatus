@@ -67,12 +67,12 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
 
 ## Installation
 
-## Prerequisites
+### Prerequisites
 
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-## Manual Installation
+### Manual Installation
 
 1. Clone the repository
 
@@ -118,7 +118,7 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
 
    > Note: You will have to provide and embed your own market definitions in Pinecone. If you want to use the Verdictr database, you can access it [here](https://verdictr.vercel.app/database.json).
 
-## Docker Installation
+### Docker Installation
 
 1. Built the image
 
