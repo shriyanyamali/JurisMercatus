@@ -6,8 +6,6 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-# Verdictr
-
 ![Verdictr Hero](https://verdictr.vercel.app/verdictr-hero.png)
 
 ## Purpose
