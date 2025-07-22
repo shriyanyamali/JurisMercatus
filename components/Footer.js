@@ -67,7 +67,16 @@ const Footer = () => {
                     target="_blank"
                     className="hover:underline"
                   >
-                    Market Definition Scraper
+                    Market Definitions Scraper
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://github.com/shriyanyamali/pinecone-def-search"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Pinecone Definitions Search
                   </a>
                 </li>
               </ul>

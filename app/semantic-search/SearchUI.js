@@ -276,7 +276,7 @@ export default function SearchUI() {
               </div>
             </div>
 
-            <div className="sm:flex gap-2 mt-4 hidden">
+            {/* <div className="sm:flex gap-2 mt-4 hidden">
               <p className="ml-1 text-sm">
                 The source code for this site available on{" "}
                 <Link
@@ -300,7 +300,7 @@ export default function SearchUI() {
                 repository. Check its README file to learn how the exactly the
                 data was generated.
               </p>
-            </div>
+            </div> */}
           </aside>
 
           {/* Main */}
