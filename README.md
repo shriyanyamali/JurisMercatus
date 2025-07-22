@@ -8,6 +8,8 @@
 
 # Verdictr
 
+![Verdictr Hero](public\verdictr-hero.png)
+
 ## Purpose
 
 Verdictr is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together on one page and uses natural language searches, so your query doesn't need to exactly match the wording in the decisions.
