@@ -8,7 +8,7 @@
 
 # Verdictr
 
-![Verdictr Hero](public\verdictr-hero.png)
+![Verdictr Hero](https://verdictr.vercel.app/verdictr-hero.png)
 
 ## Purpose
 
