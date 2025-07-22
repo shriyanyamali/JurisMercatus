@@ -73,7 +73,7 @@ export default function Benefits() {
             </thead>
             <tbody>
               {benefitsData.map((row, idx) => (
-                <tr key={idx} className="even:bg-gray-100 even:text-black text-gray-700">
+                <tr key={idx} className="even:bg-gray-100 text-black">
                   <td className="border-b border-gray-200 px-4 py-3 text-center whitespace-nowrap">
                     {row.feature}
                   </td>
@@ -104,7 +104,7 @@ export default function Benefits() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="border border-gray-200 bg-white p-8 rounded-lg hover:shadow-md transition-shadow duration-300"
+              className="border border-gray-200 bg-white p-8 rounded-lg"
             >
               <h3 className="text-2xl lg:text-3xl font-semibold text-gray-900 mb-3">
                 {feature.title}
