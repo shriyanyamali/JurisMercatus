@@ -137,8 +137,6 @@ By accessing or using Verdictr, you agree to the following:
 
    Portions of the Verdictr project, including its source code, are made available under the terms of the open-source MIT License. This license allows reuse, modification, and distribution of the code for any purpose, including commercial use, provided that proper attribution is given.
 
-   Specifically, any public use or redistribution of Verdictr’s code must include the following attribution:
-
    Failure to include proper attribution when using Verdictr’s code may be considered a violation of the license terms.
 
    View the full terms of service here: [verdictr.vercel.app/terms](https://verdictr.vercel.app/terms)
