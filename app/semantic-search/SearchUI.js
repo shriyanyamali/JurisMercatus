@@ -36,7 +36,6 @@ export default function SearchUI() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const [showScroll, setShowScroll] = useState(false);
-  const [showWarning, setShowWarning] = useState(false);
   const [doNotShow, setDoNotShow] = useState(false);
 
   useEffect(() => {
@@ -52,17 +51,6 @@ export default function SearchUI() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  // warning modal
-  useEffect(() => {
-    if (!localStorage.getItem("hideDeviceWarning")) {
-      setShowWarning(true);
-    }
-  }, []);
-  const handleCloseWarning = () => {
-    if (doNotShow) localStorage.setItem("hideDeviceWarning", "true");
-    setShowWarning(false);
-  };
 
   // semantic search on submit
   const handleSubmit = async (e) => {
@@ -151,33 +139,6 @@ export default function SearchUI() {
 
   return (
     <>
-      {showWarning && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg p-6 max-w-sm mx-4 text-center">
-            <h2 className="text-xl font-semibold mb-3">Notice</h2>
-            <p className="mb-4">
-              This webpage is best experienced on a laptop or desktop. Some
-              features may not display correctly on smaller devices.
-            </p>
-            <label className="flex items-center justify-center mb-4 space-x-2">
-              <input
-                type="checkbox"
-                checked={doNotShow}
-                onChange={(e) => setDoNotShow(e.target.checked)}
-                className="h-4 w-4 border-2 border-gray-300 checked:bg-blue-600 checked:border-blue-600"
-              />
-              <span>Do not show again</span>
-            </label>
-            <button
-              onClick={handleCloseWarning}
-              className="px-4 py-2 bg-blue-500 text-white hover:bg-white border-2 border-blue-500 hover:text-blue-500 transition"
-            >
-              OK
-            </button>
-          </div>
-        </div>
-      )}
-
       <div className="pt-20 flex flex-col min-h-screen font-sans">
         <div className="mt-2 flex flex-col md:flex-row flex-1">
           {/* Sidebar */}
