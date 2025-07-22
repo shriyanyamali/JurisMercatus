@@ -37,7 +37,7 @@ export default function Motivation() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl">
             <Scale className="w-12 h-12 mb-4 text-indigo-600" />
             <h3 className="text-2xl font-semibold text-gray-900 mb-2">
               Essential Role
@@ -48,7 +48,7 @@ export default function Motivation() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl">
             <Search className="w-12 h-12 mb-4 text-indigo-600" />
             <h3 className="text-2xl font-semibold text-gray-900 mb-2">
               Discovery Challenge
@@ -59,7 +59,7 @@ export default function Motivation() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+          <div className="flex flex-col items-center bg-white border border-gray-200 p-8 rounded-2xl">
             <Database className="w-12 h-12 mb-4 text-indigo-600" />
             <h3 className="text-2xl font-semibold text-gray-900 mb-2">
               Verdictr’s Solution
