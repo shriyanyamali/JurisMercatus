@@ -1,28 +1,4 @@
 import React from "react";
-import { Scale, Search, Database } from "lucide-react";
-
-const features = [
-  {
-    title: "A Decade of Cases",
-    description:
-      "Verdictr's database contains every market definition from the last 10 years.",
-  },
-  {
-    title: "Saves Time",
-    description:
-      "Verdictr eliminates the need to manually search through the EU’s market definition database.",
-  },
-  {
-    title: "Open Access",
-    description:
-      "Verdictr is fully open source: its website and database code are freely available on GitHub.",
-  },
-  {
-    title: "Completely Free",
-    description:
-      "Verdictr is 100% free to use, with no fees, subscriptions, or costs.",
-  },
-];
 
 export default function WhatIsVerdictr() {
   return (
