@@ -25,7 +25,7 @@ export default function Applications() {
   ];
 
   return (
-    <section className="max-w-2xl lg:max-w-screen-lg mx-auto">
+    <section className="max-w-2xl lg:max-w-screen-lg mx-auto pb-44">
       <div className="flex items-center mb-10 px-6 text-center xs:text-start">
         <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
           Real-World Applications
