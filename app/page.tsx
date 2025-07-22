@@ -5,6 +5,7 @@ import Applications from "@/components/Applications";
 import GettingStarted from "@/components/GettingStarted";
 import Infrastructure from "@/components/Infrastructure";
 import Motivation from "@/components/Motivation";
+import Contributions from "@/components/Contributions";
 
 export const metadata = {
   title: "Home - Verdictr",
@@ -21,6 +22,7 @@ export default function HomePage() {
       <Infrastructure />
       <Benefits />
       <Applications />
+      <Contributions />
     </>
   );
 }
