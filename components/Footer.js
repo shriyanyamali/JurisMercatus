@@ -3,26 +3,26 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FFFAFA] dark:bg-gray-900 mt-40">
+    <footer className="bg-[#FFFAFA] mt-40">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           {/* Veridctr Logo */}
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
               <img src="favicon.ico" className="h-8 me-3" alt="Verdictr Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap">
                 Verdictr
               </span>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6">
             {/* Site Links */}
-            <div className="pt-4 lg:pt-0">
-              <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
+            <div className="pt-4 lg:pt-0 lg:translate-x-12">
+              <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase">
                 Site Links
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a href="/" className="hover:underline">
                     Home
@@ -48,10 +48,10 @@ const Footer = () => {
 
             {/* Repository Links */}
             <div className="pt-4 lg:pt-0">
-              <h2 className="mr-[6rem] mb-6 text-base font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase">
                 Code Repositories
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a
                     href="https://github.com/shriyanyamali/Verdictr"
@@ -83,11 +83,11 @@ const Footer = () => {
             </div>
 
             {/* Legal Links */}
-            <div className="pt-4 lg:pt-0">
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <div className="mr-[6rem] pt-4 lg:pt-0">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                 Legal
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a href="/terms" className="hover:underline">
                     Terms &amp; Conditions
@@ -100,13 +100,14 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+            
           </div>
         </div>
 
         {/* Copyright and Credits */}
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-500 sm:text-center">
             Copyright &copy; {new Date().getFullYear()} Verdictr. All rights
             reserved.
           </span>
@@ -115,7 +116,7 @@ const Footer = () => {
 
           <span className="
           hidden xs:inline-block sm:hidden text-sm md:inline-block
-           text-gray-500 sm:text-center dark:text-gray-400
+           text-gray-500 sm:text-center
            ">
             <span>
               Created by{" "}
