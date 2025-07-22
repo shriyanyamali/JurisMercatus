@@ -12,17 +12,6 @@
 
 Verdictr is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together on one page and uses natural language searches, so your query doesn't need to exactly match the wording in the decisions.
 
-## Development Process
-
-1. Scrape Cases
-2. Extract Sections
-3. Extract Individual Market Definitions
-4. Embed and Index
-5. Search
-6. Return Matches
-
-Learn about the full development process [here](https://verdictr.vercel.app/how-it-works).
-
 ## Features
 
 - 4000+ market definitions
@@ -34,8 +23,49 @@ Learn about the full development process [here](https://verdictr.vercel.app/how-
 Try it out in your browser (no sign‑up needed):  
 [verdictr.vercel.app](https://verdictr.vercel.app)
 
-## Installation
+## Development Process
 
+1. Scrape Cases
+2. Extract Sections
+3. Extract Individual Market Definitions
+4. Embed and Index
+5. Search
+6. Return Matches
+
+Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how-it-works).
+
+## Infrastructure
+
+<table>
+  <tr>
+    <td><strong>Frontend Development</strong></td>
+    <td>
+      <img src="https://img.shields.io/badge/Next.js-000000.svg?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
+      <img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+      <img src="https://img.shields.io/badge/Tailwind%20CSS-38B2AC.svg?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Data Analysis</strong></td>
+    <td>
+      <img src="https://img.shields.io/badge/Gemini-4285F4.svg?style=flat-square&logo=google&logoColor=white" alt="Google Gemini"/>
+      <img src="https://img.shields.io/badge/Python-3670A0.svg?style=flat-square&logo=python&logoColor=ffdd54" alt="Python"/>
+      <img src="https://img.shields.io/badge/Pandas-150458.svg?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
+    </td>
+
+  </tr>
+  <tr>
+    <td><strong>Services</strong></td>
+    <td>
+      <img src="https://img.shields.io/badge/Pinecone-000000.svg?style=flat-square&logo=pinecone&logoColor=white" alt="Pinecone"/>
+      <img src="https://img.shields.io/badge/OpenAI-000000.svg?style=flat-square&logo=openai&logoColor=white" alt="OpenAI"/>
+      <img src="https://img.shields.io/badge/Vercel-000000.svg?style=flat-square&logo=vercel&logoColor=white" alt="Vercel"/>
+    </td>
+
+  </tr>
+</table>
+
+## Installation
 
 ## Prerequisites
 
@@ -83,6 +113,7 @@ Try it out in your browser (no sign‑up needed):
    PINECONE_INDEX= eg. verdictr
    OPENAI_API_KEY=sk...
    ```
+
    See `.env.example` for an example environment.
 
    > Note: You will have to provide and embed your own market definitions in Pinecone. If you want to use the Verdictr database, you can access it [here](https://verdictr.vercel.app/database.json).
@@ -90,6 +121,7 @@ Try it out in your browser (no sign‑up needed):
 ## Docker Installation
 
 1. Built the image
+
    ```bash
    docker build -t verdictr .
    ```
@@ -105,6 +137,7 @@ Try it out in your browser (no sign‑up needed):
    -e OPENAI_API_KEY=sk... \
    verdictr
    ```
+
    See `.env.example` for an example environment.
 
 ## How to Use
@@ -120,9 +153,9 @@ Contributions are welcome. Please read the [contribution guidelines](https://git
 
 ## Constituent repositories
 
- - [market-def-scraper](https://github.com/shriyanyamali/market-def-scraper): Extracts relevant market definitions from European Commission competition case decision PDFs.
+- [market-def-scraper](https://github.com/shriyanyamali/market-def-scraper): Extracts relevant market definitions from European Commission competition case decision PDFs.
 
- - [pinecone-def-search](https://github.com/shriyanyamali/pinecone-def-search): Code to embed text records and create a Pinecone vector index, allowing the semantic search of market definitions.
+- [pinecone-def-search](https://github.com/shriyanyamali/pinecone-def-search): Code to embed text records and create a Pinecone vector index, allowing the semantic search of market definitions.
 
 ## Terms & Conditions
 
