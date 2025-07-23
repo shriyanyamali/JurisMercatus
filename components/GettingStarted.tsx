@@ -81,7 +81,7 @@ export default function GettingStarted() {
           </div>
           <div className="ml-4">
             <h3 className="text-2xl font-medium text-gray-900">
-              Continue Searching.
+              Continue Searching
             </h3>
             <p className="mt-1 text-xl text-gray-600">
               Following the aforementioned steps to conduct another search. If
