@@ -105,21 +105,7 @@ export default function Terms() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            4. Intellectual Property
-          </h2>
-          <p>
-            All original content and functionality on Verdictr, including text,
-            layout, design elements, images, branding, and documentation, are
-            the property of Shriyan Yamali and contributors unless otherwise
-            noted. The source code is licensed under the MIT License and may be
-            used, modified, and distributed in accordance with that license.
-            However, all non-code assets, including data, visuals, and the
-            Verdictr brand, are protected and may not be reproduced, repurposed,
-            or redistributed without prior written permission.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            5. Disclaimer of Warranties
+            4. Disclaimer of Warranties
           </h2>
           <p>
             We strive to maintain the accuracy of information, but we do not
@@ -130,7 +116,7 @@ export default function Terms() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            6. Limitation of Liability
+            5. Limitation of Liability
           </h2>
           <p>
             In no event shall Verdictr, its creator, or its affiliates be liable
@@ -141,7 +127,7 @@ export default function Terms() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            7. Governing Law
+            6. Governing Law
           </h2>
           <p>
             These Legal Terms shall be governed by and construed in accordance
@@ -153,7 +139,7 @@ export default function Terms() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            8. User Privacy and Data Collection
+            7. User Privacy and Data Collection
           </h2>
           <p>
             Verdictr does not collect, store, or process any personal data or
@@ -168,7 +154,7 @@ export default function Terms() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            9. Attribution
+            8. Attribution
           </h2>
           <p>
             When using Verdictr’s source code, you must provide proper
@@ -181,7 +167,7 @@ export default function Terms() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            10. Open Source License
+            9. Open Source License
           </h2>
           <p>
             Verdictr and its Services, including its source code, are made
@@ -199,7 +185,7 @@ export default function Terms() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            11. Contact
+            10. Contact
           </h2>
           <p>
             Once more, if you have any questions or concerns about these terms, please
