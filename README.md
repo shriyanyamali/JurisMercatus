@@ -35,7 +35,7 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
 
 <table>
   <tr>
-    <td><strong>Frontend Development</strong></td>
+    <td><strong>Frontend</strong></td>
     <td>
       <img src="https://img.shields.io/badge/Next.js-000000.svg?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
       <img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
@@ -111,7 +111,7 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
    OPENAI_API_KEY=sk...
    ```
 
-   See `.env.example` for an example environment.
+   See [`.env.example`](/.env.example) for an example environment.
 
    > Note: You will have to provide and embed your own market definitions in Pinecone. If you want to use the Verdictr database, you can access it [here](https://verdictr.vercel.app/database.json).
 
@@ -135,7 +135,7 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
    verdictr
    ```
 
-   See `.env.example` for an example environment.
+   See [`.env.example`](/.env.example) for an example environment.
 
 ## How to Use
 
