@@ -144,42 +144,27 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
 3. Enter your query.
 4. Return the top 20 results based on the search criteria.
 
-## Contributing
-
-Contributions are welcome. Please read the [contribution guidelines](https://github.com/shriyanyamali/Verdictr/blob/main/CONTRIBUTING.md) first.
-
 ## Constituent repositories
 
 - [market-def-scraper](https://github.com/shriyanyamali/market-def-scraper): Extracts relevant market definitions from European Commission competition case decision PDFs.
 
 - [pinecone-def-search](https://github.com/shriyanyamali/pinecone-def-search): Code to embed text records and create a Pinecone vector index, allowing the semantic search of market definitions.
 
+## Contributing
+
+Contributions are welcome. Please read the [contribution guidelines](CONTRIBUTING.md) first.
+
 ## Terms & Conditions
 
-By accessing or using Verdictr, you agree to the following:
+Verdictr is available free of charge for everyone. However, if you use anything that is property of Verdictr or derived from this repositories or its constituent repositories, including but not limited to its code, images, color schemes, data, concept, and the name Verdictr, you must provide proper attribution. Failure to include proper attribution may be considered a violation of the license terms.
 
-1. Use of Service  
-   Verdictr is provided for informational purposes only. Verdictr and the Services are provided on an "AS IS" basis for your personal, non-commercial use or internal academic/research purposes only. You agree not to use the Services in any way that is unlawful, or harms us or any other user.
-
-2. Branding & Design Assets  
-   All branding materials, including but not limited to logos, images, illustrations, color palettes, UI elements, and the name Verdictr, are protected assets owned by Verdictr. Use of these materials for any purpose, including derivative works, is strictly prohibited without explicit authorization.
-
-3. Prohibited Commercial Use  
-   You may not use any part of the Verdictr Services, including data, designs, or content, in any commercial product, service, research, report, or application without our express written consent. This includes, but is not limited to, selling access to Verdictr data, incorporating our data into for-profit software, or offering commercial analysis based on our data.
-
-4. Open Source License
-
-   Portions of the Verdictr project, including its source code, are made available under the terms of the open-source MIT License. This license allows reuse, modification, and distribution of the code for any purpose, including commercial use, provided that proper attribution is given.
-
-   Failure to include proper attribution when using Verdictr’s code may be considered a violation of the license terms.
-
-   View the full terms of service here: [verdictr.vercel.app/terms](https://verdictr.vercel.app/terms)
+View the full Terms & Conditions at [verdictr.vercel.app/terms](https://verdictr.vercel.app/terms).
 
 ## License
 
-The code in this repository is licensed under the MIT License, adhering to the restrictions set in the Terms of Service.
+The code in this repository is licensed under the MIT License, but is limited by the restrictions set in the Terms & Conditions.
 
-View the full license here: [verdictr.vercel.app/license](https://verdictr.vercel.app/license)
+View the full license at [verdictr.vercel.app/license](https://verdictr.vercel.app/license).
 
 ## Contact
 
