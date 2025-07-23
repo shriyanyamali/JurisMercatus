@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
 
             {/* Legal Links */}
-            <div className="mr-[6rem] pt-4 lg:pt-0">
+            <div className="sm:mr-[6rem]">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                 Legal
               </h2>
