@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: 'Terms & Conditions - Verdictr',
-  description: 'Terms & Conditions for Verdictr. Made by Shriyan Yamali.',
-}
+  title: "Terms & Conditions - Verdictr",
+  description: "Terms & Conditions for Verdictr. Made by Shriyan Yamali.",
+};
 
 export default function Terms() {
   return (
@@ -85,22 +85,23 @@ export default function Terms() {
           </h2>
           <p>
             All branding materials, including but not limited to logos, images,
-            illustrations, color palettes, UI elements, and the name{" "}
-            Verdictr, are protected assets owned by Verdictr.
-            Use of these materials for any purpose, including derivative works,
-            is strictly prohibited without explicit authorization.
+            illustrations, color palettes, UI elements, and the name Verdictr,
+            are protected assets owned by Verdictr. Use of these materials for
+            any purpose, including derivative works, is strictly prohibited
+            without explicit authorization.
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            3. Prohibited Commercial Use
+            3. Commercial Use
           </h2>
           <p>
-            You may not use any part of the Verdictr Services, including data,
+            You may use any part of the Verdictr Services, including data,
             designs, or content, in any commercial product, service, research,
-            report, or application without our express written consent. This
-            includes, but is not limited to, selling access to Verdictr data,
-            incorporating our data into for-profit software, or offering
-            commercial analysis based on our data.
+            report, or application. However, by doing so, you agree to provide
+            proper attribution and abide by the terms of the AGPL-3.0 License
+            under which Verdictr and its Services are released, which includes
+            licensing any modified or derived source code under the same
+            license.
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
@@ -167,20 +168,11 @@ export default function Terms() {
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
-            9. Open Source License
+            9. Attribution
           </h2>
           <p>
-            Portions of the Verdictr project, including its source code, are
-            made available under the terms of the open-source{" "}
-            <Link
-              href="/license"
-              className="text-blue-500 underline underline-offset-2"
-            >
-              MIT License
-            </Link>
-            . This license allows reuse, modification, and distribution of the
-            code for any purpose, including commercial use, provided that proper
-            attribution is given.
+            When using Verdictr’s source code, you must provide proper
+            attribution.
           </p>
 
           <p>
@@ -188,8 +180,40 @@ export default function Terms() {
             be considered a violation of the license terms.
           </p>
 
+          <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
+            10. Open Source License
+          </h2>
+          <p>
+            Verdictr and its Services, including its source code, are made
+            available under the terms of the open-source{" "}
+            <Link
+              href="https://www.gnu.org/licenses/agpl-3.0.txt"
+              className="text-blue-500 underline underline-offset-2"
+            >
+              AGPL-3.0 License
+            </Link>
+            . This license allows reuse, modification, and distribution of the
+            code for any purpose, including commercial use, provided that any
+            products or services derived from Verdictr and its Services are also
+            made available under the same AGPL-3.0 License.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
+            11. Contact
+          </h2>
+          <p>
+            Once more, if you have any questions or concerns about these terms, please
+            contact us at {" "}
+            <Link
+              href="mailto:yamalishriyan@gmail.com"
+              className="text-blue-500 underline underline-offset-2"
+            >
+              yamalishriyan@gmail.com
+            </Link>.
+          </p>
+
           <p className="text-sm text-gray-600 mt-12">
-            Last updated: July 21, 2025
+            Last updated: July 23, 2025
           </p>
         </section>
       </main>

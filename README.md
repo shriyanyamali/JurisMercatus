@@ -162,9 +162,9 @@ View the full Terms & Conditions at [verdictr.vercel.app/terms](https://verdictr
 
 ## License
 
-The code in this repository is licensed under the MIT License, but is limited by the restrictions set in the Terms & Conditions.
+The code in this repository is licensed under the AGPL-3.0 License.
 
-View the full license at [verdictr.vercel.app/license](https://verdictr.vercel.app/license).
+View the full license at [www.gnu.org/licenses/agpl-3.0.txt](https://www.gnu.org/licenses/agpl-3.0.txt).
 
 ## Contact
 
