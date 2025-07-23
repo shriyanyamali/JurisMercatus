@@ -144,7 +144,7 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
 3. Enter your query.
 4. Return the top 20 results based on the search criteria.
 
-## Constituent repositories
+## Constituent Repositories
 
 - [market-def-scraper](https://github.com/shriyanyamali/market-def-scraper): Extracts relevant market definitions from European Commission competition case decision PDFs.
 
