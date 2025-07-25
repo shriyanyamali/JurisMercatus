@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Search feature for EU competition case relevant market decisions",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon-v2.ico',
   },  
 };
 
