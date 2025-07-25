@@ -1,5 +1,6 @@
 <div align="center">
-  <a href="https://jurismercatus.vercel.app/"><img src="public/logo-square.png" alt="JurisMercatus" width="500"></a>
+  <a href="https://jurismercatus.vercel.app/"><img src="public/logo-square.png" alt="JurisMercatus" width="500" style="display: block; margin: 0 auto;">
+</a>
 </div>
 
 <h4 align="center">A Database Of Semantically Searchable Market Definitions</h4>
