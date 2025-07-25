@@ -25,7 +25,7 @@ export default function Hero() {
           [word-spacing:0.15em]
         "
         >
-          {/* <span className="font-bold bg-gradient-to-r from-[#3080FF] via-[#3080FF] to-[#3080FF] bg-clip-text text-transparent">
+          {/* <span className="block font-bold bg-gradient-to-r from-[#3080FF] via-[#3080FF] to-[#3080FF] bg-clip-text text-transparent">
             JurisMercatus:
           </span> */}
           A Database Of <AnimatedUnderline /> Searchable Market Definitions
