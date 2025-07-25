@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WhatIsVerdictr() {
+export default function WhatIsJurisMercatus() {
   return (
     <section
       id="what-is-jurismercatus"

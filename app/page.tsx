@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import WhatIsVerdictr from "@/components/WhatIsJurisMercatus";
+import WhatIsJurisMercatus from "@/components/WhatIsJurisMercatus";
 import Benefits from "@/components/Benefits";
 import Applications from "@/components/Applications";
 import GettingStarted from "@/components/GettingStarted";
@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <WhatIsVerdictr />
+      <WhatIsJurisMercatus />
       <GettingStarted />
       <Motivation />
       <Infrastructure />
