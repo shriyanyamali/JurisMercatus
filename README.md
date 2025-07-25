@@ -1,4 +1,4 @@
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+![License](https://img.shields.io/badge/License-AGPL%203.0-green.svg)
 ![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
 ![Build Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main)
 ![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/Verdictr)
