@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "JurisMercatus",
   description:
     "Search feature for EU competition case relevant market decisions",
+  icons: {
+    icon: '/favicon.ico',
+  },  
 };
 
 export default function RootLayout({
