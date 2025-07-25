@@ -37,9 +37,9 @@ const Navbar: React.FC = () => {
         {/* LOGO */}
         <Link
           href="/"
-          className="cursor-pointer flex-shrink-0 py-2 lg:p-4 text-4xl font-bold text-black"
+          className="cursor-pointer flex-shrink-0 py-2 lg:p-4 text-3xl font-bold text-black"
         >
-          Verdictr
+          JurisMercatus
         </Link>
 
         {/* DESKTOP LINKS */}

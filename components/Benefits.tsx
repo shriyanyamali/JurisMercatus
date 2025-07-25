@@ -27,22 +27,22 @@ const features = [
   {
     title: "A Decade of Cases",
     description:
-      "Verdictr's database contains every market definition from the last 10 years.",
+      "JurisMercatus's database contains every market definition from the last 10 years.",
   },
   {
     title: "Saves Time",
     description:
-      "Verdictr eliminates the need to manually search through the EU’s market definition database.",
+      "JurisMercatus eliminates the need to manually search through the EU’s market definition database.",
   },
   {
     title: "Open Access",
     description:
-      "Verdictr is fully open source: its website and database code are freely available on GitHub.",
+      "JurisMercatus is fully open source: its website and database code are freely available on GitHub.",
   },
   {
     title: "Completely Free",
     description:
-      "Verdictr is 100% free to use, with no fees, subscriptions, or costs.",
+      "JurisMercatus is 100% free to use, with no fees, subscriptions, or costs.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function Benefits() {
       <section className="max-w-2xl lg:max-w-screen-lg mx-auto px-4 sm:px-6 pb-44">
         <div className="flex items-center mb-10 text-center xs:text-start">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
-            Verdictr vs. EC's Case Search
+            JurisMercatus vs. EC's Case Search
           </h2>
         </div>
 
@@ -64,7 +64,7 @@ export default function Benefits() {
                   Feature
                 </th>
                 <th className="border-b border-gray-200 px-4 py-2 text-center whitespace-nowrap">
-                  Verdictr
+                  JurisMercatus
                 </th>
                 <th className="border-b border-gray-200 px-4 py-2 text-center whitespace-nowrap">
                   EC's Case Search
@@ -91,12 +91,12 @@ export default function Benefits() {
       </section>
 
       <section
-        id="why-use-verdictr"
+        id="why-use-jurismercatus"
         className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 pb-44 text-center"
       >
         <div className="flex items-center mb-10">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
-            Why Use Verdictr?
+            Why Use JurisMercatus?
           </h2>
         </div>
 

@@ -280,7 +280,7 @@ export default function SearchUI() {
               <p className="ml-1 text-sm">
                 The source code for this site available on{" "}
                 <Link
-                  href="https://github.com/shriyanyamali/Verdictr"
+                  href="https://github.com/shriyanyamali/JurisMercatus"
                   target="_blank"
                 >
                   <span className="font-medium text-blue-600 underline">

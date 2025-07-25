@@ -1,10 +1,9 @@
-import NotFoundUI from "@/components/NotFoundUI"
-
+import NotFoundUI from "@/components/NotFoundUI";
 
 export const metadata = {
-  title: '404 | Page Not Found - Verdictr',
-}
+  title: "404 | Page Not Found - JurisMercatus",
+};
 
 export default function SearchPage() {
-  return <NotFoundUI />
+  return <NotFoundUI />;
 }

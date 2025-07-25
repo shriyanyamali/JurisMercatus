@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import WhatIsVerdictr from "@/components/WhatIsVerdictr";
+import WhatIsVerdictr from "@/components/WhatIsJurisMercatus";
 import Benefits from "@/components/Benefits";
 import Applications from "@/components/Applications";
 import GettingStarted from "@/components/GettingStarted";
@@ -8,8 +8,8 @@ import Motivation from "@/components/Motivation";
 import Contributions from "@/components/Contributions";
 
 export const metadata = {
-  title: "Home - Verdictr",
-  description: "Homepage for Verdictr. Made by Shriyan Yamali.",
+  title: "Home - JurisMercatus",
+  description: "Homepage for JurisMercatus. Made by Shriyan Yamali.",
 };
 
 export default function HomePage() {

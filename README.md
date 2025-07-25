@@ -1,13 +1,13 @@
 ![License](https://img.shields.io/badge/License-AGPL%203.0-green.svg)
 ![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
 ![Build Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main)
-![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/Verdictr)
+![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/JurisMercatus)
 
-![Verdictr Hero](https://verdictr.vercel.app/verdictr-hero.png)
+![JurisMercatus Hero](https://jurismercatus.vercel.app/jurismercatus-hero.png)
 
 ## Purpose
 
-Verdictr is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together on one page and uses natural language searches, so your query doesn't need to exactly match the wording in the decisions.
+JurisMercatus is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together on one page and uses natural language searches, so your query doesn't need to exactly match the wording in the decisions.
 
 ## Features
 
@@ -18,7 +18,7 @@ Verdictr is a market definition database aggregated from the European Commission
 ## Live Demo
 
 Try it out in your browser (no sign‑up needed):  
-[verdictr.vercel.app](https://verdictr.vercel.app)
+[jurismercatus.vercel.app](https://jurismercatus.vercel.app)
 
 ## Development Process
 
@@ -29,7 +29,7 @@ Try it out in your browser (no sign‑up needed):
 5. Search
 6. Return Matches
 
-Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how-it-works).
+Learn more at [jurismercatus.vercel.app/how-it-works](https://jurismercatus.vercel.app/how-it-works).
 
 ## Infrastructure
 
@@ -74,13 +74,13 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/shriyanyamali/Verdictr.git
+   git clone https://github.com/shriyanyamali/JurisMercatus.git
    ```
 
 2. Change into the project directory
 
    ```bash
-   cd Verdictr
+   cd JurisMercatus
    ```
 
 3. Install dependencies
@@ -107,20 +107,20 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
    PINECONE_API_KEY=pcsk...
    PINECONE_BASE_URL=https://<your-pinecone-index>.svc.<your-pinecone-env>.pinecone.io
    PINECONE_ENV= e.g us-east-1-aws
-   PINECONE_INDEX= eg. verdictr
+   PINECONE_INDEX= eg. jurismercatus
    OPENAI_API_KEY=sk...
    ```
 
    See [`.env.example`](/.env.example) for an example environment.
 
-   > Note: You will have to provide and embed your own market definitions in Pinecone. If you want to use the Verdictr database, you can access it [here](https://verdictr.vercel.app/database.json).
+   > Note: You will have to provide and embed your own market definitions in Pinecone. If you want to use the JurisMercatus database, you can access it [here](https://jurismercatus.vercel.app/database.json).
 
 ### Docker Installation
 
 1. Built the image
 
    ```bash
-   docker build -t verdictr .
+   docker build -t jurismercatus .
    ```
 
 2. Run the container
@@ -130,9 +130,9 @@ Learn more at [verdictr.vercel.app/how-it-works](https://verdictr.vercel.app/how
    -e PINECONE_API_KEY=pcsk... \
    -e PINECONE_BASE_URL=https://<your-pinecone-index>.svc.<your-pinecone-env>.pinecone.io \
    -e PINECONE_ENV=us-east-1-aws \
-   -e PINECONE_INDEX=verdictr \
+   -e PINECONE_INDEX=jurismercatus \
    -e OPENAI_API_KEY=sk... \
-   verdictr
+   jurismercatus
    ```
 
    See [`.env.example`](/.env.example) for an example environment.
@@ -156,15 +156,28 @@ Contributions are welcome. Please read the [contribution guidelines](CONTRIBUTIN
 
 ## Terms & Conditions
 
-Verdictr is available free of charge for everyone. However, if you use anything that is property of Verdictr or derived from this repositories or its constituent repositories, including but not limited to its code, images, color schemes, data, concept, and the name Verdictr, you must provide proper attribution. Failure to include proper attribution may be considered a violation of the license terms.
+JurisMercatus is available free of charge for everyone. However, if you use anything that is property of JurisMercatus or derived from this repositories or its constituent repositories, including but not limited to its code, images, color schemes, data, concept, and the name JurisMercatus, you must provide proper attribution. Failure to include proper attribution may be considered a violation of the license terms.
 
-View the full Terms & Conditions at [verdictr.vercel.app/terms](https://verdictr.vercel.app/terms).
+View the full Terms & Conditions at [jurismercatus.vercel.app/terms](https://jurismercatus.vercel.app/terms).
 
 ## License
 
 The code in this repository is licensed under the AGPL-3.0 License.
 
 View the full license at [www.gnu.org/licenses/agpl-3.0](https://www.gnu.org/licenses/agpl-3.0).
+
+## Attribution
+
+When using the code from this repo (i.e. shriyanyamali/JurisMercatus and jurismercatus.vercel.app) you must provide proper attribution.
+
+Specifically, in any work, including but not limited to public, published, commercialized, or derived work that uses or builds upon this repository's code, you must cite the original repository by including the following citation:
+
+```
+This project uses digital assets from the JurisMercatus repository and jurismercatus.vercel.app Copyright (c) 2025 Shriyan Yamali,
+licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+```
+
+Failure to include proper attribution when using Verdictr’s code may be considered a violation of the license terms.
 
 ## Contact
 
