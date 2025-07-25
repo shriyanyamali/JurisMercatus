@@ -8,16 +8,16 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           {/* Veridctr Logo */}
           <div className="mb-6 md:mb-0">
-            <div className="flex items-center">
+            <div className="ml-2 lg:ml-12 hidden md:flex items-center">
               <img
-                src="favicon.ico"
-                className="h-8 me-3"
+                src="logo.png"
+                className="h-48"
                 alt="JurisMercatus Logo"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap">
-                JurisMercatus
-              </span>
             </div>
+            <span className="md:hidden self-center text-5xl sm:text-7xl font-semibold whitespace-nowrap">
+              <span className="text-[#3094FF]">Juris</span><span className="text-[#03cea4]">Mercatus</span>
+            </span>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6">
