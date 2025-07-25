@@ -104,7 +104,7 @@ const FAQUI = () => {
           index={7}
           question="Can I commercialize JurisMercatus or any of its code?"
           answer="Yes, you can commercialize any part of its code. However, it should be noted that if you choose to commercialize a product
-          based on the code, database, idea, or any service over JurisMercatus, that code must be made open source under the AGPL-3.0 license."
+          based on the code, database, idea, or any service of JurisMercatus, that code must be made open source under the AGPL-3.0 license."
         />
         <AccordionItem
           index={7}
