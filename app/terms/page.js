@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Terms & Conditions - Verdictr",
-  description: "Terms & Conditions for Verdictr. Made by Shriyan Yamali.",
+  title: "Terms & Conditions - JurisMercatus",
+  description: "Terms & Conditions for JurisMercatus. Made by Shriyan Yamali.",
 };
 
 export default function Terms() {
@@ -15,7 +15,7 @@ export default function Terms() {
 
         <section className="font-medium space-y-6 text-lg leading-relaxed text-gray-800">
           <p>
-            Welcome to <strong>Verdictr</strong>. By accessing or using our
+            Welcome to <strong>JurisMercatus</strong>. By accessing or using our
             website, you agree to comply with and be bound by the following
             terms and conditions.
           </p>
@@ -25,11 +25,11 @@ export default function Terms() {
             <Link
               className="text-blue-500 underline"
               rel="stylesheet"
-              href="https://verdictr.vercel.app"
+              href="https://jurismercatus.vercel.app"
             >
-              verdictr.vercel.app
+              jurismercatus.vercel.app
             </Link>{" "}
-            (the "Site" and/or "Verdictr"), as well as any other related
+            (the "Site" and/or "JurisMercatus"), as well as any other related
             products and services that refer or link to these legal terms (the
             "Legal Terms") (collectively, the "Services").
           </p>
@@ -47,11 +47,12 @@ export default function Terms() {
           <p>
             These Legal Terms constitute a legally binding agreement made
             between you, whether personally or on behalf of an entity ("you"),
-            and Verdictr, concerning your access to and use of the Services. You
-            agree that by accessing the Services, you have read, understood, and
-            agreed to be bound by all of these Legal Terms. IF YOU DO NOT AGREE
-            WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED
-            FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
+            and JurisMercatus, concerning your access to and use of the
+            Services. You agree that by accessing the Services, you have read,
+            understood, and agreed to be bound by all of these Legal Terms. IF
+            YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE
+            EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST
+            DISCONTINUE USE IMMEDIATELY.
           </p>
 
           <p>
@@ -73,11 +74,11 @@ export default function Terms() {
             1. Use of Service
           </h2>
           <p>
-            Verdictr is provided for informational purposes only. Verdictr and
-            the Services are provided on an "AS IS" basis for your personal,
-            non-commercial use or internal academic/research purposes only. You
-            agree not to use the Services in any way that is unlawful, or harms
-            us or any other user.
+            JurisMercatus is provided for informational purposes only.
+            JurisMercatus and the Services are provided on an "AS IS" basis for
+            your personal, non-commercial use or internal academic/research
+            purposes only. You agree not to use the Services in any way that is
+            unlawful, or harms us or any other user.
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
@@ -85,23 +86,23 @@ export default function Terms() {
           </h2>
           <p>
             All branding materials, including but not limited to logos, images,
-            illustrations, color palettes, UI elements, and the name Verdictr,
-            are protected assets owned by Verdictr. Use of these materials for
-            any purpose, including derivative works, is strictly prohibited
-            without explicit authorization.
+            illustrations, color palettes, UI elements, and the name
+            JurisMercatus, are protected assets owned by JurisMercatus. Use of
+            these materials for any purpose, including derivative works, is
+            strictly prohibited without explicit authorization.
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
             3. Commercial Use
           </h2>
           <p>
-            You may use any part of the Verdictr Services, including data,
+            You may use any part of the JurisMercatus Services, including data,
             designs, or content, in any commercial product, service, research,
             report, or application. However, by doing so, you agree to provide
             proper attribution and abide by the terms of the AGPL-3.0 License
-            under which Verdictr and its Services are released, which includes
-            licensing any modified or derived source code under the same
-            license.
+            under which JurisMercatus and its Services are released, which
+            includes licensing any modified or derived source code under the
+            same license.
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
@@ -119,11 +120,11 @@ export default function Terms() {
             5. Limitation of Liability
           </h2>
           <p>
-            In no event shall Verdictr, its creator, or its affiliates be liable
-            to you for any damages, including but not limited to loss of data,
-            revenue, or profits, arising from your use of the Services. You
-            agree to indemnify and hold us harmless from any third-party claims
-            arising out of your use of Verdictr.
+            In no event shall JurisMercatus, its creator, or its affiliates be
+            liable to you for any damages, including but not limited to loss of
+            data, revenue, or profits, arising from your use of the Services.
+            You agree to indemnify and hold us harmless from any third-party
+            claims arising out of your use of JurisMercatus.
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
@@ -142,13 +143,13 @@ export default function Terms() {
             7. User Privacy and Data Collection
           </h2>
           <p>
-            Verdictr does not collect, store, or process any personal data or
-            identifiable information from users. We do not use cookies, tracking
-            pixels, analytics tools, or any other mechanisms to monitor user
-            behavior on the site.
+            JurisMercatus does not collect, store, or process any personal data
+            or identifiable information from users. We do not use cookies,
+            tracking pixels, analytics tools, or any other mechanisms to monitor
+            user behavior on the site.
           </p>
           <p>
-            You may use Verdictr anonymously without creating an account or
+            You may use JurisMercatus anonymously without creating an account or
             submitting any personal information. If this changes in the future,
             we will update these Legal Terms accordingly.
           </p>
@@ -157,20 +158,20 @@ export default function Terms() {
             8. Attribution
           </h2>
           <p>
-            When using Verdictr’s source code, you must provide proper
+            When using JurisMercatus’s source code, you must provide proper
             attribution.
           </p>
 
           <p>
-            Failure to include proper attribution when using Verdictr’s code may
-            be considered a violation of the license terms.
+            Failure to include proper attribution when using JurisMercatus’s
+            code may be considered a violation of the license terms.
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
             9. Open Source License
           </h2>
           <p>
-            Verdictr and its Services, including its source code, are made
+            JurisMercatus and its Services, including its source code, are made
             available under the terms of the open-source{" "}
             <Link
               href="https://www.gnu.org/licenses/agpl-3.0.txt"
@@ -180,22 +181,23 @@ export default function Terms() {
             </Link>
             . This license allows reuse, modification, and distribution of the
             code for any purpose, including commercial use, provided that any
-            products or services derived from Verdictr and its Services are also
-            made available under the same AGPL-3.0 License.
+            products or services derived from JurisMercatus and its Services are
+            also made available under the same AGPL-3.0 License.
           </p>
 
           <h2 className="text-2xl font-semibold mt-10 text-[#03cea4]">
             10. Contact
           </h2>
           <p>
-            Once more, if you have any questions or concerns about these terms, please
-            contact us at {" "}
+            Once more, if you have any questions or concerns about these terms,
+            please contact us at{" "}
             <Link
               href="mailto:yamalishriyan@gmail.com"
               className="text-blue-500 underline underline-offset-2"
             >
               yamalishriyan@gmail.com
-            </Link>.
+            </Link>
+            .
           </p>
 
           <p className="text-sm text-gray-600 mt-12">

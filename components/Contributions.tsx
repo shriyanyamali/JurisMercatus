@@ -10,7 +10,7 @@ export default function Contributions() {
       </div>
 
       <p className="text-lg lg:text-xl lg:text-start text-gray-700 lg:max-w-4xl mb-16 leading-relaxed">
-        Verdictr and its constituent repositories were developed by Shriyan
+        JurisMercatus and its constituent repositories were developed by Shriyan
         Yamali, who designed the interface and implemented the application. This
         project was conducted under the advisement of Professor Thibault
         Schrepel.

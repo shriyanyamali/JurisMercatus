@@ -26,7 +26,7 @@ export default function Hero() {
         "
         >
           {/* <span className="font-bold bg-gradient-to-r from-[#3080FF] via-[#3080FF] to-[#3080FF] bg-clip-text text-transparent">
-            Verdictr:
+            JurisMercatus:
           </span> */}
           A Database Of <AnimatedUnderline /> Searchable Market Definitions
         </h1>
@@ -97,7 +97,7 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="https://github.com/shriyanyamali/Verdictr"
+            href="https://github.com/shriyanyamali/JurisMercatus"
             target="_blank"
             rel="noopener noreferrer"
             className="

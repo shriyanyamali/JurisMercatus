@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "License - Verdictr",
-  description: "License for Verdictr. Made by Shriyan Yamali.",
+  title: "License - JurisMercatus",
+  description: "License for JurisMercatus. Made by Shriyan Yamali.",
 };
 
 const LicensePage = () => {
@@ -24,12 +24,9 @@ const LicensePage = () => {
           {/* Copyright and distribution notice, centered */}
           <div className="text-center">
             <p>
-              Copyright (C) 2007 Free Software Foundation, Inc. {" "}
-              <Link
-                href="http://fsf.org/"
-                className="text-blue-500"
-              >
-              &lt;http://fsf.org/&gt;
+              Copyright (C) 2007 Free Software Foundation, Inc.{" "}
+              <Link href="http://fsf.org/" className="text-blue-500">
+                &lt;http://fsf.org/&gt;
               </Link>
             </p>
             <p>

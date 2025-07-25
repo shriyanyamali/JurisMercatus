@@ -9,9 +9,13 @@ const Footer = () => {
           {/* Veridctr Logo */}
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
-              <img src="favicon.ico" className="h-8 me-3" alt="Verdictr Logo" />
+              <img
+                src="favicon.ico"
+                className="h-8 me-3"
+                alt="JurisMercatus Logo"
+              />
               <span className="self-center text-2xl font-semibold whitespace-nowrap">
-                Verdictr
+                JurisMercatus
               </span>
             </div>
           </div>
@@ -54,7 +58,7 @@ const Footer = () => {
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/shriyanyamali/Verdictr"
+                    href="https://github.com/shriyanyamali/JurisMercatus"
                     target="_blank"
                     className="hover:underline"
                   >
@@ -100,7 +104,6 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            
           </div>
         </div>
 
@@ -108,16 +111,18 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center">
-            Copyright &copy; {new Date().getFullYear()} Verdictr. All rights
-            reserved.
+            Copyright &copy; {new Date().getFullYear()} JurisMercatus. All
+            rights reserved.
           </span>
 
           <br className="md:hidden" />
 
-          <span className="
+          <span
+            className="
           hidden xs:inline-block sm:hidden text-sm md:inline-block
            text-gray-500 sm:text-center
-           ">
+           "
+          >
             <span>
               Created by{" "}
               <Link

@@ -55,15 +55,15 @@ const FAQUI = () => {
       <div>
         <AccordionItem
           index={1}
-          question="How much does Verdictr cost to use?"
+          question="How much does JurisMercatus cost to use?"
           answer="Nothing!"
         />
         <AccordionItem
           index={3}
           question="What is semantic search?"
-          answer="Semantic search is a search method that matches the meaning of a search query with market definitions,
-          rather than matching keywords. For example, if you search &quot;tires&quot;, it might return results related to cars, even though
-          tires are never explicitly mentioned in the market definition."
+          answer='Semantic search is a search method that matches the meaning of a search query with market definitions,
+          rather than matching keywords. For example, if you search "tires", it might return results related to cars, even though
+          tires are never explicitly mentioned in the market definition.'
         />
         <AccordionItem
           index={3}
@@ -86,7 +86,7 @@ const FAQUI = () => {
         <AccordionItem
           index={5}
           question="Why are some words highlighted in a few of the matches?"
-          answer="While Verdictr uses semantic search, if you type a word(s) in your search query which exactly matches the wording of 
+          answer="While JurisMercatus uses semantic search, if you type a word(s) in your search query which exactly matches the wording of 
           a match, then it will be highlighted."
         />
         <AccordionItem
@@ -102,12 +102,13 @@ const FAQUI = () => {
         />
         <AccordionItem
           index={7}
-          question="Can I commercialize Verdictr or any of its code?"
-          answer="No, Verdictr is provided solely for non-commercial use. You may not use any part of Verdictr in any commercial product. See the Terms & Conditions for more information."
+          question="Can I commercialize JurisMercatus or any of its code?"
+          answer="Yes, you can commercialize any part of its code. However, it should be noted that if you choose to commercialize a product
+          based on the code, database, idea, or any service over JurisMercatus, that code must be made open source under the AGPL-3.0 license."
         />
         <AccordionItem
           index={7}
-          question="Does Verdictr store my data?"
+          question="Does JurisMercatus store my data?"
           answer="No, we do not store your data."
         />
         <AccordionItem
