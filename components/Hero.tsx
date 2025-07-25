@@ -39,7 +39,7 @@ export default function Hero() {
           max-w-4xl
           text-black
           font-medium
-          [word-spacing:0.15em]
+          [word-spacing:0.15em]re
           "
         >
           <span
