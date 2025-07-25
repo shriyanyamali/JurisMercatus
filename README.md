@@ -1,9 +1,34 @@
-![License](https://img.shields.io/badge/License-AGPL%203.0-green.svg)
-![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)
-![Build Status](https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main)
-![Last Commit](https://img.shields.io/github/last-commit/shriyanyamali/JurisMercatus)
+<div align="center">
+  <a href="https://jurismercatus.vercel.app/"><img src="public/logo-square.png" alt="JurisMercatus" width="400"></a>
+</div>
 
-![JurisMercatus Hero](https://jurismercatus.vercel.app/jurismercatus-hero.png)
+<h4 align="center">A Database Of Semantically Searchable Market Definitions</h4>
+
+<p align="center">
+  <a href="https://img.shields.io/badge/License-AGPL%203.0-green.svg">
+    <img src="https://img.shields.io/badge/License-AGPL%203.0-green.svg"
+         alt="Gitter">
+  </a>
+  <a href="https://img.shields.io/badge/Maintained-yes-green.svg"><img src="https://img.shields.io/badge/Maintained-yes-green.svg"></a>
+  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+  </a>
+  <a href="https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main">
+    <img src="https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main">
+  </a>
+  <a href="https://img.shields.io/github/last-commit/shriyanyamali/JurisMercatus">
+    <img src="https://img.shields.io/github/last-commit/shriyanyamali/JurisMercatus">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#infrastructure">Infrastructure</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#license">License</a> •
+  <a href="#attribution">Attribution</a>
+</p>
 
 ## Purpose
 
@@ -11,10 +36,17 @@ JurisMercatus is a market definition database aggregated from the European Commi
 
 ## Features
 
-- 4000+ market definitions
-- 600 unique cases
-- Natural Language Search
-
+* A decade of cases
+  - A database with every market definition from the last 10 years.
+* Cross platform
+  - Works on Windows, macOS and Linux.
+* 4000+ market definitions
+* 600 unique cases
+* 100% Free
+* Ready and easy to use
+* Complete access to full database and code	
+* Natural language search
+* Live preview
 ## Live Demo
 
 Try it out in your browser (no sign‑up needed):  
@@ -71,71 +103,57 @@ Learn more at [jurismercatus.vercel.app/how-it-works](https://jurismercatus.verc
 
 ### Manual Installation
 
-1. Clone the repository
+```bash
+# Clone the repository
+git clone https://github.com/shriyanyamali/JurisMercatus.git
 
-   ```bash
-   git clone https://github.com/shriyanyamali/JurisMercatus.git
-   ```
+# Change into the project directory
+cd JurisMercatus
 
-2. Change into the project directory
+# Install dependencies
+npm install
+# or
+yarn install
 
-   ```bash
-   cd JurisMercatus
-   ```
+# Start local development server
+npm run dev
+# or
+yarn dev
+```
 
-3. Install dependencies
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+If you are hosting with Vercel, set these as your environment variables or create a `.env` file. The variables should be structured as follows:
 
-4. Start local development server
+```bash
+PINECONE_API_KEY=pcsk...
+PINECONE_BASE_URL=https://<your-pinecone-index>.svc.<your-pinecone-env>.pinecone.io
+PINECONE_ENV= e.g us-east-1-aws
+PINECONE_INDEX= eg. jurismercatus
+OPENAI_API_KEY=sk...
+```
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-   The app will be available at [http://localhost:3000](http://localhost:3000).
-
-5. If you are hosting with Vercel, set these as your environment variables or create a `.env` file. The variables should be structured as follows:
-
-   ```bash
-   PINECONE_API_KEY=pcsk...
-   PINECONE_BASE_URL=https://<your-pinecone-index>.svc.<your-pinecone-env>.pinecone.io
-   PINECONE_ENV= e.g us-east-1-aws
-   PINECONE_INDEX= eg. jurismercatus
-   OPENAI_API_KEY=sk...
-   ```
-
-   See [`.env.example`](/.env.example) for an example environment.
-
-   > Note: You will have to provide and embed your own market definitions in Pinecone. If you want to use the JurisMercatus database, you can access it [here](https://jurismercatus.vercel.app/database.json).
+See [`.env.example`](/.env.example) for an example environment.
 
 ### Docker Installation
 
-1. Built the image
+```bash
+# Built the image
+docker build -t jurismercatus .
 
-   ```bash
-   docker build -t jurismercatus .
-   ```
+# Run the container
+docker run -d -p 3000:3000 \
+-e PINECONE_API_KEY=pcsk... \
+-e PINECONE_BASE_URL=https://<your-pinecone-index>.svc.<your-pinecone-env>.pinecone.io \
+-e PINECONE_ENV=us-east-1-aws \
+-e PINECONE_INDEX=jurismercatus \
+-e OPENAI_API_KEY=sk... \
+jurismercatus
+```
 
-2. Run the container
+See [`.env.example`](/.env.example) for an example environment.
 
-   ```bash
-   docker run -d -p 3000:3000 \
-   -e PINECONE_API_KEY=pcsk... \
-   -e PINECONE_BASE_URL=https://<your-pinecone-index>.svc.<your-pinecone-env>.pinecone.io \
-   -e PINECONE_ENV=us-east-1-aws \
-   -e PINECONE_INDEX=jurismercatus \
-   -e OPENAI_API_KEY=sk... \
-   jurismercatus
-   ```
-
-   See [`.env.example`](/.env.example) for an example environment.
+> Note: Regardless of the installation method, you will have to provide and embed your own market definitions in Pinecone. If you want to use the JurisMercatus database, you can access it [here](https://jurismercatus.vercel.app/database.json).
 
 ## How to Use
 
@@ -154,12 +172,6 @@ Learn more at [jurismercatus.vercel.app/how-it-works](https://jurismercatus.verc
 
 Contributions are welcome. Please read the [contribution guidelines](CONTRIBUTING.md) first.
 
-## Terms & Conditions
-
-JurisMercatus is available free of charge for everyone. However, if you use anything that is property of JurisMercatus or derived from this repositories or its constituent repositories, including but not limited to its code, images, color schemes, data, concept, and the name JurisMercatus, you must provide proper attribution. Failure to include proper attribution may be considered a violation of the license terms.
-
-View the full Terms & Conditions at [jurismercatus.vercel.app/terms](https://jurismercatus.vercel.app/terms).
-
 ## License
 
 The code in this repository is licensed under the AGPL-3.0 License.
@@ -173,8 +185,9 @@ When using the code from this repo (i.e. shriyanyamali/JurisMercatus and jurisme
 Specifically, in any work, including but not limited to public, published, commercialized, or derived work that uses or builds upon this repository's code, you must cite the original repository by including the following citation:
 
 ```
-This project uses digital assets from the JurisMercatus repository and jurismercatus.vercel.app Copyright (c) 2025 Shriyan Yamali,
-licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+This project uses digital assets from the JurisMercatus repository and
+jurismercatus.vercel.app Copyright (c) 2025 Shriyan Yamali, licensed under
+the GNU Affero General Public License v3.0 (AGPL-3.0).
 ```
 
 Failure to include proper attribution when using JurisMercatus’s code may be considered a violation of the license terms.
