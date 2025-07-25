@@ -12,9 +12,8 @@
     <img src="https://img.shields.io/badge/License-AGPL%203.0-green.svg"
          alt="Gitter">
   </a>
-  <a href="https://img.shields.io/badge/Maintained-yes-green.svg"><img src="https://img.shields.io/badge/Maintained-yes-green.svg"></a>
-  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
-      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+  <a href="https://img.shields.io/badge/Maintained-yes-green.svg">
+    <img src="https://img.shields.io/badge/Maintained-yes-green.svg">
   </a>
   <a href="https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main">
     <img src="https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main">
