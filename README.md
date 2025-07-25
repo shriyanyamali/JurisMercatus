@@ -177,7 +177,7 @@ This project uses digital assets from the JurisMercatus repository and jurismerc
 licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
 ```
 
-Failure to include proper attribution when using Verdictr’s code may be considered a violation of the license terms.
+Failure to include proper attribution when using JurisMercatus’s code may be considered a violation of the license terms.
 
 ## Contact
 

@@ -4,7 +4,7 @@ const benefitsData = [
   {
     feature: "Market Definitions",
     your: "4 000+ definitions",
-    other: "Every market definition in EU history",
+    other: "All market definitions, but buried in PDFs",
   },
   {
     feature: "Search Flexibility",
@@ -52,7 +52,7 @@ export default function Benefits() {
       <section className="max-w-2xl lg:max-w-screen-lg mx-auto px-4 sm:px-6 pb-44">
         <div className="flex items-center mb-10 text-center xs:text-start">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
-            JurisMercatus vs. EC's Case Search
+            JurisMercatus vs. EC's Search
           </h2>
         </div>
 
