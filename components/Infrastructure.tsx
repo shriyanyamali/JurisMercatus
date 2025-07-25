@@ -10,16 +10,16 @@ interface Infrastructure {
 
 export default function TechnologiesSection() {
   const technologies: Infrastructure[] = [
-    { name: "React", icon: "logos/react.svg?height=48&width=48" },
-    { name: "Next.js", icon: "logos/nextjs.svg?height=48&width=48" },
-    { name: "TypeScript", icon: "logos/typescript.svg?height=48&width=48" },
-    { name: "Tailwind CSS", icon: "logos/tailwind.svg?height=48&width=48" },
-    { name: "Python", icon: "logos/python.svg?height=48&width=48" },
-    { name: "Pandas", icon: "logos/pandas.svg?height=48&width=48" },
-    { name: "Gemini", icon: "logos/gemini.svg?height=48&width=48" },
-    { name: "OpenAI", icon: "logos/openai.svg?height=48&width=48" },
-    { name: "Pinecone", icon: "logos/pinecone.png?height=48&width=48" },
-    { name: "Vercel", icon: "logos/vercel.svg?height=48&width=48" },
+    { name: "React", icon: "infrastructure-logos/react.svg?height=48&width=48" },
+    { name: "Next.js", icon: "infrastructure-logos/nextjs.svg?height=48&width=48" },
+    { name: "TypeScript", icon: "infrastructure-logos/typescript.svg?height=48&width=48" },
+    { name: "Tailwind CSS", icon: "infrastructure-logos/tailwind.svg?height=48&width=48" },
+    { name: "Python", icon: "infrastructure-logos/python.svg?height=48&width=48" },
+    { name: "Pandas", icon: "infrastructure-logos/pandas.svg?height=48&width=48" },
+    { name: "Gemini", icon: "infrastructure-logos/gemini.svg?height=48&width=48" },
+    { name: "OpenAI", icon: "infrastructure-logos/openai.svg?height=48&width=48" },
+    { name: "Pinecone", icon: "infrastructure-logos/pinecone.png?height=48&width=48" },
+    { name: "Vercel", icon: "infrastructure-logos/vercel.svg?height=48&width=48" },
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function TechnologiesSection() {
           >
             <div className="relative w-12 h-12 mb-2">
               <Image
-                src={tech.icon || "logos/placeholder.svg"}
+                src={tech.icon || "infrastructure-logos/placeholder.svg"}
                 alt={`${tech.name} logo`}
                 fill
                 className="object-contain"

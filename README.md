@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://jurismercatus.vercel.app/"><img src="public/logo-square.png" alt="JurisMercatus" width="300"></a>
+  <a href="https://jurismercatus.vercel.app/"><img src="public/logos/logo-square.png" alt="JurisMercatus" width="300"></a>
   <br>
   <br>
 </h1>

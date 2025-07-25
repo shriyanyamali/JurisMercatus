@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <div className="ml-2 lg:ml-12 hidden md:flex items-center">
               <img
-                src="logo.png"
+                src="/logos/logo.png"
                 className="h-48"
                 alt="JurisMercatus Logo"
               />
