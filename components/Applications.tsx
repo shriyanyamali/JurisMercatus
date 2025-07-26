@@ -21,8 +21,6 @@
 //
 // -------------------------------------------------------------------------------
 
-import Link from "next/link";
-
 interface AppItem {
   name: string;
   description: string;
