@@ -4,7 +4,7 @@ export default function WhatIsJurisMercatus() {
   return (
     <section
       id="what-is-jurismercatus"
-      className="max-w-2xl lg:max-w-screen-lg mx-auto px-4 sm:px-6 py-24 3xl:pt-44 text-center"
+      className="max-w-2xl lg:max-w-screen-lg mx-auto px-3 sm:px-6 py-24 3xl:pt-44 text-center"
     >
       <div className="flex items-center mb-10">
         <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">

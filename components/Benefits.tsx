@@ -92,7 +92,7 @@ export default function Benefits() {
 
       <section
         id="why-use-jurismercatus"
-        className="max-w-2xl lg:max-w-screen-lg mx-auto px-6 pb-44 text-center"
+        className="max-w-2xl lg:max-w-screen-lg mx-auto px-3 sm:px-6 pb-44 text-center"
       >
         <div className="flex items-center mb-10">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900">
