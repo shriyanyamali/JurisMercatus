@@ -127,11 +127,17 @@ export default function SearchUI() {
       return okYear && okPolicy;
     });
 
-    list.sort((a, b) => {
-      const yA = parseInt(a.year),
-        yB = parseInt(b.year);
-      return sortOrder === "newest" ? yB - yA : yA - yB;
-    });
+    if (rawResults !== null) {
+      // When showing search results, sort by descending score
+      list.sort((a, b) => b.score - a.score);
+    } else {
+      // Otherwise sort by year per the current sortOrder
+      list.sort((a, b) => {
+        const yA = parseInt(a.year, 10),
+          yB = parseInt(b.year, 10);
+        return sortOrder === "newest" ? yB - yA : yA - yB;
+      });
+    }
 
     setFilteredData(list);
     setCurrentPage(1);
