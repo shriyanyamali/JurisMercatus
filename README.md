@@ -32,6 +32,8 @@
   <a href="#attribution">Attribution</a>
 </p>
 
+![JurisMercatus Demo](public/JurisMercatus.gif)
+
 ## Purpose
 
 JurisMercatus is a market definition database aggregated from the European Commission's merger and antitrust case decisions. It brings all the definitions together on one page and uses natural language searches, so your query doesn't need to exactly match the wording in the decisions.
