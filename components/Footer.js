@@ -5,24 +5,34 @@ const Footer = () => {
   return (
     <footer className="bg-[#FFFAFA] mt-40">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+
+        {/* Veridctr Logo Text Mobile */}
+        <div className="mb-6 md:mb-4 lg:mb-0 md:text-center">
+          <span className="lg:hidden inline-block text-5xl sm:text-7xl font-semibold whitespace-nowrap">
+            <span className="text-[#3094FF]">Juris</span>
+            <span className="text-[#03cea4]">Mercatus</span>
+          </span>
+        </div>
+
         <div className="md:flex md:justify-between">
           {/* Veridctr Logo */}
-          <div className="mb-6 md:mb-0">
-            <div className="ml-2 lg:ml-12 hidden md:flex items-center">
+          <div className="hidden lg:flex lg:items-end">
+            <div className="text-center">
               <img
-                src="/logos/logo.png"
-                className="h-48"
-                alt="JurisMercatus Logo"
+                src="logos/logo.png"
+                alt="Logo"
+                className="mx-auto hidden xl:inline-block mb-2 h-28 w-auto"
               />
+              <span className="text-5xl xl:text-6xl font-semibold whitespace-nowrap">
+                <span className="text-[#3094FF]">Juris</span>
+                <span className="text-[#03cea4]">Mercatus</span>
+              </span>
             </div>
-            <span className="md:hidden self-center text-5xl sm:text-7xl font-semibold whitespace-nowrap">
-              <span className="text-[#3094FF]">Juris</span><span className="text-[#03cea4]">Mercatus</span>
-            </span>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 mx-auto gap-8 sm:gap-6">
             {/* Site Links */}
-            <div className="pt-4 lg:pt-0 lg:translate-x-12">
+            <div className="pt-4 lg:pt-0">
               <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase">
                 Site Links
               </h2>
@@ -51,7 +61,7 @@ const Footer = () => {
             </div>
 
             {/* Repository Links */}
-            <div className="pt-4 lg:pt-0">
+            <div className="pt-4 lg:pt-0 lg:-translate-x-4 xl:-translate-x-8">
               <h2 className="mb-6 text-base font-semibold text-gray-900 uppercase">
                 Code Repositories
               </h2>
@@ -87,7 +97,7 @@ const Footer = () => {
             </div>
 
             {/* Legal Links */}
-            <div className="sm:mr-[6rem]">
+            <div className="md:ml-8 lg:ml-0 -translate-y-6 xs:-translate-y-0 xs:pt-2 md:pt-4 lg:pt-0">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                 Legal
               </h2>
