@@ -1,4 +1,4 @@
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -19,7 +19,7 @@
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
 "use client";
 
@@ -33,16 +33,46 @@ interface Infrastructure {
 
 export default function TechnologiesSection() {
   const technologies: Infrastructure[] = [
-    { name: "React", icon: "infrastructure-logos/react.svg?height=48&width=48" },
-    { name: "Next.js", icon: "infrastructure-logos/nextjs.svg?height=48&width=48" },
-    { name: "TypeScript", icon: "infrastructure-logos/typescript.svg?height=48&width=48" },
-    { name: "Tailwind CSS", icon: "infrastructure-logos/tailwind.svg?height=48&width=48" },
-    { name: "Python", icon: "infrastructure-logos/python.svg?height=48&width=48" },
-    { name: "Pandas", icon: "infrastructure-logos/pandas.svg?height=48&width=48" },
-    { name: "Gemini", icon: "infrastructure-logos/gemini.svg?height=48&width=48" },
-    { name: "OpenAI", icon: "infrastructure-logos/openai.svg?height=48&width=48" },
-    { name: "Pinecone", icon: "infrastructure-logos/pinecone.png?height=48&width=48" },
-    { name: "Vercel", icon: "infrastructure-logos/vercel.svg?height=48&width=48" },
+    {
+      name: "React",
+      icon: "infrastructure-logos/react.svg?height=48&width=48",
+    },
+    {
+      name: "Next.js",
+      icon: "infrastructure-logos/nextjs.svg?height=48&width=48",
+    },
+    {
+      name: "TypeScript",
+      icon: "infrastructure-logos/typescript.svg?height=48&width=48",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "infrastructure-logos/tailwind.svg?height=48&width=48",
+    },
+    {
+      name: "Python",
+      icon: "infrastructure-logos/python.svg?height=48&width=48",
+    },
+    {
+      name: "Pandas",
+      icon: "infrastructure-logos/pandas.svg?height=48&width=48",
+    },
+    {
+      name: "Gemini",
+      icon: "infrastructure-logos/gemini.svg?height=48&width=48",
+    },
+    {
+      name: "OpenAI",
+      icon: "infrastructure-logos/openai.svg?height=48&width=48",
+    },
+    {
+      name: "Pinecone",
+      icon: "infrastructure-logos/pinecone.png?height=48&width=48",
+    },
+    {
+      name: "Vercel",
+      icon: "infrastructure-logos/vercel.svg?height=48&width=48",
+    },
   ];
 
   return (

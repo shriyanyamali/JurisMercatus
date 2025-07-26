@@ -1,4 +1,4 @@
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -19,7 +19,7 @@
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
 import Image from "next/image";
 import Link from "next/link";
@@ -189,7 +189,8 @@ export default function HowItWorks() {
             The returned matches are filtered based on the filters chosen. You
             may receive anywhere from 0 to 20 matches. Each match is given a
             score, representing how similar that match is to the meaning of your
-            query (input). The closer the score is to 1.000, the more similar the match.
+            query (input). The closer the score is to 1.000, the more similar
+            the match.
           </p>
         </div>
         <div className="md:w-1/2 my-8 md:my-0">

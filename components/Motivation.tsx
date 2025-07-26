@@ -1,4 +1,4 @@
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -19,7 +19,7 @@
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
 import React from "react";
 import { Scale, Search, Database } from "lucide-react";
@@ -88,8 +88,8 @@ export default function Motivation() {
             Our Solution
           </h3>
           <div className="text-gray-600 text-center">
-            JurisMercatus, which compiles ten years of market definitions into one open-source,
-            semantically searchable database.
+            JurisMercatus, which compiles ten years of market definitions into
+            one open-source, semantically searchable database.
           </div>
         </div>
       </div>

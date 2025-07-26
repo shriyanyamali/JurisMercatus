@@ -1,4 +1,4 @@
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -19,11 +19,15 @@
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
 export const NAV_LINKS = [
   { href: "/", key: "Home", label: "Home" },
-  { href: "/semantic-search", key: "Semantic Search", label: "Semantic Search" },
+  {
+    href: "/semantic-search",
+    key: "Semantic Search",
+    label: "Semantic Search",
+  },
   {
     href: "/how-it-works",
     key: "How It Works ",

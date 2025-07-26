@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -23,7 +23,7 @@ import Navbar from "@/components/Navbar";
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
 import Footer from "@/components/Footer";
 
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   description:
     "Search feature for EU competition case relevant market decisions",
   icons: {
-    icon: '/favicon-v2.ico',
-  },  
+    icon: "/favicon-v2.ico",
+  },
 };
 
 export default function RootLayout({

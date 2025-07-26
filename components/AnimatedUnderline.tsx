@@ -1,4 +1,4 @@
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -19,21 +19,21 @@
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 export default function AnimatedUnderline() {
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    const hasAnimated = sessionStorage.getItem('underlineAnimated');
+    const hasAnimated = sessionStorage.getItem("underlineAnimated");
 
     if (!hasAnimated) {
       setShouldAnimate(true);
-      sessionStorage.setItem('underlineAnimated', 'true');
+      sessionStorage.setItem("underlineAnimated", "true");
     }
   }, []);
 
@@ -46,7 +46,7 @@ export default function AnimatedUnderline() {
           w-full h-1/2
           bg-[#03cea4] z-0
           transform origin-left
-          ${shouldAnimate ? 'animate-underline' : ''}
+          ${shouldAnimate ? "animate-underline" : ""}
         `}
       />
     </span>
