@@ -41,11 +41,6 @@ const Footer = () => {
           {/* Veridctr Logo */}
           <div className="hidden lg:flex lg:items-end">
             <div className="text-center">
-              <img
-                src="logos/logo.png"
-                alt="Logo"
-                className="mx-auto hidden xl:inline-block mb-2 h-28 w-auto"
-              />
               <span className="text-5xl xl:text-6xl font-semibold whitespace-nowrap">
                 <span className="text-[#3094FF]">Juris</span>
                 <span className="text-[#03cea4]">Mercatus</span>
