@@ -1,4 +1,4 @@
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -19,7 +19,7 @@
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
 import Link from "next/link";
 
@@ -68,9 +68,7 @@ export default function Applications() {
             <h3 className="text-xl font-semibold text-gray-900 transition-colors duration-300 group-hover:text-[#3080FF]">
               {app.name}
             </h3>
-            <p className="text-gray-600 mt-2">
-              {app.description}
-            </p>
+            <p className="text-gray-600 mt-2">{app.description}</p>
           </div>
         ))}
       </div>

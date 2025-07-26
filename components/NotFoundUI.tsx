@@ -1,4 +1,4 @@
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -19,9 +19,9 @@
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
-'use client';
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";

@@ -1,4 +1,4 @@
-// =============================================================================
+// -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
 //
@@ -19,7 +19,7 @@
 //
 // Contact: yamalishriyan@gmail.com
 //
-// =============================================================================
+// -------------------------------------------------------------------------------
 
 import Link from "next/link";
 import React from "react";
@@ -28,7 +28,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#FFFAFA] mt-40">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-
         {/* Veridctr Logo Text Mobile */}
         <div className="mb-6 md:mb-4 lg:mb-0 md:text-center">
           <span className="lg:hidden inline-block text-5xl sm:text-7xl font-semibold whitespace-nowrap">
