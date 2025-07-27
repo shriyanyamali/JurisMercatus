@@ -27,12 +27,12 @@
   <a href="#features">Features</a> •
   <a href="#infrastructure">Infrastructure</a> •
   <a href="#installation">Installation</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#license">License</a> •
   <a href="#attribution">Attribution</a>
 </p>
 
-![JurisMercatus Demo](public/JurisMercatus.gif)
+<div style="text-align: center;">
+  <img src="public/JurisMercatus.gif" alt="JurisMercatus Demo" style="center">
+</div>
 
 ## Purpose
 
