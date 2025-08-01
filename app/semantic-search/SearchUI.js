@@ -319,11 +319,11 @@ export default function SearchUI() {
                 . The market definitions database was built using the program
                 stored in the{" "}
                 <Link
-                  href="https://github.com/shriyanyamali/market-def-scraper"
+                  href="https://github.com/shriyanyamali/Lextract"
                   target="_blank"
                 >
                   <span className="font-medium text-blue-600 underline">
-                    market-def-scraper
+                    Lextract
                   </span>
                 </Link>{" "}
                 repository. Check its README file to learn how the exactly the
@@ -340,62 +340,64 @@ export default function SearchUI() {
 
             {/* Pagination & Clear */}
             <div className="flex flex-wrap gap-4 mb-6 items-center">
-  {/* Pagination: only if there's data */}
-  {filteredData.length > 0 && (
-    <>
-      <button
-        onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-        disabled={currentPage === 1}
-        className="bg-white px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
-      >
-        « Prev
-      </button>
+              {/* Pagination: only if there's data */}
+              {filteredData.length > 0 && (
+                <>
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+                    disabled={currentPage === 1}
+                    className="bg-white px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
+                  >
+                    « Prev
+                  </button>
 
-      <button
-        onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
-        disabled={currentPage === totalPages}
-        className="bg-white px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
-      >
-        Next »
-      </button>
+                  <button
+                    onClick={() =>
+                      setCurrentPage((p) => Math.min(p + 1, totalPages))
+                    }
+                    disabled={currentPage === totalPages}
+                    className="bg-white px-4 py-2 rounded border-2 duration-300 disabled:opacity-50 disabled:pointer-events-none hover:bg-white hover:border-blue-500 hover:text-blue-500"
+                  >
+                    Next »
+                  </button>
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          const v = parseInt(e.target.pageNumber.value, 10);
-          if (v >= 1 && v <= totalPages) setCurrentPage(v);
-        }}
-        className="flex items-center gap-2"
-      >
-        <input
-          name="pageNumber"
-          type="number"
-          min={1}
-          max={totalPages}
-          placeholder="Page #"
-          className="w-[5.5rem] p-2 border rounded"
-        />
-        <button
-          type="submit"
-          className="ml-2 px-3 py-[0.375rem] bg-blue-500 text-white rounded border-2 border-blue-500 hover:bg-white hover:text-blue-500 duration-300"
-        >
-          Go
-        </button>
-      </form>
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      const v = parseInt(e.target.pageNumber.value, 10);
+                      if (v >= 1 && v <= totalPages) setCurrentPage(v);
+                    }}
+                    className="flex items-center gap-2"
+                  >
+                    <input
+                      name="pageNumber"
+                      type="number"
+                      min={1}
+                      max={totalPages}
+                      placeholder="Page #"
+                      className="w-[5.5rem] p-2 border rounded"
+                    />
+                    <button
+                      type="submit"
+                      className="ml-2 px-3 py-[0.375rem] bg-blue-500 text-white rounded border-2 border-blue-500 hover:bg-white hover:text-blue-500 duration-300"
+                    >
+                      Go
+                    </button>
+                  </form>
 
-      <span className="text-lg ml-4 mt-2">
-        Page {currentPage} of {totalPages}
-      </span>
-    </>
-  )}
+                  <span className="text-lg ml-4 mt-2">
+                    Page {currentPage} of {totalPages}
+                  </span>
+                </>
+              )}
 
-  {/* Always show Clear Search */}
-  <button
-    onClick={(e) => {
-      handleShowAll();
-      e.currentTarget.blur();
-    }}
-    className="md:-mt-1 ml-4 relative inline-flex h-[2.75rem] items-center justify-center 
+              {/* Always show Clear Search */}
+              <button
+                onClick={(e) => {
+                  handleShowAll();
+                  e.currentTarget.blur();
+                }}
+                className="md:-mt-1 ml-4 relative inline-flex h-[2.75rem] items-center justify-center 
               overflow-hidden rounded-md border-2 border-blue-500 bg-transparent 
               px-4 font-regular text-black transition-all duration-200
               [box-shadow:5px_5px_#3b82f6]
@@ -407,10 +409,10 @@ export default function SearchUI() {
               active:translate-y-[3px]
               active:[box-shadow:0px_0px_#3b82f6]
               active:bg-[#3b83f670]"
-  >
-    Clear Search
-  </button>
-</div>
+              >
+                Clear Search
+              </button>
+            </div>
 
             {/* Results and Spinner */}
             {isLoading ? (

@@ -40,17 +40,18 @@ JurisMercatus is a market definition database aggregated from the European Commi
 
 ## Features
 
-* A decade of cases
+- A decade of cases
   - A database with every market definition from the last 10 years.
-* Cross platform
+- Cross platform
   - Works on Windows, macOS and Linux.
-* 4000+ market definitions
-* 600 unique cases
-* 100% Free
-* Ready and easy to use
-* Complete access to full database and code	
-* Natural language search
-* Live preview
+- 4000+ market definitions
+- 600 unique cases
+- 100% Free
+- Ready and easy to use
+- Complete access to full database and code
+- Natural language search
+- Live preview
+
 ## Live Demo
 
 Try it out in your browser (no sign‑up needed):  
@@ -168,7 +169,7 @@ See [`.env.example`](/.env.example) for an example environment.
 
 ## Constituent Repositories
 
-- [market-def-scraper](https://github.com/shriyanyamali/market-def-scraper): Extracts relevant market definitions from European Commission competition case decision PDFs.
+- [Lextract](https://github.com/shriyanyamali/Lextract): Extracts relevant market definitions from European Commission competition case decision PDFs.
 
 - [pinecone-def-search](https://github.com/shriyanyamali/pinecone-def-search): Code to embed text records and create a Pinecone vector index, allowing the semantic search of market definitions.
 
