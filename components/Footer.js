@@ -94,11 +94,11 @@ const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="https://github.com/shriyanyamali/market-def-scraper"
+                    href="https://github.com/shriyanyamali/Lextract"
                     target="_blank"
                     className="hover:underline"
                   >
-                    Market Definitions Scraper
+                    Lextract
                   </a>
                 </li>
                 <li className="mb-4">
