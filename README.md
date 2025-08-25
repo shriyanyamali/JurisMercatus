@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://jurismercatus.vercel.app/"><img src="public/logos/logo-square.png" alt="JurisMercatus" width="300"></a>
+  <a href="https://jurismercatus.shriyanyamali.com/"><img src="public/logos/logo-square.png" alt="JurisMercatus" width="300"></a>
   <br>
   <br>
 </h1>
@@ -55,7 +55,7 @@ JurisMercatus is a market definition database aggregated from the European Commi
 ## Live Demo
 
 Try it out in your browser (no sign‑up needed):  
-[jurismercatus.vercel.app](https://jurismercatus.vercel.app)
+[jurismercatus.shriyanyamali.com](https://jurismercatus.shriyanyamali.com)
 
 ## Development Process
 
@@ -66,7 +66,7 @@ Try it out in your browser (no sign‑up needed):
 5. Search
 6. Return Matches
 
-Learn more at [jurismercatus.vercel.app/how-it-works](https://jurismercatus.vercel.app/how-it-works).
+Learn more at [jurismercatus.shriyanyamali.com/how-it-works](https://jurismercatus.shriyanyamali.com/how-it-works).
 
 ## Infrastructure
 
@@ -158,7 +158,7 @@ jurismercatus
 
 See [`.env.example`](/.env.example) for an example environment.
 
-> Note: Regardless of the installation method, you will have to provide and embed your own market definitions in Pinecone. If you want to use the JurisMercatus database, you can access it [here](https://jurismercatus.vercel.app/database.json).
+> Note: Regardless of the installation method, you will have to provide and embed your own market definitions in Pinecone. If you want to use the JurisMercatus database, you can access it [here](https://jurismercatus.shriyanyamali.com/database.json).
 
 ## How to Use
 
@@ -185,13 +185,13 @@ View the full license at [www.gnu.org/licenses/agpl-3.0](https://www.gnu.org/lic
 
 ## Attribution
 
-When using the code from this repo (i.e. shriyanyamali/JurisMercatus and jurismercatus.vercel.app) you must provide proper attribution.
+When using the code from this repo (i.e. shriyanyamali/JurisMercatus and jurismercatus.shriyanyamali.com) you must provide proper attribution.
 
 Specifically, in any work, including but not limited to public, published, commercialized, or derived work that uses or builds upon this repository's code, you must cite the original repository by including the following citation:
 
 ```
 This project uses digital assets from the JurisMercatus repository and
-jurismercatus.vercel.app Copyright (c) 2025 Shriyan Yamali, licensed under
+jurismercatus.shriyanyamali.com Copyright (c) 2025 Shriyan Yamali, licensed under
 the GNU Affero General Public License v3.0 (AGPL-3.0).
 ```
 

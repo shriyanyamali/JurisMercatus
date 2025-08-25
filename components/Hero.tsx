@@ -154,7 +154,7 @@ export default function Hero() {
           Created by{" "}
           <Link
             className="underline underline-offset-4"
-            href="https://shriyanyamali.tech/"
+            href="https://shriyanyamali.com/"
             target="_blank"
           >
             Shriyan Yamali
