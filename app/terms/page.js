@@ -48,9 +48,9 @@ export default function Terms() {
             <Link
               className="text-blue-500 underline"
               rel="stylesheet"
-              href="https://jurismercatus.vercel.app"
+              href="https://jurismercatus.shriyanyamali.com"
             >
-              jurismercatus.vercel.app
+              jurismercatus.shriyanyamali.com
             </Link>{" "}
             (the "Site" and/or "JurisMercatus"), as well as any other related
             products and services that refer or link to these legal terms (the
