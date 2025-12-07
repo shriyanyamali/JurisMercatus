@@ -50,8 +50,11 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
+
+      /* After removing the banner, delete top-20 md:top-14 and replace it with top-0 */
+
       className={`
-        fixed top-0 left-0 w-full z-30
+        fixed top-[70px] md:top-[60px] left-0 w-full z-30
         transition-shadow duration-300
         ${isScrolled ? "bg-[#F2F0EF] shadow-md" : "bg-transparent shadow-none"}
       `}

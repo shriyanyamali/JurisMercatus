@@ -1,7 +1,3 @@
-import type { Metadata } from "next";
-
-import "./globals.css";
-import Navbar from "@/components/Navbar";
 // -------------------------------------------------------------------------------
 //
 // JurisMercatus - Market definition database with semantic search
@@ -25,6 +21,11 @@ import Navbar from "@/components/Navbar";
 //
 // -------------------------------------------------------------------------------
 
+import type { Metadata } from "next";
+
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -44,8 +45,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+
+        {/* After removing the banner, delete top-20 md:top-14 from Navbar.tsx and replace it with top-0 */}
+
+        <div className="fixed top-0 left-0 w-full bg-blue-600 text-white text-lg md:text-xl font-medium text-center py-2 sm:py-4 z-50">
+          <div className="mx-4 lg:mx-0">
+            Notice: The search function is temporarily unavailable working as we pursue funding.
+          </div>
+        </div>
+
+        {/* Between navbar and context; remove when removing banner */}
+        
+        <div className="h-12"></div>
+
         <Navbar />
+
         <main className="relative overflow-hidden">{children}</main>
+
         <Footer />
       </body>
     </html>
