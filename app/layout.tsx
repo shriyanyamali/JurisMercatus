@@ -50,7 +50,7 @@ export default function RootLayout({
 
         <div className="fixed top-0 left-0 w-full bg-blue-600 text-white text-lg md:text-xl font-medium text-center py-2 sm:py-4 z-50">
           <div className="mx-4 lg:mx-0">
-            Notice: The search function is temporarily unavailable working as we pursue funding.
+            Notice: The search function is temporarily unavailable as we pursue funding.
           </div>
         </div>
 
