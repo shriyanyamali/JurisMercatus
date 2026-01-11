@@ -24,6 +24,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "How It Works - JurisMercatus",
+  description: "How It Works page JurisMercatus. Made by Shriyan Yamali.",
+};
+
 export default function HowItWorks() {
   return (
     <section className="max-w-4xl mx-auto px-6">
