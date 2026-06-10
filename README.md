@@ -15,8 +15,8 @@
   <a href="https://img.shields.io/badge/Maintained-yes-green.svg">
     <img src="https://img.shields.io/badge/Maintained-yes-green.svg">
   </a>
-  <a href="https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main">
-    <img src="https://img.shields.io/github/actions/workflow/status/shriyanyamali/shriyanyamali.github.io/ci.yml?branch=main">
+  <a href="https://img.shields.io/github/actions/workflow/status/shriyanyamali/JurisMercatus/ci.yml?branch=main">
+    <img src="https://img.shields.io/github/actions/workflow/status/shriyanyamali/JurisMercatus/ci.yml?branch=main">
   </a>
   <a href="https://img.shields.io/github/last-commit/shriyanyamali/JurisMercatus">
     <img src="https://img.shields.io/github/last-commit/shriyanyamali/JurisMercatus">
