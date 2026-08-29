@@ -32,7 +32,7 @@ export default function NotFoundUI() {
   const router = useRouter();
 
   return (
-    <div className="pt-40 bg-gradient-to-br flex items-center justify-center p-4">
+    <div className="pt-44 bg-gradient-to-br flex items-center justify-center p-4">
       <div className="max-w-2xl mx-auto text-center space-y-10">
         <div className="relative">
           <div className="text-8xl md:text-9xl font-bold text-gray-900 select-none">
@@ -55,18 +55,6 @@ export default function NotFoundUI() {
             any errors, or use the navigation menu to find what you're looking
             for.
           </p>
-        </div>
-
-        <div className="flex justify-center space-x-4 my-8">
-          <div className="w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center transform rotate-12 shadow-md">
-            <HelpCircle className="w-8 h-8 text-pink-600" />
-          </div>
-          <div className="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center transform -rotate-6 shadow-md">
-            <div className="w-3 h-3 bg-green-600 rounded-full"></div>
-          </div>
-          <div className="w-14 h-14 bg-purple-200 rounded-full flex items-center justify-center transform rotate-45 shadow-md">
-            <div className="w-4 h-4 bg-purple-600 rounded-full"></div>
-          </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
