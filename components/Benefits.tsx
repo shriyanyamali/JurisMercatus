@@ -32,17 +32,22 @@ const benefitsData = [
   {
     feature: "Search Flexibility",
     your: "Supports natural language searching",
-    other: "No search function",
+    other: "No definition search function",
+  },
+  {
+    feature: "Query Results",
+    your: "Specific market definitions",
+    other: "Entire case decisions",
+  },
+  {
+    feature: "Cross-Case Research",
+    your: "Exact return & only one query",
+    other: "Searching & multiple queries",
   },
   {
     feature: "Database Access",
-    your: "Complete access to full database and code",
+    your: "Complete access to full database & code",
     other: "Limited access to database",
-  },
-  {
-    feature: "UI/UX Improvements",
-    your: "Weekly",
-    other: "Rarely",
   },
 ];
 
