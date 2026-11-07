@@ -22,11 +22,20 @@
 // -------------------------------------------------------------------------------
 
 import type { Metadata } from "next";
+import { Hanken_Grotesk } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 import Footer from "@/components/Footer";
+
+// Hanken Grotesk is licensed under the SIL Open Font License (free for commercial use).
+// next/font downloads it at build time and self-hosts it, so no requests go to Google at runtime.
+const hankenGrotesk = Hanken_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-hanken-grotesk",
+});
 
 export const metadata: Metadata = {
   title: "JurisMercatus",
@@ -43,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={hankenGrotesk.variable}>
       <body>
 
         {/* After removing the banner, delete top-20 md:top-14 from Navbar.tsx and replace it with top-0 */}

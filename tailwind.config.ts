@@ -49,8 +49,8 @@ module.exports = {
         "5xl": "40px",
       },
       fontFamily: {
-        grotesk: ['"Vastago Grotesk"', "sans-serif"],
-        sans: ['"Vastago Grotesk"', "sans-serif"],
+        grotesk: ["var(--font-hanken-grotesk)", "sans-serif"],
+        sans: ["var(--font-hanken-grotesk)", "sans-serif"],
       },
       animation: {
         underline: "underline 1.2s ease-out forwards",
